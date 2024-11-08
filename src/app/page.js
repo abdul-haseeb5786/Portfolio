@@ -71,9 +71,7 @@ export default function Home() {
     <p className="text-lg text-gray-300 mb-6">
     My journey in web development started with a curiosity to create interactive websites and has grown into a professional commitment to deliver excellence. Whether it&apos;s a sleek UI or a robust back-end, I enjoy every step of turning ideas into reality through clean and efficient code.
     </p>
-    <p className="text-lg text-gray-300 mb-6">
-      Besides coding, I actively participate in learning communities, hackathons, and open-source projects to stay updated with the latest trends and tools in the tech world. My goal is to continually enhance my skills and contribute to impactful projects that make a difference.
-    </p>
+    
 
     {/* Education Section */}
     <div className="mt-10">
