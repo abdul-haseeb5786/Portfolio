@@ -164,10 +164,12 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
             <div className="bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
               <h3 className="text-2xl font-semibold mb-4">Project 1</h3>
+              <h4 className="text-2xl font-semibold mb-4">Furniro Clone (Guided Project, Incomplete)</h4>
               <p className="text-gray-300 mb-4">
-                A web app built with React and Firebase that does amazing things.
-              </p>
-              <a href="#" className="text-blue-400 hover:underline">
+              Developed a responsive e-commerce website clone using React and Firebase under the guidance of my instructor.
+Implemented authentication, dynamic routing, and product page structure.
+The project is incomplete due to missing product images, but the core structure and functionality have been completed and are ready for future updates.</p>
+              <a href="https://cheery-centaur-d47200.netlify.app/" target="blank" className="text-blue-400 hover:underline">
                 View Project
               </a>
             </div>
