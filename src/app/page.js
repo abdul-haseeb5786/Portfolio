@@ -158,24 +158,41 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 bg-gray-800">
-        <div className="max-w-screen-xl mx-auto text-center">
-          <h2 className="text-4xl font-semibold mb-10">Projects</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-            <div className="bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-2xl font-semibold mb-4">Project 1</h3>
-              <h4 className="text-2xl font-semibold mb-4">Furniro Clone (Guided Project, Incomplete)</h4>
-              <p className="text-gray-300 mb-4">
-              Developed a responsive e-commerce website clone using React and Firebase under the guidance of my instructor.
-Implemented authentication, dynamic routing, and product page structure.
-The project is incomplete due to missing product images, but the core structure and functionality have been completed and are ready for future updates.</p>
-              <a href="https://cheery-centaur-d47200.netlify.app/" target="blank" className="text-blue-400 hover:underline">
-                View Project
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+     <section id="projects" className="py-20 bg-gray-800">         
+  <div className="max-w-screen-xl mx-auto text-center">           
+    <h2 className="text-4xl font-semibold mb-10">Projects</h2>           
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">             
+
+      {/* Project 1 */}
+      <div className="bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">               
+        <h3 className="text-2xl font-semibold mb-4">Project 1</h3>               
+        <h4 className="text-2xl font-semibold mb-4">Furniro Clone</h4>               
+        <p className="text-gray-300 mb-4">
+          Developed a responsive e-commerce website clone using React and Firebase under the guidance of my instructor. 
+          Implemented authentication, dynamic routing, and product page structure. The project is incomplete due to missing product images, 
+          but the core structure and functionality have been completed and are ready for future updates.
+        </p>               
+        <a href="https://cheery-centaur-d47200.netlify.app/" target="blank" className="text-blue-400 hover:underline">
+          View Project
+        </a>             
+      </div> 
+
+      {/* Project 2 */}
+      <div className="bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">               
+        <h3 className="text-2xl font-semibold mb-4">Project 2</h3>               
+        <h4 className="text-2xl font-semibold mb-4">Beneficiary Management System</h4>               
+        <p className="text-gray-300 mb-4">
+          The Beneficiary Management App was designed to help organizations efficiently manage and track beneficiaries seeking assistance. The CNIC-based system ensures that beneficiary information is accurately recorded, tracked, and updated across different departments, while offering role-based access to different stakeholders.
+        </p>               
+        <a href="https://cute-crostata-9e00ad.netlify.app/" target="blank" className="text-blue-400 hover:underline">
+          View Project
+        </a>             
+      </div>     
+
+    </div>         
+  </div>       
+</section>
+
 
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gray-900">
