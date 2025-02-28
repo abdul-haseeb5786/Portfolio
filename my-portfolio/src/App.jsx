@@ -43,6 +43,7 @@ export default function Home() {
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id)
+    if (!element) return;
     const offset = 80
     const bodyRect = document.body.getBoundingClientRect().top
     const elementRect = element.getBoundingClientRect().top
@@ -57,19 +58,7 @@ export default function Home() {
   }
 
   const skills = [
-    "HTML5",
-    "CSS3",
-    "JavaScript",
-    "React",
-    "Node.js",
-    "MongoDB",
-    "Express.js",
-    "Next.js",
-    "TypeScript",
-    "FireBase",
-    "Git",
-    "RESTful APIs",
-    
+    "HTML5", "CSS3", "JavaScript", "React", "Node.js", "MongoDB", "Express.js", "Next.js", "TypeScript", "Firebase", "Git", "RESTful APIs"
   ]
 
   return (
@@ -105,14 +94,9 @@ export default function Home() {
             <div className="md:hidden">
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
               >
-                <span className="sr-only">Open main menu</span>
-                {menuOpen ? (
-                  <AiOutlineClose className="block h-6 w-6" aria-hidden="true" />
-                ) : (
-                  <AiOutlineMenu className="block h-6 w-6" aria-hidden="true" />
-                )}
+                {menuOpen ? <AiOutlineClose className="h-6 w-6" /> : <AiOutlineMenu className="h-6 w-6" />}
               </button>
             </div>
           </div>
@@ -120,8 +104,8 @@ export default function Home() {
 
         {/* Mobile menu */}
         {menuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="md:hidden bg-gray-900 bg-opacity-95 fixed inset-0 flex flex-col items-center justify-center z-30">
+            <div className="space-y-6">
               {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
                 <motion.button
                   key={item}
@@ -130,7 +114,7 @@ export default function Home() {
                     activeSection === item.toLowerCase()
                       ? "bg-blue-500 text-white"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white"
-                  } block px-3 py-2 rounded-md text-base font-medium w-full text-left`}
+                  } block px-6 py-3 rounded-md text-lg font-medium`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -141,87 +125,51 @@ export default function Home() {
           </div>
         )}
       </nav>
-
-      {/* Hero Section with Particles */}
-      <section id="home" className="h-screen flex items-center justify-center relative overflow-hidden">
+{/* Hero Section with Particles */}
+<section id="home" className="h-screen flex items-center justify-center relative overflow-hidden">
+  {/* Particles Background */}
   <Particles
     id="tsparticles"
     init={particlesInit}
     options={{
       fullScreen: { enable: false },
-      background: {
-        color: {
-          value: "transparent",
-        },
-      },
+      background: { color: { value: "transparent" } },
       fpsLimit: 120,
       interactivity: {
         events: {
-          onClick: {
-            enable: true,
-            mode: "push",
-          },
-          onHover: {
-            enable: true,
-            mode: "repulse",
-          },
+          onClick: { enable: true, mode: "push" },
+          onHover: { enable: true, mode: "repulse" },
           resize: true,
         },
         modes: {
-          push: {
-            quantity: 4,
-          },
-          repulse: {
-            distance: 200,
-            duration: 0.4,
-          },
+          push: { quantity: 4 },
+          repulse: { distance: 200, duration: 0.4 },
         },
       },
       particles: {
-        color: {
-          value: "#ffffff",
-        },
-        links: {
-          color: "#ffffff",
-          distance: 150,
-          enable: true,
-          opacity: 0.5,
-          width: 1,
-        },
-        collisions: {
-          enable: true,
-        },
+        color: { value: "#ffffff" },
+        links: { color: "#ffffff", distance: 150, enable: true, opacity: 0.5, width: 1 },
+        collisions: { enable: true },
         move: {
           direction: "none",
           enable: true,
-          outModes: {
-            default: "bounce",
-          },
+          outModes: { default: "bounce" },
           random: false,
           speed: 2,
           straight: false,
         },
-        number: {
-          density: {
-            enable: true,
-            area: 800,
-          },
-          value: 80,
-        },
-        opacity: {
-          value: 0.5,
-        },
-        shape: {
-          type: "circle",
-        },
-        size: {
-          value: { min: 1, max: 5 },
-        },
+        number: { density: { enable: true, area: 800 }, value: 80 },
+        opacity: { value: 0.5 },
+        shape: { type: "circle" },
+        size: { value: { min: 1, max: 5 } },
       },
       detectRetina: true,
     }}
+    className="absolute inset-0"
   />
-  <div className="text-center flex flex-col items-center justify-center relative z-10 px-4 w-full">
+
+  {/* Content Wrapper */}
+  <div className="flex flex-col items-center justify-center h-full text-center relative z-10 px-4 w-full">
     <motion.h1
       className="text-5xl md:text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400"
       initial={{ opacity: 0, y: -50 }}
@@ -230,6 +178,7 @@ export default function Home() {
     >
       Hi, I'm Abdul Haseeb
     </motion.h1>
+
     <motion.div
       className="text-3xl md:text-4xl mb-6 text-blue-300"
       initial={{ opacity: 0 }}
@@ -244,16 +193,18 @@ export default function Home() {
         }}
       />
     </motion.div>
+
     <motion.p
-      className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-gray-300"
+      className="text-xl md:text-2xl mb-8 max-w-2xl text-gray-300"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 2, duration: 1 }}
     >
       Creating dynamic, responsive, and user-friendly web experiences.
     </motion.p>
+
     <motion.button
-      onClick={() => scrollToSection("about")}
+      onClick={() => scrollToSection("projects")}
       className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 shadow-lg"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
@@ -262,6 +213,7 @@ export default function Home() {
     </motion.button>
   </div>
 </section>
+
 
 
       {/* About Me Section */}
