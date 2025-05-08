@@ -69,6 +69,29 @@ export default function Projects() {
                 View Project
               </a>
             </motion.div>
+            <motion.div
+              className="bg-gray-700 p-6 rounded-lg shadow-xl dark:bg-gray-100"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              whileHover={{ scale: 1.05 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl md:text-3xl font-semibold mb-4 text-blue-300 dark:text-blue-600">
+               Project Tracker
+              </h3>
+              <p className="text-gray-300 mb-4 dark:text-gray-700">
+              Full-stack task management app using React, Express.js, MongoDB & Tailwind CSS. Create, categorize, and filter tasks with real-time updates. Clean, scalable code with modern UI. Built for productivity and efficient project tracking.
+              </p>
+              <a
+                href="https://project-tracker-ten-tawny.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-blue-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-600 transition-colors duration-300 dark:bg-blue-600 dark:hover:bg-blue-700"
+              >
+                View Project
+              </a>
+            </motion.div>
           </div>
         </div>
       </section>
