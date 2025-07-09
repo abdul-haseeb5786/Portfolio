@@ -35,7 +35,7 @@ export default function Projects() {
                 by lazy loading images and reducing bundle size.
               </p>
               <a
-                href="https://cheery-centaur-d47200.netlify.app/"
+                href="https://furniro-ecommerce-ten.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-blue-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-600 transition-colors duration-300 dark:bg-blue-600 dark:hover:bg-blue-700"
