@@ -74,7 +74,7 @@ export default function ContactForm() {
       viewport={{ once: true }}
     >
       <h3 className="text-2xl font-semibold text-white mb-6 text-center">
-        Let's Talk
+        Let's Connect
       </h3>
 
       <div className="grid grid-cols-1 gap-4">
