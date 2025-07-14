@@ -3,6 +3,7 @@ import { useState, useEffect, useCallback } from "react"
 import { FaLinkedin, FaWhatsapp, FaEnvelope, FaGithub } from "react-icons/fa"
 import { loadFull } from "tsparticles"
 import { motion } from "framer-motion"
+import ContactForm from "./ContactForm"
 
 export default function Contact() {
   const [showArrow, setShowArrow] = useState(false)
@@ -100,6 +101,9 @@ export default function Contact() {
           >
             I'm always open to new opportunities and collaborations. Feel free to reach out!
           </motion.p>
+          <div className="flex flex-col gap-16">
+
+          <ContactForm />
           <div className="flex justify-center gap-6">
             <motion.a
               href="mailto:abdulhaseebsohail115@gmail.com"
@@ -109,7 +113,7 @@ export default function Contact() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               aria-label="Email"
-            >
+              >
               <FaEnvelope size={24} />
             </motion.a>
             <motion.a
@@ -142,14 +146,15 @@ export default function Contact() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               aria-label="GitHub"
-            >
+              >
               <FaGithub size={24} />
             </motion.a>
           </div>
+              </div>
         </div>
       </section>
         </div>
     );
-}
+  }
 
 
