@@ -3,12 +3,15 @@ import React, { useCallback, useEffect, useState } from "react"
 import { loadFull } from "tsparticles"
 import { motion } from "framer-motion"
 import { useTheme } from "../context/ThemeContext"
+import { FaDownload } from "react-icons/fa"
+
 
 
 export default function AboutMe() {
   const [showArrow, setShowArrow] = useState(false)
   const [activeSection, setActiveSection] = useState("home")
   const [menuOpen, setMenuOpen] = useState(false)
+  const [loading, setLoading] = useState(false) 
 
   const { darkMode } = useTheme() // Using context for darkMode
 
@@ -56,6 +59,22 @@ export default function AboutMe() {
     })
     setMenuOpen(false)
   }
+  
+
+
+const downloadCV = () => {
+  setLoading(true)
+  // const fileId = "1FjJxMQu_gHo1MurLQnyjD2TZ0o5z_re1"
+  const url = `https://drive.google.com/uc?export=download&id=${fileId}`
+  const link = document.createElement("a")
+  link.href = url
+  link.setAttribute("download", "Abdul_Haseeb_CV.pdf")
+  document.body.appendChild(link)
+  link.click()
+  document.body.removeChild(link)
+  setLoading(false)
+}
+
 
   return (
     <div>
@@ -88,10 +107,21 @@ export default function AboutMe() {
             transition={{ delay: 0.4, duration: 0.5 }}
             viewport={{ once: true }}
           >
-            My journey in web development started with a curiosity to create interactive websites and has grown into a
-            professional commitment to deliver excellence. Whether it's a sleek UI or a robust back-end, I enjoy every
-            step of turning ideas into reality through clean and efficient code.
+              My journey in Mern Stack development started with a curiosity to create interactive websites and has grown into a
+  professional commitment to deliver excellence. Whether it's a sleek UI or a robust back-end, I enjoy every
+  step of turning ideas into reality through clean and efficient code. <span className="font-medium text-blue-400 dark:text-blue-600">For more details about my skills and experience, feel free to download my CV below.</span>
           </motion.p>
+        <motion.button
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  onClick={downloadCV}
+  disabled={loading}
+  className="inline-flex items-center gap-2 px-6 py-2 bg-blue-500 text-white text-sm md:text-base font-medium rounded-md shadow hover:bg-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+>
+  <FaDownload className="text-lg" />
+  {loading ? "Downloading..." : "Download CV"}
+</motion.button>
+
         </div>
       </section>
     </div>
