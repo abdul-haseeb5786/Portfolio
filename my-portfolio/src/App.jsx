@@ -8,6 +8,7 @@ import Education from "./components/Education"
 import Skills from "./components/Skills"
 import Projects from "./components/Projects"
 import Contact from "./components/Contact"
+import Reviews from "./components/Reviews"
 
 
 
@@ -33,6 +34,7 @@ export default function Home() {
       <Education />
       <Skills />
       <Projects />
+      <Reviews />
       <Contact />
 
       {/* Scroll-to-top Button */}
@@ -50,7 +52,7 @@ export default function Home() {
         </motion.div>
       )}
 
-      <footer className="py-4 bg-gray-800 text-center text-gray-400 dark:bg-gray-200 dark:text-gray-700">
+      <footer className="py-4 bg-gray-900 text-center text-gray-400 dark:bg-gray-200 dark:text-gray-700">
         <p>© 2025 Abdul Haseeb. All Rights Reserved.</p>
       </footer>
     </div>

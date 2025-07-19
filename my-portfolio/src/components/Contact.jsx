@@ -81,7 +81,7 @@ export default function Contact() {
   ]
     return (
         <div>
-             <section id="contact" className="py-20 bg-gray-900 dark:bg-gray-100">
+             <section id="contact" className="py-20 bg-gray-800 dark:bg-gray-100">
         <div className="max-w-4xl mx-auto text-center px-4">
           <motion.h2
             className="text-4xl md:text-5xl font-semibold mb-10 text-blue-400 dark:text-blue-600"

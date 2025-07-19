@@ -14,7 +14,7 @@ const NavBar = () => {
     const handleScroll = () => {
       setShowArrow(window.scrollY > 300);
 
-      const sections = ["home", "about", "education", "skills", "projects", "contact"];
+      const sections = ["home", "about", "education", "skills", "projects", "reviews", "contact"];
       let current = "home";
 
       sections.forEach((section) => {
@@ -62,7 +62,7 @@ const NavBar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              {["Home", "About", "Education", "Skills", "Projects", "Contact"].map((item) => (
+              {["Home", "About", "Education", "Skills", "Projects", "Reviews", "Contact"].map((item) => (
                 <motion.button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
