@@ -139,7 +139,7 @@ export default function Contact() {
               <FaWhatsapp size={24} />
             </motion.a>
             <motion.a
-              href="https://github.com/abdul-haseeb2057"
+              href="https://github.com/abdul-haseeb5786"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-500 p-4 rounded-full hover:bg-blue-600 transition-colors duration-300 dark:bg-blue-600 dark:hover:bg-blue-700"
