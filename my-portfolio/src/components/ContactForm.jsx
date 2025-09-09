@@ -3,13 +3,7 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 
 export default function ContactForm() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  })
-
+  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" })
   const [buttonText, setButtonText] = useState("Send Message")
   const [isLoading, setIsLoading] = useState(false)
   const [isSend, setIsSend] = useState(false)
@@ -39,26 +33,20 @@ export default function ContactForm() {
 
       if (res.ok) {
         setForm({ name: "", email: "", subject: "", message: "" })
-        setButtonText("Message Sent Successfully ✅")
+        setButtonText("Message Sent ✅")
         setIsSend(true)
         setTimeout(() => {
           setButtonText("Send Message")
           setIsSend(false)
         }, 2000)
       } else {
-        const data = await res.json()
-        console.error("Error:", data.message)
-        setButtonText("Failed to Send ❌")
-        setTimeout(() => {
-          setButtonText("Send Message")
-        }, 5000)
+        setButtonText("Failed ❌")
+        setTimeout(() => setButtonText("Send Message"), 5000)
       }
     } catch (err) {
       console.error(err)
-      setButtonText("Error Sending ❌")
-      setTimeout(() => {
-        setButtonText("Send Message")
-      }, 5000)
+      setButtonText("Error ❌")
+      setTimeout(() => setButtonText("Send Message"), 5000)
     } finally {
       setIsLoading(false)
     }
@@ -67,44 +55,29 @@ export default function ContactForm() {
   return (
     <motion.form
       onSubmit={handleSubmit}
-      className="w-full max-w-lg mx-auto px-6 py-8 rounded-xl shadow-md bg-gray-900 border border-gray-700"
+      className="w-full max-w-lg mx-auto px-6 py-8 rounded-xl shadow-md bg-[#1a2238] border border-[#2a314d]"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
     >
-      <h3 className="text-2xl font-semibold text-white mb-6 text-center">
+      <h3 className="text-2xl font-semibold text-[#599692] mb-6 text-center">
         Let's Connect
       </h3>
 
       <div className="grid grid-cols-1 gap-4">
-        <input
-          type="text"
-          name="name"
-          value={form.name}
-          onChange={handleChange}
-          placeholder="Name"
-          required
-          className="px-4 py-2 rounded-md bg-gray-800 border border-gray-600 text-sm text-white"
-        />
-        <input
-          type="email"
-          name="email"
-          value={form.email}
-          onChange={handleChange}
-          placeholder="Email"
-          required
-          className="px-4 py-2 rounded-md bg-gray-800 border border-gray-600 text-sm text-white"
-        />
-        <input
-          type="text"
-          name="subject"
-          value={form.subject}
-          onChange={handleChange}
-          placeholder="Subject"
-          required
-          className="px-4 py-2 rounded-md bg-gray-800 border border-gray-600 text-sm text-white"
-        />
+        {["name", "email", "subject"].map((field) => (
+          <input
+            key={field}
+            type={field === "email" ? "email" : "text"}
+            name={field}
+            value={form[field]}
+            onChange={handleChange}
+            placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
+            required
+            className="px-4 py-2 rounded-md bg-[#11172a] border border-[#2a314d] text-sm text-[#dfe5ec] placeholder-[#626c7d]"
+          />
+        ))}
         <textarea
           name="message"
           value={form.message}
@@ -112,7 +85,7 @@ export default function ContactForm() {
           placeholder="Message"
           rows={4}
           required
-          className="px-4 py-2 rounded-md bg-gray-800 border border-gray-600 text-sm text-white resize-none"
+          className="px-4 py-2 rounded-md bg-[#11172a] border border-[#2a314d] text-sm text-[#dfe5ec] placeholder-[#626c7d] resize-none"
         />
       </div>
 
@@ -121,13 +94,13 @@ export default function ContactForm() {
         whileTap={{ scale: !isLoading && !isSend ? 0.97 : 1 }}
         type="submit"
         disabled={isLoading || isSend}
-        className={`mt-6 w-full text-sm py-2 rounded-md transition-all duration-300 text-white
+        className={`mt-6 w-full text-sm py-2 rounded-md transition-all duration-300 text-[#dfe5ec]
           ${
             isLoading
-              ? "bg-gray-400 cursor-not-allowed"
+              ? "bg-[#626c7d] cursor-not-allowed"
               : isSend
               ? "bg-green-600 cursor-not-allowed"
-              : "bg-blue-500 hover:bg-blue-600"
+              : "bg-[#599692] hover:bg-[#4d827f]"
           }
         `}
       >
