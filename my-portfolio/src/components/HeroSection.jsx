@@ -1,19 +1,14 @@
-"use client";
-import React from 'react';
-import { useCallback } from "react";
 
+"use client";
+import React, { useCallback } from 'react';
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { useTheme } from '../context/ThemeContext';
 
-
-// Import useTheme from your context
-// import { useTheme } from "./context/ThemeContext"; // Adjust path if needed
-
 const HeroSection = () => {
-  const { darkMode } = useTheme(); // Get darkMode from context
+  const { darkMode } = useTheme();
 
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
@@ -36,8 +31,11 @@ const HeroSection = () => {
 
   return (
     <div>
-      <section id="home" className="h-screen flex items-center justify-center relative overflow-hidden">
-       
+      <section
+        id="home"
+        className="h-screen flex items-center justify-center relative overflow-hidden "
+        style={{ backgroundColor: "#11172a" }}
+      >
         <Particles
           id="tsparticles"
           init={particlesInit}
@@ -57,17 +55,10 @@ const HeroSection = () => {
               },
             },
             particles: {
-              color: { value: "#ffffff" },
-              links: { color: "#ffffff", distance: 150, enable: true, opacity: 0.5, width: 1 },
+              color: { value: "#599692" },
+              links: { color: "#599692", distance: 150, enable: true, opacity: 0.5, width: 1 },
               collisions: { enable: true },
-              move: {
-                direction: "none",
-                enable: true,
-                outModes: { default: "bounce" },
-                random: false,
-                speed: 2,
-                straight: false,
-              },
+              move: { direction: "none", enable: true, outModes: { default: "bounce" }, random: false, speed: 2, straight: false },
               number: { density: { enable: true, area: 800 }, value: 40 },
               opacity: { value: 0.5 },
               shape: { type: "circle" },
@@ -81,7 +72,8 @@ const HeroSection = () => {
         {/* Content */}
         <div className="flex flex-col items-center justify-center h-full text-center relative z-10 px-4 w-full">
           <motion.h1
-            className="text-5xl md:text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400"
+            className="text-5xl md:text-6xl font-bold mb-4"
+            style={{ color: "#dfe5ec" }}
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -90,7 +82,8 @@ const HeroSection = () => {
           </motion.h1>
 
           <motion.div
-            className="text-3xl md:text-4xl mb-6 text-blue-300 dark:text-blue-600"
+            className="font-semibold text-3xl md:text-4xl mb-6"
+            style={{ color: "#599692" }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}
@@ -105,7 +98,8 @@ const HeroSection = () => {
           </motion.div>
 
           <motion.p
-            className="text-xl md:text-2xl mb-8 max-w-2xl text-gray-300 dark:text-gray-700"
+            className="text-xl md:text-2xl mb-8 max-w-2xl"
+            style={{ color: "#626c7d" }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 2, duration: 1 }}
@@ -115,7 +109,8 @@ const HeroSection = () => {
 
           <motion.button
             onClick={() => scrollToSection("projects")}
-            className="bg-sky-800 hover:bg-sky-950 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 shadow-lg dark:bg-blue-600 dark:hover:bg-blue-700"
+            className="px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 shadow-lg"
+            style={{ backgroundColor: "#599692", color: "#dfe5ec" }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

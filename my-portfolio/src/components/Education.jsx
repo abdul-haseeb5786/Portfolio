@@ -1,33 +1,51 @@
 "use client"
-import {  useCallback } from "react"
+import { useCallback } from "react"
 import { loadFull } from "tsparticles"
 import { motion } from "framer-motion"
-// import { useTheme } from "../context/ThemeContext"
-
+import Devider from "./Devider"
 
 export default function Education() {
-
-  // Instead of local darkMode state, we use the one provided by context
-//   const { darkMode } = useTheme()
-
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine)
   }, [])
 
-  
-
-
- 
-
-  
+  const educationData = [
+    {
+      id: 1,
+      title: "Madrasa-tul-Madina",
+      date: "Jun 2015 - Jan 2018",
+      description: "Hifz-e-Quran Certification with Tajweed and Islamic Studies",
+      points: [
+        { icon: "📖", text: "Complete Quran Memorization" },
+        { icon: "🕌", text: "Islamic Jurisprudence" },
+      ],
+    },
+    {
+      id: 2,
+      title: "DAR-UL-MADINAH",
+      date: "Jun 2022 - May 2023",
+      description:
+        "Matriculation in Computer Science with focus on fundamental concepts.",
+      points: [{ icon: "📘", text: "Core CS Subjects" }],
+    },
+    {
+      id: 3,
+      title: "Saylani Mass IT Training",
+      date: "Dec 2023 - Jan 2025",
+      description:
+        "Professional certification in MERN Stack Development with hands-on project experience.",
+      points: [{ icon: "🏆", text: "3 Hackathon Wins" }],
+    },
+  ]
 
   return (
     <div>
-      <section id="education" className="py-20 bg-gray-800 dark:bg-gray-200">
+    <Devider />
+      <section id="education" className="py-20 bg-[#11172a]">
         <div className="max-w-6xl mx-auto px-4 relative">
           {/* Section Title */}
           <motion.h2
-            className="text-4xl md:text-5xl font-semibold mb-16 text-center text-blue-400 dark:text-blue-600"
+            className="text-4xl md:text-5xl font-semibold mb-16 text-center text-[#599692]"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -38,9 +56,9 @@ export default function Education() {
 
           {/* Timeline Container */}
           <div className="relative">
-            {/* Vertical Line (Desktop Only) */}
+            {/* Vertical Line */}
             <motion.div
-              className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gray-600 dark:bg-gray-400 transform -translate-x-1/2"
+              className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-[#626c7d] transform -translate-x-1/2"
               initial={{ scaleY: 0 }}
               whileInView={{ scaleY: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
@@ -49,219 +67,92 @@ export default function Education() {
 
             {/* Timeline Items */}
             <div className="space-y-12 md:space-y-20">
-              {/* Madrasa-tul-Madina Item */}
-              <motion.div
-                className="flex flex-col md:flex-row items-center gap-8"
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.6, type: "spring" }}
-                viewport={{ once: true, margin: "-100px" }}
-              >
-                {/* Left Side (Desktop) */}
-                <div className="hidden md:block w-1/2 pr-8">
-                  <motion.div
-                    className="relative h-full"
-                    whileHover={{ scale: 1.1 }}
-                  >
-                    <div className="absolute right-0 top-1/2 -mr-4 w-8 h-8 bg-blue-400 rounded-full transform -translate-y-1/2 dark:bg-blue-600 shadow-lg hover:shadow-blue-400/30 transition-shadow" />
-                  </motion.div>
-                </div>
-
-                {/* Mobile Dot */}
+              {educationData.map((item, index) => (
                 <motion.div
-                  className="md:hidden w-full flex justify-center"
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ delay: 0.2 }}
+                  key={item.id}
+                  className="flex flex-col md:flex-row items-center gap-8"
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  whileHover={{ scale: 1.02 }}
+                  transition={{
+                    duration: 0.6,
+                    type: "spring",
+                    delay: index * 0.2,
+                  }}
+                  viewport={{ once: true, margin: "-100px" }}
                 >
-                  <div className="w-6 h-6 bg-blue-400 rounded-full dark:bg-blue-600 shadow-lg" />
-                </motion.div>
-
-                {/* Content Card */}
-                <motion.div
-                  className="w-full md:w-1/2 bg-gray-700 p-6 rounded-xl shadow-xl dark:bg-gray-100 relative hover:shadow-2xl transition-shadow duration-300"
-                  whileHover={{ rotate: -1 }}
-                >
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 md:hidden w-8 h-8 bg-gray-700 rotate-45 dark:bg-gray-100" />
-                  <motion.h3
-                    className="text-2xl font-bold mb-2 text-blue-300 dark:text-blue-600"
-                    whileHover={{ x: 10 }}
+                  {/* Side Dot (Desktop) */}
+                  <div
+                    className={`hidden md:block w-1/2 ${
+                      index % 2 === 0 ? "pr-8" : "pl-8 order-2"
+                    }`}
                   >
-                    Madrasa-tul-Madina
-                  </motion.h3>
-                  <motion.p
-                    className="text-gray-400 dark:text-gray-600 text-sm mb-2"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: 0.3 }}
-                  >
-                    Jun 2015 - Jan 2018
-                  </motion.p>
-                  <motion.div
-                    className="space-y-4"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: 0.4 }}
-                  >
-                    <p className="text-gray-300 dark:text-gray-700">
-                      Hifz-e-Quran Certification with Tajweed and Islamic Studies
-                    </p>
                     <motion.div
-                      className="flex items-center gap-2 text-sm text-blue-300 dark:text-blue-600"
-                      whileHover={{ scale: 1.05 }}
+                      className="relative h-full"
+                      whileHover={{ scale: 1.1 }}
                     >
-                      <span>📖</span>
-                      <span>Complete Quran Memorization</span>
+                      <div
+                        className={`absolute ${
+                          index % 2 === 0 ? "right-0 -mr-4" : "left-0 -ml-4"
+                        } top-1/2 w-8 h-8 bg-[#599692] rounded-full transform -translate-y-1/2 shadow-lg hover:shadow-[#599692]/30 transition-shadow`}
+                      />
                     </motion.div>
-                    <motion.div
-                      className="flex items-center gap-2 text-sm text-blue-300 dark:text-blue-600"
-                      whileHover={{ scale: 1.05 }}
-                    >
-                      <span>🕌</span>
-                      <span>Islamic Jurisprudence</span>
-                    </motion.div>
-                  </motion.div>
-                </motion.div>
-              </motion.div>
+                  </div>
 
-              {/* DAR-UL-MADINAH Item */}
-              <motion.div
-                className="flex flex-col md:flex-row items-center gap-8"
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.6, type: "spring", delay: 0.2 }}
-                viewport={{ once: true, margin: "-100px" }}
-              >
-                {/* Right Side (Desktop) */}
-                <div className="hidden md:block w-1/2 pl-8 order-2">
+                  {/* Mobile Dot */}
                   <motion.div
-                    className="relative h-full"
-                    whileHover={{ scale: 1.1 }}
+                    className="md:hidden w-full flex justify-center"
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ delay: 0.2 * index }}
                   >
-                    <div className="absolute left-0 top-1/2 -ml-4 w-8 h-8 bg-blue-400 rounded-full transform -translate-y-1/2 dark:bg-blue-600 shadow-lg hover:shadow-blue-400/30 transition-shadow" />
+                    <div className="w-6 h-6 bg-[#599692] rounded-full shadow-lg" />
                   </motion.div>
-                </div>
 
-                {/* Mobile Dot */}
-                <motion.div
-                  className="md:hidden w-full flex justify-center"
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ delay: 0.4 }}
-                >
-                  <div className="w-6 h-6 bg-blue-400 rounded-full dark:bg-blue-600 shadow-lg" />
-                </motion.div>
-
-                {/* Content Card */}
-                <motion.div
-                  className="w-full md:w-1/2 bg-gray-700 p-6 rounded-xl shadow-xl dark:bg-gray-100 relative order-1 hover:shadow-2xl transition-shadow duration-300"
-                  whileHover={{ rotate: 1 }}
-                >
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 md:hidden w-8 h-8 bg-gray-700 rotate-45 dark:bg-gray-100" />
-                  <motion.h3
-                    className="text-2xl font-bold mb-2 text-blue-300 dark:text-blue-600"
-                    whileHover={{ x: 10 }}
-                  >
-                    DAR-UL-MADINAH
-                  </motion.h3>
-                  <motion.p
-                    className="text-gray-400 dark:text-gray-600 text-sm mb-2"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: 0.5 }}
-                  >
-                    Jun 2022 - May 2023
-                  </motion.p>
+                  {/* Content Card */}
                   <motion.div
-                    className="space-y-4"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: 0.6 }}
+                    className={`w-full md:w-1/2 bg-[#1a2238] p-6 rounded-xl shadow-xl relative ${
+                      index % 2 !== 0 ? "order-1" : ""
+                    } hover:shadow-2xl transition-shadow duration-300`}
+                    whileHover={{ rotate: index % 2 === 0 ? -1 : 1 }}
                   >
-                    <p className="text-gray-300 dark:text-gray-700">
-                      Matriculation in Computer Science with focus on fundamental concepts.
-                    </p>
-                    <motion.div
-                      className="flex items-center gap-2 text-sm text-blue-300 dark:text-blue-600"
-                      whileHover={{ scale: 1.05 }}
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 md:hidden w-8 h-8 bg-[#1a2238] rotate-45" />
+
+                    <motion.h3
+                      className="text-2xl font-bold mb-2 text-[#dfe5ec]"
+                      whileHover={{ x: 10 }}
                     >
-                      <span>📘</span>
-                      <span>Core CS Subjects</span>
+                      {item.title}
+                    </motion.h3>
+                    <motion.p
+                      className="text-[#626c7d] text-sm mb-2"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ delay: 0.3 }}
+                    >
+                      {item.date}
+                    </motion.p>
+                    <motion.div
+                      className="space-y-4"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ delay: 0.4 }}
+                    >
+                      <p className="text-[#dfe5ec]">{item.description}</p>
+                      {item.points.map((point, idx) => (
+                        <motion.div
+                          key={idx}
+                          className="flex items-center gap-2 text-sm text-[#599692]"
+                          whileHover={{ scale: 1.05 }}
+                        >
+                          <span>{point.icon}</span>
+                          <span>{point.text}</span>
+                        </motion.div>
+                      ))}
                     </motion.div>
                   </motion.div>
                 </motion.div>
-              </motion.div>
-
-              {/* Saylani Item */}
-              <motion.div
-                className="flex flex-col md:flex-row items-center gap-8"
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.6, type: "spring", delay: 0.4 }}
-                viewport={{ once: true, margin: "-100px" }}
-              >
-                {/* Left Side (Desktop) */}
-                <div className="hidden md:block w-1/2 pr-8">
-                  <motion.div
-                    className="relative h-full"
-                    whileHover={{ scale: 1.1 }}
-                  >
-                    <div className="absolute right-0 top-1/2 -mr-4 w-8 h-8 bg-blue-400 rounded-full transform -translate-y-1/2 dark:bg-blue-600 shadow-lg hover:shadow-blue-400/30 transition-shadow" />
-                  </motion.div>
-                </div>
-
-                {/* Mobile Dot */}
-                <motion.div
-                  className="md:hidden w-full flex justify-center"
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ delay: 0.6 }}
-                >
-                  <div className="w-6 h-6 bg-blue-400 rounded-full dark:bg-blue-600 shadow-lg" />
-                </motion.div>
-
-                {/* Content Card */}
-                <motion.div
-                  className="w-full md:w-1/2 bg-gray-700 p-6 rounded-xl shadow-xl dark:bg-gray-100 relative hover:shadow-2xl transition-shadow duration-300"
-                  whileHover={{ rotate: -1 }}
-                >
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 md:hidden w-8 h-8 bg-gray-700 rotate-45 dark:bg-gray-100" />
-                  <motion.h3
-                    className="text-2xl font-bold mb-2 text-blue-300 dark:text-blue-600"
-                    whileHover={{ x: 10 }}
-                  >
-                    Saylani Mass IT Training
-                  </motion.h3>
-                  <motion.p
-                    className="text-gray-400 dark:text-gray-600 text-sm mb-2"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: 0.7 }}
-                  >
-                    Dec 2023 - Jan 2025
-                  </motion.p>
-                  <motion.div
-                    className="space-y-4"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: 0.8 }}
-                  >
-                    <p className="text-gray-300 dark:text-gray-700">
-                      Professional certification in MERN Stack Development with hands-on project experience.
-                    </p>
-                    <motion.div
-                      className="flex items-center gap-2 text-sm text-blue-300 dark:text-blue-600"
-                      whileHover={{ scale: 1.05 }}
-                    >
-                      <span>🏆</span>
-                      <span>3 Hackathon Wins</span>
-                    </motion.div>
-                  </motion.div>
-                </motion.div>
-              </motion.div>
+              ))}
             </div>
           </div>
         </div>
