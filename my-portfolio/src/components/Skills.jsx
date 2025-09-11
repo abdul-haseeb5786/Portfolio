@@ -1,12 +1,9 @@
+
 "use client"
-import { useState, useEffect, useCallback } from "react"
-
-import { loadFull } from "tsparticles"
 import { motion } from "framer-motion"
-
+import Devider from "./Devider"
 
 export default function Skills() {
-  
   const skills = [
     { name: "HTML5", proficiency: 90 },
     { name: "CSS3", proficiency: 85 },
@@ -22,12 +19,14 @@ export default function Skills() {
     { name: "RESTful APIs", proficiency: 80 },
   ]
 
-    return (
-        <div>
-               <section id="skills" className="py-20 bg-gray-900 dark:bg-gray-100">
+  return (
+    <div>
+      <Devider />
+      <section id="skills" className="py-20 bg-[#11172a]">
         <div className="max-w-6xl mx-auto text-center px-4">
+          {/* Section Title */}
           <motion.h2
-            className="text-4xl md:text-5xl font-semibold mb-10 text-blue-400 dark:text-blue-600"
+            className="text-4xl md:text-5xl font-semibold mb-10 text-[#599692]"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -35,21 +34,25 @@ export default function Skills() {
           >
             Skills
           </motion.h2>
+
+          {/* Skills Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {skills.map((skill, index) => (
               <motion.div
                 key={skill.name}
-                className="bg-gray-800 p-4 rounded-lg shadow-lg dark:bg-gray-200"
+                className="bg-[#1a2238] p-4 rounded-lg shadow-lg"
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.5,}}
                 whileHover={{ scale: 1.05, rotate: 5 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-lg md:text-xl font-semibold text-blue-300 dark:text-blue-600">{skill.name}</h3>
-                <div className="w-full bg-gray-700 rounded-full h-2 mt-2 dark:bg-gray-300">
+                <h3 className="text-lg md:text-xl font-semibold text-[#dfe5ec]">
+                  {skill.name}
+                </h3>
+                <div className="w-full bg-[#626c7d] rounded-full h-2 mt-2">
                   <div
-                    className="bg-blue-500 h-2 rounded-full dark:bg-blue-600"
+                    className="bg-[#599692] h-2 rounded-full"
                     style={{ width: `${skill.proficiency}%` }}
                   ></div>
                 </div>
@@ -58,6 +61,6 @@ export default function Skills() {
           </div>
         </div>
       </section>
-        </div>
-    );
+    </div>
+  )
 }
