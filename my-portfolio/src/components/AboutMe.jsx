@@ -109,7 +109,7 @@ export default function AboutMe() {
             transition={{ delay: 0.4, duration: 0.5 }}
             viewport={{ once: true }}
           >
-            Myy journey in MERN Stack development started with a curiosity to create interactive websites and has grown into a
+            My journey in MERN Stack development started with a curiosity to create interactive websites and has grown into a
             professional commitment to deliver excellence. Whether it's a sleek UI or a robust back-end, I enjoy every
             step of turning ideas into reality through clean and efficient code.{" "}
             <span className="font-medium" style={{ color: "#dfe5ec" }}>
