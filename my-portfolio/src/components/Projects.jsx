@@ -65,7 +65,7 @@ export default function Projects() {
             >
               {/* Background Image (hover only) */}
               <div
-                className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 group-hover:blur-[1px] transition duration-500"
+                className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 group-hover:blur-[2px] transition duration-500"
                 style={{ backgroundImage: `url(/${project.image})` }}
               ></div>
 
