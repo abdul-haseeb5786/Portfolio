@@ -56,7 +56,7 @@ export default function Projects() {
           {projectsData.map((project, index) => (
             <motion.div
               key={index}
-              className="relative h-60 rounded-xl overflow-hidden shadow-lg group"
+             className="relative h-80 sm:h-60 rounded-xl overflow-hidden shadow-lg group"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               whileHover={{ scale: 1.05 }}
