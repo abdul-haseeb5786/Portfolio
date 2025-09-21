@@ -68,7 +68,7 @@ const HeroSection = () => {
           className="absolute inset-0"
         />
 
-        {/* 
+        
         <div className="flex flex-col items-center justify-center h-full text-center relative z-10 px-4 w-full">
           <motion.h1
             className="text-5xl md:text-6xl font-bold mb-4"
