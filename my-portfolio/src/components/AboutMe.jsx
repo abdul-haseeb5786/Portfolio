@@ -88,34 +88,36 @@ export default function AboutMe() {
             About Me
           </motion.h2>
 
-          <motion.p
-            className="text-lg md:text-xl mb-6"
-            style={{ color: "#626c7d" }}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            Hi, I'm Abdul Haseeb, a dedicated MERN Stack Developer with a strong passion for crafting dynamic,
-            responsive, and user-friendly web applications. With a solid foundation in modern front-end and back-end
-            technologies, I specialize in building scalable solutions that solve real-world problems.
-          </motion.p>
+<motion.p
+  className="text-lg md:text-xl mb-6"
+  style={{ color: "#626c7d" }}
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ delay: 0.2, duration: 0.5 }}
+  viewport={{ once: true }}
+>
+  Hi, I'm Abdul Haseeb — a dedicated <span className="font-medium" style={{ color: "#dfe5ec" }}>MERN Stack Developer & AI Automation Engineer</span> 
+  with a strong passion for crafting dynamic, responsive, and intelligent web applications. I specialize in building 
+  scalable full-stack solutions, integrating automation, and enhancing user experiences through modern web and AI technologies.
+</motion.p>
 
-          <motion.p
-            className="text-lg md:text-xl mb-6"
-            style={{ color: "#626c7d" }}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            My journey in MERN Stack development started with a curiosity to create interactive websites and has grown into a
-            professional commitment to deliver excellence. Whether it's a sleek UI or a robust back-end, I enjoy every
-            step of turning ideas into reality through clean and efficient code.{" "}
-            <span className="font-medium" style={{ color: "#dfe5ec" }}>
-              For more details about my skills and experience, feel free to download my CV below.
-            </span>
-          </motion.p>
+<motion.p
+  className="text-lg md:text-xl mb-6"
+  style={{ color: "#626c7d" }}
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ delay: 0.4, duration: 0.5 }}
+  viewport={{ once: true }}
+>
+  My journey started with a curiosity to create interactive websites and has evolved into a passion for 
+  <span className="font-medium" style={{ color: "#dfe5ec" }}> AI-driven development, automation workflows, and voice agent systems.</span> 
+  Whether it’s a sleek UI or a robust backend, I enjoy every step of turning ideas into real, impactful products 
+  through clean and efficient code.{" "}
+  <span className="font-medium" style={{ color: "#dfe5ec" }}>
+    For more details about my skills and experience, feel free to download my CV below.
+  </span>
+</motion.p>
+
 
           <motion.button
           disabled={disable}
