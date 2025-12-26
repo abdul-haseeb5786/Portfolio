@@ -1,0 +1,509 @@
+{
+    "siteConfig": {
+        "name": "عبد الحسيب",
+        "role": "مطور MERN Stack ومهندس أتمتة الذكاء الاصطناعي",
+        "email": "abdulhaseeb.dev@gmail.com",
+        "phone": "+92 300 1234567",
+        "location": "كراتشي، باكستان",
+        "profilePic": "/hero-image.jpg",
+        "cvId": "1FjJxMQu_gHo1MurLQnyjD2TZ0o5z_re1",
+        "socials": {
+            "github": "https://github.com",
+            "linkedin": "https://linkedin.com",
+            "twitter": "https://twitter.com"
+        }
+    },
+    "hero": {
+        "welcome": "مرحباً بك في عالمي",
+        "name": "عبد الحسيب",
+        "typewriterStrings": [
+            "مطور MERN Stack",
+            "مهندس أتمتة الذكاء الاصطناعي",
+            "متحمس للذكاء الاصطناعي والتعلم الآلي",
+            "حلال المشاكل"
+        ],
+        "description": "أقوم بإنشاء تطبيقات ويب ديناميكية ومتجاوبة وذكية باستخدام التقنيات الحديثة والأتمتة المدفوعة بالذكاء الاصطناعي.",
+        "primaryAction": "عرض المشاريع",
+        "secondaryAction": "تواصل معي"
+    },
+    "about": {
+        "title": "نبذة",
+        "subtitle": "عني",
+        "paragraphs": [
+            "مرحباً، أنا **عبد الحسيب** — مطور MERN Stack ومهندس أتمتة الذكاء الاصطناعي مكرس بشغف قوي لإنشاء تطبيقات ويب ديناميكية ومتجاوبة وذكية.",
+            "بدأت رحلتي بفضول لإنشاء مواقع ويب تفاعلية وتطورت إلى شغف *بالتطوير المدفوع بالذكاء الاصطناعي وسير عمل الأتمتة وأنظمة الوكلاء الصوتيين.*",
+            "سواء كانت واجهة مستخدم أنيقة أو خلفية قوية، أستمتع بكل خطوة في تحويل الأفكار إلى منتجات حقيقية ومؤثرة من خلال كود نظيف وفعال."
+        ],
+        "education": {
+            "title": "التعليم",
+            "history": [
+                {
+                    "id": 1,
+                    "title": "Madrasa-tul-Madina",
+                    "date": "Jun 2015 - Jan 2018",
+                    "description": "Hifz-e-Quran Certification with Tajweed and Islamic Studies",
+                    "points": [
+                        {
+                            "icon": "📖",
+                            "text": "Complete Quran Memorization"
+                        },
+                        {
+                            "icon": "🕌",
+                            "text": "Islamic Jurisprudence"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "DAR-UL-MADINAH",
+                    "date": "Jun 2022 - May 2023",
+                    "description": "Matriculation in Computer Science with focus on fundamental concepts.",
+                    "points": [
+                        {
+                            "icon": "📘",
+                            "text": "Core CS Subjects"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "title": "Saylani Mass IT Training",
+                    "date": "Dec 2023 - Jan 2025",
+                    "description": "Professional certification in MERN Stack Development with hands-on project experience.",
+                    "points": [
+                        {
+                            "icon": "🏆",
+                            "text": "3 Hackathon Wins"
+                        }
+                    ]
+                }
+            ]
+        },
+        "stats": {
+            "experience": "سنوات الخبرة",
+            "projects": "المشاريع المنجزة"
+        },
+        "downloadCV": "تحميل السيرة الذاتية"
+    },
+    "skills": {
+        "title": "المهارات",
+        "subtitle": "التقنية",
+        "description": "قائمة شاملة بالتقنيات والأدوات التي أتخصص فيها لبناء حلول برمجية حديثة.",
+        "categories": [
+            {
+                "title": "لغات البرمجة",
+                "skills": [
+                    "JavaScript",
+                    "TypeScript",
+                    "Python",
+                    "Dart"
+                ]
+            },
+            {
+                "title": "تطوير الواجهة الأمامية",
+                "skills": [
+                    "React",
+                    "Next.js",
+                    "HTML5",
+                    "CSS3",
+                    "Bootstrap",
+                    "Tailwind",
+                    "Hero UI",
+                    "Chakra UI",
+                    "Redux Toolkit"
+                ]
+            },
+            {
+                "title": "تطوير الخلفية",
+                "skills": [
+                    "Node.js",
+                    "Express.js",
+                    "MongoDB",
+                    "Mongoose",
+                    "PostgreSQL",
+                    "Firebase"
+                ]
+            },
+            {
+                "title": "DevOps والأدوات",
+                "skills": [
+                    "AWS",
+                    "Azure",
+                    "Docker",
+                    "Git",
+                    "GitHub",
+                    "Vercel",
+                    "Postman"
+                ]
+            },
+            {
+                "title": "الذكاء الاصطناعي والأتمتة",
+                "skills": [
+                    "n8n",
+                    "Vapi",
+                    "OpenAI API",
+                    "LangChain",
+                    "AI Workflows",
+                    "Voice Agents",
+                    "MCP"
+                ]
+            },
+            {
+                "title": "الذكاء الاصطناعي وعلوم البيانات",
+                "skills": [
+                    "Machine Learning",
+                    "Deep Learning",
+                    "Data Science Fundamentals"
+                ]
+            }
+        ]
+    },
+    "projects": {
+        "title": "المشاريع",
+        "subtitle": "المميزة",
+        "description": "إليك بعض المشاريع التي عملت عليها، تتراوح من منصات SaaS إلى مساعدي الرعاية الصحية بالذكاء الاصطناعي.",
+        "allProjects": "جميع المشاريع",
+        "viewCaseStudy": "عرض دراسة الحالة",
+        "details": "التفاصيل",
+        "backToProjects": "العودة إلى المشاريع",
+        "backToHome": "العودة إلى الصفحة الرئيسية",
+        "overview": "نظرة عامة",
+        "keyFeatures": "الميزات الرئيسية",
+        "gallery": "معرض الصور",
+        "projectInfo": "معلومات المشروع",
+        "category": "الفئة",
+        "completionDate": "تاريخ الإنجاز",
+        "liveDemo": "العرض التوضيحي المباشر",
+        "githubRepo": "مستودع GitHub",
+        "features": {
+            "responsive": "تصميم متجاوب",
+            "performance": "محسّن للأداء",
+            "security": "مصادقة آمنة",
+            "modernUI": "واجهة مستخدم حديثة"
+        },
+        "items": [
+            {
+                "id": "furniro",
+                "title": "نسخة موقع Furniro",
+                "description": "موقع تجارة إلكترونية متجاوب مبني باستخدام React وFirebase وTailwind CSS. يتضمن تسجيل دخول المستخدم، وتوجيه ديناميكي، وصفحات المنتجات.",
+                "longDescription": "موقع تجارة إلكترونية متجاوب مبني باستخدام React وFirebase وTailwind CSS. يشمل تسجيل دخول المستخدم، التوجيه الديناميكي، وصفحات المنتجات. يتم تحميل الصور بشكل كسول لتحسين الأداء.",
+                "image": "/projects/furniro.png",
+                "extraImages": [],
+                "link": "https://furniro-ecommerce-ten.vercel.app/",
+                "github": "https://github.com",
+                "tech": [
+                    "React",
+                    "Firebase",
+                    "Tailwind CSS"
+                ],
+                "category": "تجارة إلكترونية"
+            },
+            {
+                "id": "shrinkly",
+                "title": "Shrinkly",
+                "description": "مختصر روابط حديث يدعم المسارات المخصصة، انتهاء صلاحية الروابط، وتسجيل دخول المستخدم.",
+                "longDescription": "مختصر روابط حديث يدعم المسارات المخصصة، انتهاء صلاحية الروابط، وتسجيل دخول المستخدم. مبني للموثوقية والأمان وتجربة مستخدم نظيفة باستخدام MERN Stack.",
+                "image": "/projects/shrinkly.png",
+                "extraImages": [],
+                "link": "https://shrinkly-beta.vercel.app/",
+                "github": "https://github.com",
+                "tech": [
+                    "MERN Stack",
+                    "MongoDB",
+                    "Express",
+                    "React"
+                ],
+                "category": "تطبيق ويب"
+            },
+            {
+                "id": "ems",
+                "title": "نظام إدارة الموظفين (EMS)",
+                "description": "نظام إدارة موظفين غني بالميزات مبني باستخدام MERN Stack. يشمل تعيين المهام وتسجيل دخول قائم على الدور.",
+                "longDescription": "نظام إدارة موظفين غني بالميزات مبني باستخدام MERN Stack. يشمل تعيين المهام، تسجيل دخول حسب الدور (مدير/مستخدم)، تتبع الأداء، وواجهة لوحة تحكم متجاوبة.",
+                "image": "/projects/ems.png",
+                "extraImages": [],
+                "link": "https://ems-orcin-pi.vercel.app/",
+                "github": "https://github.com",
+                "tech": [
+                    "MERN Stack",
+                    "MongoDB",
+                    "Express",
+                    "React"
+                ],
+                "category": "نظام إدارة"
+            },
+            {
+                "id": "vscode-portfolio",
+                "title": "محفظة مستوحاة من VS Code",
+                "description": "موقع محفظة مستوحى من VS Code مبني باستخدام React وTypeScript وTailwind CSS.",
+                "longDescription": "موقع محفظة مستوحى من VS Code مبني باستخدام React وTypeScript وTailwind CSS. يتضمن تصميم محرر كود، تنقل تفاعلي، أقسام قابلة للتخصيص، وتصميم متجاوب بالكامل لجميع الأجهزة.",
+                "image": "/projects/vscode.png",
+                "extraImages": [],
+                "link": "https://vscode-inspired-portfolio.vercel.app/",
+                "github": "https://github.com",
+                "tech": [
+                    "React",
+                    "TypeScript",
+                    "Tailwind CSS"
+                ],
+                "category": "محفظة أعمال"
+            },
+            {
+                "id": "beneficiary-management",
+                "title": "نظام إدارة المستفيدين",
+                "description": "تطبيق ويب للمنظمات لإدارة وتتبع المستفيدين باستخدام رقم الهوية الوطنية.",
+                "longDescription": "تطبيق ويب للمنظمات لإدارة وتتبع المستفيدين باستخدام رقم الهوية الوطنية. الوصول قائم على الدور لضمان الأمان والتحكم السلس في البيانات لتحقيق كفاءة العمليات.",
+                "image": "/projects/beneficiary.png",
+                "extraImages": [],
+                "link": "https://cute-crostata-9e00ad.netlify.app/",
+                "github": "https://github.com",
+                "tech": [
+                    "React",
+                    "Firebase",
+                    "Tailwind CSS"
+                ],
+                "category": "نظام إدارة"
+            },
+            {
+                "id": "project-tracker",
+                "title": "متتبع المشاريع",
+                "description": "مدير مهام كامل باستخدام React وExpress وMongoDB وTailwind CSS.",
+                "longDescription": "مدير مهام كامل باستخدام React وExpress وMongoDB وTailwind CSS. إنشاء وتنظيم وتصنيف المهام في الوقت الحقيقي مع واجهة نظيفة لتحسين إنتاجية الفريق.",
+                "image": "/projects/project-tracker.png",
+                "extraImages": [],
+                "link": "https://project-tracker-ten-tawny.vercel.app/",
+                "github": "https://github.com",
+                "tech": [
+                    "React",
+                    "Express",
+                    "MongoDB",
+                    "Tailwind CSS"
+                ],
+                "category": "إنتاجية"
+            },
+            {
+                "id": "startup-crm",
+                "title": "StartupCRM",
+                "description": "منصة ذكاء مبيعات شاملة مصممة للشركات الناشئة عالية النمو.",
+                "longDescription": "StartupCRM هي لوحة تحكم قوية لفرق المبيعات لتتبع العملاء المحتملين، إدارة خطوط العمل، واكتساب البيانات التحليلية. تتضمن الرسوم البيانية في الوقت الفعلي، تصنيف العملاء المحتملين، والمتابعات التلقائية. مبنية باستخدام React وNode.js.",
+                "image": "/projects/startup-crm/1.png",
+                "extraImages": [
+                    "/projects/startup-crm/2.png",
+                    "/projects/startup-crm/3.png"
+                ],
+                "link": "https://startup-crm.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "React",
+                    "Node.js",
+                    "MongoDB",
+                    "Tailwind"
+                ],
+                "category": "SaaS"
+            },
+            {
+                "id": "helply",
+                "title": "Helply",
+                "description": "منصة دعم العملاء مدعومة بالذكاء الاصطناعي مع دردشة مباشرة وأتمتة مدمجة.",
+                "longDescription": "تستفيد Helply من الذكاء الاصطناعي لأتمتة خدمة العملاء. يشمل روبوت محادثة ذكي للتعامل مع الاستفسارات الشائعة ولوحة تحكم للوكلاء البشريين عند الحاجة.",
+                "image": "/projects/helply/1.png",
+                "extraImages": [
+                    "/projects/helply/2.png",
+                    "/projects/helply/3.png"
+                ],
+                "link": "https://helply-ai.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "Next.js",
+                    "OpenAI",
+                    "Firebase",
+                    "TypeScript"
+                ],
+                "category": "منصة ذكاء اصطناعي"
+            },
+            {
+                "id": "hireflow",
+                "title": "Hireflow",
+                "description": "منصة توظيف حديثة ولوحة وظائف تربط المواهب بالشركات.",
+                "longDescription": "Hireflow تُبسط عملية التوظيف. يمكن للمرشحين التقديم على الوظائف، بينما يمكن لأصحاب العمل إدارة الطلبات وجدولة المقابلات من خلال واجهة سهلة الاستخدام.",
+                "image": "/projects/hireflow/1.png",
+                "extraImages": [
+                    "/projects/hireflow/2.png",
+                    "/projects/hireflow/3.png"
+                ],
+                "link": "https://hireflow-jobs.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "MERN Stack",
+                    "AWS",
+                    "Auth0",
+                    "Tailwind"
+                ],
+                "category": "بوابة وظائف"
+            },
+            {
+                "id": "meridian-commerce",
+                "title": "Meridian Commerce",
+                "description": "لوحة تحكم تجارة إلكترونية متقدمة مع تحليلات فورية وإدارة المخزون.",
+                "longDescription": "نظام إدارة تجارة إلكترونية كامل الميزات. يتتبع المبيعات، مستويات المخزون، وسلوك العملاء مع عروض وتقارير مرئية جذابة.",
+                "image": "/projects/meridian-commerce/1.png",
+                "extraImages": [
+                    "/projects/meridian-commerce/2.png",
+                    "/projects/meridian-commerce/3.png"
+                ],
+                "link": "https://meridian-shop.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "React",
+                    "PostgreSQL",
+                    "Express",
+                    "Chart.js"
+                ],
+                "category": "تجارة إلكترونية"
+            },
+            {
+                "id": "finance-assistant",
+                "title": "مساعد التمويل",
+                "description": "مدير مالي شخصي آمن لتتبع النفقات وتحديد الميزانيات.",
+                "longDescription": "يساعد مساعد التمويل المستخدمين على التحكم في أموالهم. ربط الحسابات، تتبع كل قرش، والحصول على رؤى مدعومة بالذكاء الاصطناعي حول كيفية التوفير بشكل أفضل.",
+                "image": "/projects/finance-assistant/1.png",
+                "extraImages": [
+                    "/projects/finance-assistant/2.png",
+                    "/projects/finance-assistant/3.png"
+                ],
+                "link": "https://finance-smart.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "TypeScript",
+                    "Next.js",
+                    "Prisma",
+                    "Plaid"
+                ],
+                "category": "تكنولوجيا مالية"
+            },
+            {
+                "id": "caresync",
+                "title": "CareSync",
+                "description": "مساعد صحي مدعوم بالذكاء الاصطناعي لإدارة المرضى وحجز المواعيد.",
+                "longDescription": "CareSync يجسر الفجوة بين المرضى والأطباء. يوفر فحص الأعراض، جدولة المواعيد، وتخزين آمن للسجلات الطبية.",
+                "image": "/projects/caresync/1.png",
+                "extraImages": [
+                    "/projects/caresync/2.png",
+                    "/projects/caresync/3.png"
+                ],
+                "link": "https://caresync-health.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "Flutter",
+                    "Firebase",
+                    "Node.js",
+                    "Python"
+                ],
+                "category": "تكنولوجيا الرعاية الصحية"
+            },
+            {
+                "id": "collab-chat",
+                "title": "دردشة التعاون بالذكاء الاصطناعي",
+                "description": "تطبيق تعاون فريق في الوقت الحقيقي مع مساعدين ذكاء اصطناعي مدمجين ومكالمات فيديو.",
+                "longDescription": "مساحة عمل حديثة حيث يمكن للفرق الدردشة، مشاركة الملفات، وعقد مكالمات فيديو. يتوفر مساعدين ذكاء اصطناعي في كل قناة للمساعدة في البحث وإعداد المسودات.",
+                "image": "/projects/collab-chat/1.png",
+                "extraImages": [
+                    "/projects/collab-chat/2.png",
+                    "/projects/collab-chat/3.png"
+                ],
+                "link": "https://collab-chat.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "React",
+                    "Socket.io",
+                    "WebRTC",
+                    "OpenAI"
+                ],
+                "category": "التواصل"
+            },
+            {
+                "id": "cryptopulse",
+                "title": "CryptoPulse",
+                "description": "متتبع محفظة العملات الرقمية مدعوم بالذكاء الاصطناعي مع بيانات السوق الفورية والرؤى التحليلية.",
+                "longDescription": "CryptoPulse يتتبع أصولك الرقمية عبر مختلف البورصات. يستخدم الذكاء الاصطناعي لتقديم تحليل المشاعر وتوقعات اتجاهات السوق.",
+                "image": "/projects/cryptopulse/1.png",
+                "extraImages": [
+                    "/projects/cryptopulse/2.png",
+                    "/projects/cryptopulse/3.png"
+                ],
+                "link": "https://cryptopulse.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "Next.js",
+                    "CoinGecko API",
+                    "TensorFlow.js",
+                    "Tailwind"
+                ],
+                "category": "عملات رقمية"
+            }
+        ]
+    },
+    "reviews": {
+        "title": "آراء",
+        "subtitle": "العملاء",
+        "description": "استمع إلى الأشخاص الذين تعاونت معهم في مشاريع مختلفة.",
+        "items": [
+            {
+                "id": 1,
+                "name": "James Anderson",
+                "role": "Startup Founder, UK",
+                "image": "https://randomuser.me/api/portraits/men/32.jpg",
+                "review": "Working with Haseeb was a fantastic experience. He delivered exactly what we needed, on time and with clean code."
+            },
+            {
+                "id": 2,
+                "name": "Emily Stone",
+                "role": "Project Manager, US",
+                "image": "https://randomuser.me/api/portraits/women/65.jpg",
+                "review": "Very reliable and professional. Haseeb understood our requirements clearly and exceeded expectations."
+            },
+            {
+                "id": 3,
+                "name": "Ahmed Khalid",
+                "role": "Freelance Client, Saudi Arabia",
+                "image": "https://randomuser.me/api/portraits/men/50.jpg",
+                "review": "Great communication and impressive React skills. He built a secure and fast web app for us. Highly recommended!"
+            }
+        ]
+    },
+    "contact": {
+        "title": "لنتواصل",
+        "subtitle": "معاً",
+        "description": "هل لديك مشروع في ذهنك أو تريد مناقشة تعاون؟ لا تتردد في التواصل. أنا دائماً منفتح على فرص جديدة.",
+        "email": "البريد الإلكتروني",
+        "phone": "الهاتف",
+        "location": "الموقع",
+        "form": {
+            "name": "الاسم",
+            "namePlaceholder": "أحمد محمد",
+            "email": "البريد الإلكتروني",
+            "emailPlaceholder": "ahmad@example.com",
+            "subject": "الموضوع",
+            "subjectPlaceholder": "استفسار عن مشروع",
+            "message": "الرسالة",
+            "messagePlaceholder": "أخبرني عن مشروعك...",
+            "send": "إرسال الرسالة"
+        }
+    },
+    "nav": {
+        "home": "الرئيسية",
+        "about": "نبذة عني",
+        "skills": "المهارات",
+        "projects": "المشاريع",
+        "contact": "تواصل"
+    },
+    "footer": {
+        "rights": "جميع الحقوق محفوظة."
+    },
+    "common": {
+        "loading": "جاري التحميل...",
+        "error": "حدث خطأ",
+        "notFound": "غير موجود",
+        "success": "تم إرسال الرسالة بنجاح!"
+    }
+}

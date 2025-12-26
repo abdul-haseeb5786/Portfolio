@@ -1,0 +1,509 @@
+{
+    "siteConfig": {
+        "name": "Abdul Haseeb",
+        "role": "MERN Stack Developer & AI Automation Engineer",
+        "email": "abdulhaseeb.dev@gmail.com",
+        "phone": "+92 300 1234567",
+        "location": "Karachi, Pakistan",
+        "profilePic": "/hero-image.jpg",
+        "cvId": "1FjJxMQu_gHo1MurLQnyjD2TZ0o5z_re1",
+        "socials": {
+            "github": "https://github.com",
+            "linkedin": "https://linkedin.com",
+            "twitter": "https://twitter.com"
+        }
+    },
+    "hero": {
+        "welcome": "Welcome to my world",
+        "name": "Abdul Haseeb",
+        "typewriterStrings": [
+            "MERN Stack Developer",
+            "AI Automation Engineer",
+            "AI & ML Enthusiast",
+            "Problem Solver"
+        ],
+        "description": "I craft dynamic, responsive, and intelligent web applications using modern technologies and AI-driven automation.",
+        "primaryAction": "View Projects",
+        "secondaryAction": "Contact Me"
+    },
+    "about": {
+        "title": "About",
+        "subtitle": "Me",
+        "paragraphs": [
+            "Hi, I'm **Abdul Haseeb** — a dedicated MERN Stack Developer & AI Automation Engineer with a strong passion for crafting dynamic, responsive, and intelligent web applications.",
+            "My journey started with a curiosity to create interactive websites and has evolved into a passion for *AI-driven development, automation workflows, and voice agent systems.*",
+            "Whether it's a sleek UI or a robust backend, I enjoy every step of turning ideas into real, impactful products through clean and efficient code."
+        ],
+        "education": {
+            "title": "Education",
+            "history": [
+                {
+                    "id": 1,
+                    "title": "Madrasa-tul-Madina",
+                    "date": "Jun 2015 - Jan 2018",
+                    "description": "Hifz-e-Quran Certification with Tajweed and Islamic Studies",
+                    "points": [
+                        {
+                            "icon": "📖",
+                            "text": "Complete Quran Memorization"
+                        },
+                        {
+                            "icon": "🕌",
+                            "text": "Islamic Jurisprudence"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "DAR-UL-MADINAH",
+                    "date": "Jun 2022 - May 2023",
+                    "description": "Matriculation in Computer Science with focus on fundamental concepts.",
+                    "points": [
+                        {
+                            "icon": "📘",
+                            "text": "Core CS Subjects"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "title": "Saylani Mass IT Training",
+                    "date": "Dec 2023 - Jan 2025",
+                    "description": "Professional certification in MERN Stack Development with hands-on project experience.",
+                    "points": [
+                        {
+                            "icon": "🏆",
+                            "text": "3 Hackathon Wins"
+                        }
+                    ]
+                }
+            ]
+        },
+        "stats": {
+            "experience": "Years Experience",
+            "projects": "Projects Done"
+        },
+        "downloadCV": "Download CV"
+    },
+    "skills": {
+        "title": "Technical",
+        "subtitle": "Skills",
+        "description": "A comprehensive list of technologies and tools I specialize in to build modern software solutions.",
+        "categories": [
+            {
+                "title": "Programming Languages",
+                "skills": [
+                    "JavaScript",
+                    "TypeScript",
+                    "Python",
+                    "Dart"
+                ]
+            },
+            {
+                "title": "Frontend Development",
+                "skills": [
+                    "React",
+                    "Next.js",
+                    "HTML5",
+                    "CSS3",
+                    "Bootstrap",
+                    "Tailwind",
+                    "Hero UI",
+                    "Chakra UI",
+                    "Redux Toolkit"
+                ]
+            },
+            {
+                "title": "Backend Development",
+                "skills": [
+                    "Node.js",
+                    "Express.js",
+                    "MongoDB",
+                    "Mongoose",
+                    "PostgreSQL",
+                    "Firebase"
+                ]
+            },
+            {
+                "title": "DevOps & Tools",
+                "skills": [
+                    "AWS",
+                    "Azure",
+                    "Docker",
+                    "Git",
+                    "GitHub",
+                    "Vercel",
+                    "Postman"
+                ]
+            },
+            {
+                "title": "AI & Automation",
+                "skills": [
+                    "n8n",
+                    "Vapi",
+                    "OpenAI API",
+                    "LangChain",
+                    "AI Workflows",
+                    "Voice Agents",
+                    "MCP"
+                ]
+            },
+            {
+                "title": "AI & Data Science",
+                "skills": [
+                    "Machine Learning",
+                    "Deep Learning",
+                    "Data Science Fundamentals"
+                ]
+            }
+        ]
+    },
+    "projects": {
+        "title": "Featured",
+        "subtitle": "Projects",
+        "description": "Here are some of the projects I've worked on, ranging from SaaS platforms to AI healthcare assistants.",
+        "allProjects": "All Projects",
+        "viewCaseStudy": "View Case Study",
+        "details": "Details",
+        "backToProjects": "Back to Projects",
+        "backToHome": "Back to Home",
+        "overview": "Overview",
+        "keyFeatures": "Key Features",
+        "gallery": "Gallery",
+        "projectInfo": "Project Info",
+        "category": "Category",
+        "completionDate": "Completion Date",
+        "liveDemo": "Live Demo",
+        "githubRepo": "GitHub Repository",
+        "features": {
+            "responsive": "Responsive Design",
+            "performance": "Performance Optimized",
+            "security": "Secure Authentication",
+            "modernUI": "Modern UI/UX"
+        },
+        "items": [
+            {
+                "id": "furniro",
+                "title": "Furniro Clone",
+                "description": "Responsive e-commerce site built with React, Firebase, and Tailwind CSS. Features user auth, dynamic routing, and product pages.",
+                "longDescription": "Responsive e-commerce site built with React, Firebase, and Tailwind CSS. Features user authentication, dynamic routing, and product pages. Images are lazy-loaded for performance optimization.",
+                "image": "/projects/furniro.png",
+                "extraImages": [],
+                "link": "https://furniro-ecommerce-ten.vercel.app/",
+                "github": "https://github.com",
+                "tech": [
+                    "React",
+                    "Firebase",
+                    "Tailwind CSS"
+                ],
+                "category": "E-commerce"
+            },
+            {
+                "id": "shrinkly",
+                "title": "Shrinkly",
+                "description": "Modern URL shortener with support for custom slugs, link expiration, and user authentication.",
+                "longDescription": "Modern URL shortener with support for custom slugs, link expiration, and user authentication. Built for reliability, security, and a clean user experience using MERN stack.",
+                "image": "/projects/shrinkly.png",
+                "extraImages": [],
+                "link": "https://shrinkly-beta.vercel.app/",
+                "github": "https://github.com",
+                "tech": [
+                    "MERN Stack",
+                    "MongoDB",
+                    "Express",
+                    "React"
+                ],
+                "category": "Web App"
+            },
+            {
+                "id": "ems",
+                "title": "EMS (Employee Management System)",
+                "description": "A feature-rich employee management system built with the MERN stack. Includes task assignment and role-based login.",
+                "longDescription": "A feature-rich employee management system built with the MERN stack. Includes task assignment, role-based login (admin/user), performance tracking, and a responsive dashboard interface.",
+                "image": "/projects/ems.png",
+                "extraImages": [],
+                "link": "https://ems-orcin-pi.vercel.app/",
+                "github": "https://github.com",
+                "tech": [
+                    "MERN Stack",
+                    "MongoDB",
+                    "Express",
+                    "React"
+                ],
+                "category": "Management System"
+            },
+            {
+                "id": "vscode-portfolio",
+                "title": "VScode Inspired Portfolio",
+                "description": "A VS Code-inspired portfolio website built with React, TypeScript, and Tailwind CSS.",
+                "longDescription": "A VS Code-inspired portfolio website built with React, TypeScript, and Tailwind CSS. Features a code editor layout, interactive navigation, customizable sections, and a fully responsive design optimized for all devices.",
+                "image": "/projects/vscode.png",
+                "extraImages": [],
+                "link": "https://vscode-inspired-portfolio.vercel.app/",
+                "github": "https://github.com",
+                "tech": [
+                    "React",
+                    "TypeScript",
+                    "Tailwind CSS"
+                ],
+                "category": "Portfolio"
+            },
+            {
+                "id": "beneficiary-management",
+                "title": "Beneficiary Management System",
+                "description": "Web app for organizations to manage and track beneficiaries using CNIC-based identification.",
+                "longDescription": "Web app for organizations to manage and track beneficiaries using CNIC-based identification. Role-based access ensures security and streamlined data control for efficient operations.",
+                "image": "/projects/beneficiary.png",
+                "extraImages": [],
+                "link": "https://cute-crostata-9e00ad.netlify.app/",
+                "github": "https://github.com",
+                "tech": [
+                    "React",
+                    "Firebase",
+                    "Tailwind CSS"
+                ],
+                "category": "Management System"
+            },
+            {
+                "id": "project-tracker",
+                "title": "Project Tracker",
+                "description": "Full-stack task manager using React, Express, MongoDB, and Tailwind CSS.",
+                "longDescription": "Full-stack task manager using React, Express, MongoDB, and Tailwind CSS. Create, organize, and filter tasks in real time with a clean UI designed for better team productivity.",
+                "image": "/projects/project-tracker.png",
+                "extraImages": [],
+                "link": "https://project-tracker-ten-tawny.vercel.app/",
+                "github": "https://github.com",
+                "tech": [
+                    "React",
+                    "Express",
+                    "MongoDB",
+                    "Tailwind CSS"
+                ],
+                "category": "Productivity"
+            },
+            {
+                "id": "startup-crm",
+                "title": "StartupCRM",
+                "description": "A comprehensive Sales Intelligence Platform designed for high-growth startups.",
+                "longDescription": "StartupCRM is a powerful dashboard for sales teams to track leads, manage pipelines, and gain intelligence. It features real-time charts, lead scoring, and automated follow-ups. Built with React and Node.js.",
+                "image": "/projects/startup-crm/1.png",
+                "extraImages": [
+                    "/projects/startup-crm/2.png",
+                    "/projects/startup-crm/3.png"
+                ],
+                "link": "https://startup-crm.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "React",
+                    "Node.js",
+                    "MongoDB",
+                    "Tailwind"
+                ],
+                "category": "SaaS"
+            },
+            {
+                "id": "helply",
+                "title": "Helply",
+                "description": "AI-powered customer support platform with integrated live chat and automation.",
+                "longDescription": "Helply leverages AI to automate customer service. It includes a smart chatbot that handles common queries and a dashboard for human agents to take over when needed.",
+                "image": "/projects/helply/1.png",
+                "extraImages": [
+                    "/projects/helply/2.png",
+                    "/projects/helply/3.png"
+                ],
+                "link": "https://helply-ai.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "Next.js",
+                    "OpenAI",
+                    "Firebase",
+                    "TypeScript"
+                ],
+                "category": "AI Platform"
+            },
+            {
+                "id": "hireflow",
+                "title": "Hireflow",
+                "description": "Modern recruitment and job board platform connecting top talent with companies.",
+                "longDescription": "Hireflow simplifies the hiring process. Candidates can apply for jobs, while employers can manage applications and schedule interviews through an intuitive interface.",
+                "image": "/projects/hireflow/1.png",
+                "extraImages": [
+                    "/projects/hireflow/2.png",
+                    "/projects/hireflow/3.png"
+                ],
+                "link": "https://hireflow-jobs.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "MERN Stack",
+                    "AWS",
+                    "Auth0",
+                    "Tailwind"
+                ],
+                "category": "Job Portal"
+            },
+            {
+                "id": "meridian-commerce",
+                "title": "Meridian Commerce",
+                "description": "Premium e-commerce dashboard with real-time analytics and inventory management.",
+                "longDescription": "A full-featured e-commerce management system. It tracks sales, inventory levels, and customer behavior with beautiful visualizations and reports.",
+                "image": "/projects/meridian-commerce/1.png",
+                "extraImages": [
+                    "/projects/meridian-commerce/2.png",
+                    "/projects/meridian-commerce/3.png"
+                ],
+                "link": "https://meridian-shop.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "React",
+                    "PostgreSQL",
+                    "Express",
+                    "Chart.js"
+                ],
+                "category": "E-commerce"
+            },
+            {
+                "id": "finance-assistant",
+                "title": "Finance Assistant",
+                "description": "Secure personal finance manager for tracking expenses and setting budgets.",
+                "longDescription": "Finance Assistant helps users take control of their money. Link accounts, track every penny, and get AI-driven insights on how to save more effectively.",
+                "image": "/projects/finance-assistant/1.png",
+                "extraImages": [
+                    "/projects/finance-assistant/2.png",
+                    "/projects/finance-assistant/3.png"
+                ],
+                "link": "https://finance-smart.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "TypeScript",
+                    "Next.js",
+                    "Prisma",
+                    "Plaid"
+                ],
+                "category": "FinTech"
+            },
+            {
+                "id": "caresync",
+                "title": "CareSync",
+                "description": "AI-powered healthcare assistant for patient management and appointment booking.",
+                "longDescription": "CareSync bridges the gap between patients and doctors. It provides symptom checking, appointment scheduling, and secure medical record storage.",
+                "image": "/projects/caresync/1.png",
+                "extraImages": [
+                    "/projects/caresync/2.png",
+                    "/projects/caresync/3.png"
+                ],
+                "link": "https://caresync-health.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "Flutter",
+                    "Firebase",
+                    "Node.js",
+                    "Python"
+                ],
+                "category": "HealthTech"
+            },
+            {
+                "id": "collab-chat",
+                "title": "AI Collab Chat",
+                "description": "Real-time team collaboration app with integrated AI assistants and video calling.",
+                "longDescription": "A modern workspace where teams can chat, share files, and hold video calls. AI assistants are available in every channel to help with research and drafting.",
+                "image": "/projects/collab-chat/1.png",
+                "extraImages": [
+                    "/projects/collab-chat/2.png",
+                    "/projects/collab-chat/3.png"
+                ],
+                "link": "https://collab-chat.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "React",
+                    "Socket.io",
+                    "WebRTC",
+                    "OpenAI"
+                ],
+                "category": "Communication"
+            },
+            {
+                "id": "cryptopulse",
+                "title": "CryptoPulse",
+                "description": "AI-driven crypto portfolio tracker with real-time market data and insights.",
+                "longDescription": "CryptoPulse tracks your crypto assets across different exchanges. It uses AI to provide sentiment analysis and market trend predictions.",
+                "image": "/projects/cryptopulse/1.png",
+                "extraImages": [
+                    "/projects/cryptopulse/2.png",
+                    "/projects/cryptopulse/3.png"
+                ],
+                "link": "https://cryptopulse.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "Next.js",
+                    "CoinGecko API",
+                    "TensorFlow.js",
+                    "Tailwind"
+                ],
+                "category": "Crypto"
+            }
+        ]
+    },
+    "reviews": {
+        "title": "Client",
+        "subtitle": "Reviews",
+        "description": "Hear from people I've collaborated with on various projects.",
+        "items": [
+            {
+                "id": 1,
+                "name": "James Anderson",
+                "role": "Startup Founder, UK",
+                "image": "https://randomuser.me/api/portraits/men/32.jpg",
+                "review": "Working with Haseeb was a fantastic experience. He delivered exactly what we needed, on time and with clean code."
+            },
+            {
+                "id": 2,
+                "name": "Emily Stone",
+                "role": "Project Manager, US",
+                "image": "https://randomuser.me/api/portraits/women/65.jpg",
+                "review": "Very reliable and professional. Haseeb understood our requirements clearly and exceeded expectations."
+            },
+            {
+                "id": 3,
+                "name": "Ahmed Khalid",
+                "role": "Freelance Client, Saudi Arabia",
+                "image": "https://randomuser.me/api/portraits/men/50.jpg",
+                "review": "Great communication and impressive React skills. He built a secure and fast web app for us. Highly recommended!"
+            }
+        ]
+    },
+    "contact": {
+        "title": "Let's",
+        "subtitle": "Connect",
+        "description": "Have a project in mind or want to discuss a collaboration? Feel free to reach out. I'm always open to new opportunities.",
+        "email": "Email",
+        "phone": "Phone",
+        "location": "Location",
+        "form": {
+            "name": "Name",
+            "namePlaceholder": "John Doe",
+            "email": "Email",
+            "emailPlaceholder": "john@example.com",
+            "subject": "Subject",
+            "subjectPlaceholder": "Project Inquiry",
+            "message": "Message",
+            "messagePlaceholder": "Tell me about your project...",
+            "send": "Send Message"
+        }
+    },
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "footer": {
+        "rights": "All rights reserved."
+    },
+    "common": {
+        "loading": "Loading...",
+        "error": "An error occurred",
+        "notFound": "Not Found",
+        "success": "Message sent successfully!"
+    }
+}

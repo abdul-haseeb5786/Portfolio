@@ -1,0 +1,509 @@
+{
+    "siteConfig": {
+        "name": "Abdul Haseeb",
+        "role": "Desarrollador MERN Stack e Ingeniero de Automatización IA",
+        "email": "abdulhaseeb.dev@gmail.com",
+        "phone": "+92 300 1234567",
+        "location": "Karachi, Pakistán",
+        "profilePic": "/hero-image.jpg",
+        "cvId": "1FjJxMQu_gHo1MurLQnyjD2TZ0o5z_re1",
+        "socials": {
+            "github": "https://github.com",
+            "linkedin": "https://linkedin.com",
+            "twitter": "https://twitter.com"
+        }
+    },
+    "hero": {
+        "welcome": "Bienvenido a mi mundo",
+        "name": "Abdul Haseeb",
+        "typewriterStrings": [
+            "Desarrollador MERN Stack",
+            "Ingeniero de Automatización IA",
+            "Entusiasta de IA y ML",
+            "Solucionador de Problemas"
+        ],
+        "description": "Creo aplicaciones web dinámicas, responsivas e inteligentes utilizando tecnologías modernas y automatización impulsada por IA.",
+        "primaryAction": "Ver Proyectos",
+        "secondaryAction": "Contáctame"
+    },
+    "about": {
+        "title": "Sobre",
+        "subtitle": "Mí",
+        "paragraphs": [
+            "Hola, soy **Abdul Haseeb** — un Desarrollador MERN Stack e Ingeniero de Automatización IA dedicado con una fuerte pasión por crear aplicaciones web dinámicas, responsivas e inteligentes.",
+            "Mi viaje comenzó con la curiosidad de crear sitios web interactivos y ha evolucionado hacia una pasión por el *desarrollo impulsado por IA, flujos de trabajo de automatización y sistemas de agentes de voz.*",
+            "Ya sea una interfaz elegante o un backend robusto, disfruto cada paso de convertir ideas en productos reales e impactantes a través de código limpio y eficiente."
+        ],
+        "education": {
+            "title": "Educación",
+            "history": [
+                {
+                    "id": 1,
+                    "title": "Madrasa-tul-Madina",
+                    "date": "Jun 2015 - Jan 2018",
+                    "description": "Hifz-e-Quran Certification with Tajweed and Islamic Studies",
+                    "points": [
+                        {
+                            "icon": "📖",
+                            "text": "Complete Quran Memorization"
+                        },
+                        {
+                            "icon": "🕌",
+                            "text": "Islamic Jurisprudence"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "DAR-UL-MADINAH",
+                    "date": "Jun 2022 - May 2023",
+                    "description": "Matriculation in Computer Science with focus on fundamental concepts.",
+                    "points": [
+                        {
+                            "icon": "📘",
+                            "text": "Core CS Subjects"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "title": "Saylani Mass IT Training",
+                    "date": "Dec 2023 - Jan 2025",
+                    "description": "Professional certification in MERN Stack Development with hands-on project experience.",
+                    "points": [
+                        {
+                            "icon": "🏆",
+                            "text": "3 Hackathon Wins"
+                        }
+                    ]
+                }
+            ]
+        },
+        "stats": {
+            "experience": "Años de Experiencia",
+            "projects": "Proyectos Completados"
+        },
+        "downloadCV": "Descargar CV"
+    },
+    "skills": {
+        "title": "Habilidades",
+        "subtitle": "Técnicas",
+        "description": "Una lista completa de tecnologías y herramientas en las que me especializo para construir soluciones de software modernas.",
+        "categories": [
+            {
+                "title": "Lenguajes de Programación",
+                "skills": [
+                    "JavaScript",
+                    "TypeScript",
+                    "Python",
+                    "Dart"
+                ]
+            },
+            {
+                "title": "Desarrollo Frontend",
+                "skills": [
+                    "React",
+                    "Next.js",
+                    "HTML5",
+                    "CSS3",
+                    "Bootstrap",
+                    "Tailwind",
+                    "Hero UI",
+                    "Chakra UI",
+                    "Redux Toolkit"
+                ]
+            },
+            {
+                "title": "Desarrollo Backend",
+                "skills": [
+                    "Node.js",
+                    "Express.js",
+                    "MongoDB",
+                    "Mongoose",
+                    "PostgreSQL",
+                    "Firebase"
+                ]
+            },
+            {
+                "title": "DevOps y Herramientas",
+                "skills": [
+                    "AWS",
+                    "Azure",
+                    "Docker",
+                    "Git",
+                    "GitHub",
+                    "Vercel",
+                    "Postman"
+                ]
+            },
+            {
+                "title": "IA y Automatización",
+                "skills": [
+                    "n8n",
+                    "Vapi",
+                    "OpenAI API",
+                    "LangChain",
+                    "AI Workflows",
+                    "Voice Agents",
+                    "MCP"
+                ]
+            },
+            {
+                "title": "IA y Ciencia de Datos",
+                "skills": [
+                    "Machine Learning",
+                    "Deep Learning",
+                    "Data Science Fundamentals"
+                ]
+            }
+        ]
+    },
+    "projects": {
+        "title": "Proyectos",
+        "subtitle": "Destacados",
+        "description": "Aquí hay algunos de los proyectos en los que he trabajado, desde plataformas SaaS hasta asistentes de salud con IA.",
+        "allProjects": "Todos los Proyectos",
+        "viewCaseStudy": "Ver Caso de Estudio",
+        "details": "Detalles",
+        "backToProjects": "Volver a Proyectos",
+        "backToHome": "Volver al Inicio",
+        "overview": "Descripción General",
+        "keyFeatures": "Características Clave",
+        "gallery": "Galería",
+        "projectInfo": "Información del Proyecto",
+        "category": "Categoría",
+        "completionDate": "Fecha de Finalización",
+        "liveDemo": "Demo en Vivo",
+        "githubRepo": "Repositorio GitHub",
+        "features": {
+            "responsive": "Diseño Responsivo",
+            "performance": "Optimizado para Rendimiento",
+            "security": "Autenticación Segura",
+            "modernUI": "UI/UX Moderno"
+        },
+        "items": [
+            {
+                "id": "furniro",
+                "title": "Clon de Furniro",
+                "description": "Sitio de comercio electrónico responsivo construido con React, Firebase y Tailwind CSS. Incluye autenticación de usuario, enrutamiento dinámico y páginas de productos.",
+                "longDescription": "Sitio de comercio electrónico responsivo construido con React, Firebase y Tailwind CSS. Incluye autenticación de usuario, enrutamiento dinámico y páginas de productos. Las imágenes se cargan de manera diferida para optimizar el rendimiento.",
+                "image": "/projects/furniro.png",
+                "extraImages": [],
+                "link": "https://furniro-ecommerce-ten.vercel.app/",
+                "github": "https://github.com",
+                "tech": [
+                    "React",
+                    "Firebase",
+                    "Tailwind CSS"
+                ],
+                "category": "Comercio electrónico"
+            },
+            {
+                "id": "shrinkly",
+                "title": "Shrinkly",
+                "description": "Acortador de URLs moderno con soporte para slugs personalizados, expiración de enlaces y autenticación de usuario.",
+                "longDescription": "Acortador de URLs moderno con soporte para slugs personalizados, expiración de enlaces y autenticación de usuario. Construido para confiabilidad, seguridad y una experiencia de usuario limpia usando MERN Stack.",
+                "image": "/projects/shrinkly.png",
+                "extraImages": [],
+                "link": "https://shrinkly-beta.vercel.app/",
+                "github": "https://github.com",
+                "tech": [
+                    "MERN Stack",
+                    "MongoDB",
+                    "Express",
+                    "React"
+                ],
+                "category": "Aplicación web"
+            },
+            {
+                "id": "ems",
+                "title": "Sistema de Gestión de Empleados (EMS)",
+                "description": "Sistema de gestión de empleados con muchas funciones construido con MERN Stack. Incluye asignación de tareas y login basado en roles.",
+                "longDescription": "Sistema de gestión de empleados con muchas funciones construido con MERN Stack. Incluye asignación de tareas, login basado en roles (admin/usuario), seguimiento de desempeño e interfaz de panel responsiva.",
+                "image": "/projects/ems.png",
+                "extraImages": [],
+                "link": "https://ems-orcin-pi.vercel.app/",
+                "github": "https://github.com",
+                "tech": [
+                    "MERN Stack",
+                    "MongoDB",
+                    "Express",
+                    "React"
+                ],
+                "category": "Sistema de gestión"
+            },
+            {
+                "id": "vscode-portfolio",
+                "title": "Portafolio inspirado en VS Code",
+                "description": "Sitio de portafolio inspirado en VS Code construido con React, TypeScript y Tailwind CSS.",
+                "longDescription": "Sitio de portafolio inspirado en VS Code construido con React, TypeScript y Tailwind CSS. Incluye diseño de editor de código, navegación interactiva, secciones personalizables y diseño totalmente responsivo optimizado para todos los dispositivos.",
+                "image": "/projects/vscode.png",
+                "extraImages": [],
+                "link": "https://vscode-inspired-portfolio.vercel.app/",
+                "github": "https://github.com",
+                "tech": [
+                    "React",
+                    "TypeScript",
+                    "Tailwind CSS"
+                ],
+                "category": "Portafolio"
+            },
+            {
+                "id": "beneficiary-management",
+                "title": "Sistema de Gestión de Beneficiarios",
+                "description": "Aplicación web para organizaciones para gestionar y rastrear beneficiarios usando identificación basada en CNIC.",
+                "longDescription": "Aplicación web para organizaciones para gestionar y rastrear beneficiarios usando identificación basada en CNIC. El acceso basado en roles garantiza seguridad y control eficiente de datos.",
+                "image": "/projects/beneficiary.png",
+                "extraImages": [],
+                "link": "https://cute-crostata-9e00ad.netlify.app/",
+                "github": "https://github.com",
+                "tech": [
+                    "React",
+                    "Firebase",
+                    "Tailwind CSS"
+                ],
+                "category": "Sistema de gestión"
+            },
+            {
+                "id": "project-tracker",
+                "title": "Rastreador de Proyectos",
+                "description": "Administrador de tareas full-stack usando React, Express, MongoDB y Tailwind CSS.",
+                "longDescription": "Administrador de tareas full-stack usando React, Express, MongoDB y Tailwind CSS. Crear, organizar y filtrar tareas en tiempo real con una interfaz limpia diseñada para mejorar la productividad del equipo.",
+                "image": "/projects/project-tracker.png",
+                "extraImages": [],
+                "link": "https://project-tracker-ten-tawny.vercel.app/",
+                "github": "https://github.com",
+                "tech": [
+                    "React",
+                    "Express",
+                    "MongoDB",
+                    "Tailwind CSS"
+                ],
+                "category": "Productividad"
+            },
+            {
+                "id": "startup-crm",
+                "title": "StartupCRM",
+                "description": "Plataforma integral de inteligencia de ventas diseñada para startups de alto crecimiento.",
+                "longDescription": "StartupCRM es un panel potente para equipos de ventas para rastrear clientes potenciales, gestionar pipelines y obtener inteligencia de mercado. Incluye gráficos en tiempo real, puntuación de leads y seguimientos automatizados. Construido con React y Node.js.",
+                "image": "/projects/startup-crm/1.png",
+                "extraImages": [
+                    "/projects/startup-crm/2.png",
+                    "/projects/startup-crm/3.png"
+                ],
+                "link": "https://startup-crm.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "React",
+                    "Node.js",
+                    "MongoDB",
+                    "Tailwind"
+                ],
+                "category": "SaaS"
+            },
+            {
+                "id": "helply",
+                "title": "Helply",
+                "description": "Plataforma de soporte al cliente impulsada por IA con chat en vivo y automatización integrados.",
+                "longDescription": "Helply utiliza IA para automatizar el servicio al cliente. Incluye un chatbot inteligente para consultas comunes y un panel para que agentes humanos tomen el control cuando sea necesario.",
+                "image": "/projects/helply/1.png",
+                "extraImages": [
+                    "/projects/helply/2.png",
+                    "/projects/helply/3.png"
+                ],
+                "link": "https://helply-ai.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "Next.js",
+                    "OpenAI",
+                    "Firebase",
+                    "TypeScript"
+                ],
+                "category": "Plataforma de IA"
+            },
+            {
+                "id": "hireflow",
+                "title": "Hireflow",
+                "description": "Plataforma de reclutamiento moderna y portal de empleo que conecta talentos con empresas.",
+                "longDescription": "Hireflow simplifica el proceso de contratación. Los candidatos pueden postularse a trabajos mientras los empleadores gestionan solicitudes y programan entrevistas a través de una interfaz intuitiva.",
+                "image": "/projects/hireflow/1.png",
+                "extraImages": [
+                    "/projects/hireflow/2.png",
+                    "/projects/hireflow/3.png"
+                ],
+                "link": "https://hireflow-jobs.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "MERN Stack",
+                    "AWS",
+                    "Auth0",
+                    "Tailwind"
+                ],
+                "category": "Portal de empleo"
+            },
+            {
+                "id": "meridian-commerce",
+                "title": "Meridian Commerce",
+                "description": "Panel premium de comercio electrónico con análisis en tiempo real y gestión de inventario.",
+                "longDescription": "Sistema completo de gestión de comercio electrónico. Rastrea ventas, niveles de inventario y comportamiento del cliente con visualizaciones y reportes atractivos.",
+                "image": "/projects/meridian-commerce/1.png",
+                "extraImages": [
+                    "/projects/meridian-commerce/2.png",
+                    "/projects/meridian-commerce/3.png"
+                ],
+                "link": "https://meridian-shop.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "React",
+                    "PostgreSQL",
+                    "Express",
+                    "Chart.js"
+                ],
+                "category": "Comercio electrónico"
+            },
+            {
+                "id": "finance-assistant",
+                "title": "Asistente Financiero",
+                "description": "Gestor de finanzas personales seguro para rastrear gastos y establecer presupuestos.",
+                "longDescription": "El Asistente Financiero ayuda a los usuarios a tomar control de su dinero. Vincula cuentas, rastrea cada centavo y obtiene información impulsada por IA sobre cómo ahorrar más efectivamente.",
+                "image": "/projects/finance-assistant/1.png",
+                "extraImages": [
+                    "/projects/finance-assistant/2.png",
+                    "/projects/finance-assistant/3.png"
+                ],
+                "link": "https://finance-smart.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "TypeScript",
+                    "Next.js",
+                    "Prisma",
+                    "Plaid"
+                ],
+                "category": "FinTech"
+            },
+            {
+                "id": "caresync",
+                "title": "CareSync",
+                "description": "Asistente de salud impulsado por IA para gestión de pacientes y programación de citas.",
+                "longDescription": "CareSync cierra la brecha entre pacientes y médicos. Proporciona chequeo de síntomas, programación de citas y almacenamiento seguro de registros médicos.",
+                "image": "/projects/caresync/1.png",
+                "extraImages": [
+                    "/projects/caresync/2.png",
+                    "/projects/caresync/3.png"
+                ],
+                "link": "https://caresync-health.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "Flutter",
+                    "Firebase",
+                    "Node.js",
+                    "Python"
+                ],
+                "category": "HealthTech"
+            },
+            {
+                "id": "collab-chat",
+                "title": "Chat Colaborativo con IA",
+                "description": "Aplicación de colaboración en tiempo real para equipos con asistentes de IA integrados y videollamadas.",
+                "longDescription": "Espacio de trabajo moderno donde los equipos pueden chatear, compartir archivos y realizar videollamadas. Los asistentes de IA están disponibles en cada canal para ayudar con la investigación y la redacción.",
+                "image": "/projects/collab-chat/1.png",
+                "extraImages": [
+                    "/projects/collab-chat/2.png",
+                    "/projects/collab-chat/3.png"
+                ],
+                "link": "https://collab-chat.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "React",
+                    "Socket.io",
+                    "WebRTC",
+                    "OpenAI"
+                ],
+                "category": "Comunicación"
+            },
+            {
+                "id": "cryptopulse",
+                "title": "CryptoPulse",
+                "description": "Rastreador de cartera cripto impulsado por IA con datos de mercado en tiempo real y análisis.",
+                "longDescription": "CryptoPulse rastrea tus activos cripto a través de diferentes exchanges. Utiliza IA para análisis de sentimiento y predicciones de tendencias de mercado.",
+                "image": "/projects/cryptopulse/1.png",
+                "extraImages": [
+                    "/projects/cryptopulse/2.png",
+                    "/projects/cryptopulse/3.png"
+                ],
+                "link": "https://cryptopulse.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "Next.js",
+                    "CoinGecko API",
+                    "TensorFlow.js",
+                    "Tailwind"
+                ],
+                "category": "Cripto"
+            }
+        ]
+    },
+    "reviews": {
+        "title": "Opiniones",
+        "subtitle": "de Clientes",
+        "description": "Escucha a las personas con las que he colaborado en varios proyectos.",
+        "items": [
+            {
+                "id": 1,
+                "name": "James Anderson",
+                "role": "Startup Founder, UK",
+                "image": "https://randomuser.me/api/portraits/men/32.jpg",
+                "review": "Working with Haseeb was a fantastic experience. He delivered exactly what we needed, on time and with clean code."
+            },
+            {
+                "id": 2,
+                "name": "Emily Stone",
+                "role": "Project Manager, US",
+                "image": "https://randomuser.me/api/portraits/women/65.jpg",
+                "review": "Very reliable and professional. Haseeb understood our requirements clearly and exceeded expectations."
+            },
+            {
+                "id": 3,
+                "name": "Ahmed Khalid",
+                "role": "Freelance Client, Saudi Arabia",
+                "image": "https://randomuser.me/api/portraits/men/50.jpg",
+                "review": "Great communication and impressive React skills. He built a secure and fast web app for us. Highly recommended!"
+            }
+        ]
+    },
+    "contact": {
+        "title": "Conectemos",
+        "subtitle": "Juntos",
+        "description": "¿Tienes un proyecto en mente o quieres discutir una colaboración? No dudes en contactarme. Siempre estoy abierto a nuevas oportunidades.",
+        "email": "Correo Electrónico",
+        "phone": "Teléfono",
+        "location": "Ubicación",
+        "form": {
+            "name": "Nombre",
+            "namePlaceholder": "Juan Pérez",
+            "email": "Correo Electrónico",
+            "emailPlaceholder": "juan@ejemplo.com",
+            "subject": "Asunto",
+            "subjectPlaceholder": "Consulta de Proyecto",
+            "message": "Mensaje",
+            "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+            "send": "Enviar Mensaje"
+        }
+    },
+    "nav": {
+        "home": "Inicio",
+        "about": "Sobre Mí",
+        "skills": "Habilidades",
+        "projects": "Proyectos",
+        "contact": "Contacto"
+    },
+    "footer": {
+        "rights": "Todos los derechos reservados."
+    },
+    "common": {
+        "loading": "Cargando...",
+        "error": "Ocurrió un error",
+        "notFound": "No Encontrado",
+        "success": "¡Mensaje enviado con éxito!"
+    }
+}
