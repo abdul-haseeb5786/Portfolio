@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Github, Linkedin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const iconMap: Record<string, any> = {
@@ -75,7 +75,7 @@ export default function Contact() {
                         <div className="space-y-8">
                             {contactItems.map((item, idx) => (
                                 <div key={idx} className="flex gap-6 items-start group">
-                                    <div className="w-14 h-14 rounded-2xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 flex items-center justify-center group-hover:bg-[#599692] group-hover:text-white transition-all shadow-sm">
+                                    <div className="w-14 h-14 rounded-2xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 flex items-center justify-center group-hover:bg-[#599692] group-hover:text-white transition-all shadow-sm text-slate-600 dark:text-zinc-400">
                                         {Object.values(iconMap)[idx] || <Mail size={24} />}
                                     </div>
                                     <div>
@@ -84,6 +84,35 @@ export default function Contact() {
                                     </div>
                                 </div>
                             ))}
+
+                            {/* Social Links */}
+                            <div className="pt-8 border-t border-slate-200 dark:border-zinc-800">
+                                <h4 className="text-sm uppercase tracking-widest text-[#599692] font-bold mb-6">Social Profiles</h4>
+                                <div className="flex gap-4">
+                                    {t.siteConfig.socials?.github && (
+                                        <a
+                                            href={t.siteConfig.socials.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="w-14 h-14 rounded-2xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 flex items-center justify-center text-slate-600 dark:text-zinc-400 hover:bg-[#599692] hover:text-white transition-all shadow-sm"
+                                            title="GitHub"
+                                        >
+                                            <Github size={24} />
+                                        </a>
+                                    )}
+                                    {t.siteConfig.socials?.linkedin && (
+                                        <a
+                                            href={t.siteConfig.socials.linkedin}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="w-14 h-14 rounded-2xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 flex items-center justify-center text-slate-600 dark:text-zinc-400 hover:bg-[#599692] hover:text-white transition-all shadow-sm"
+                                            title="LinkedIn"
+                                        >
+                                            <Linkedin size={24} />
+                                        </a>
+                                    )}
+                                </div>
+                            </div>
                         </div>
                     </div>
 
