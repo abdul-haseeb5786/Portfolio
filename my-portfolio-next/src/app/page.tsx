@@ -42,7 +42,7 @@ export default function Home() {
               <span className="block text-2xl md:text-4xl mt-4 text-slate-600 dark:text-zinc-400 font-normal">
                 <Typewriter
                   options={{
-                    strings: t.hero.roles,
+                    strings: t.hero.typewriterStrings,
                     autoStart: true,
                     loop: true,
                     deleteSpeed: 50,
