@@ -17,11 +17,13 @@
         "welcome": "Bienvenido a mi mundo",
         "name": "Abdul Haseeb",
         "typewriterStrings": [
-            "Desarrollador MERN Stack",
-            "Ingeniero de Automatización IA",
-            "Entusiasta de IA y ML",
-            "Solucionador de Problemas"
-        ],
+      "Desarrollador Full Stack Web y Móvil",
+      "Ingeniero de Automatización con IA",
+      "Entusiasta de IA y Machine Learning",
+      "Especialista en MERN Stack",
+      "Especialista en Flutter y React Native",
+      "Solucionador de Problemas"
+    ],
         "description": "Creo aplicaciones web dinámicas, responsivas e inteligentes utilizando tecnologías modernas y automatización impulsada por IA.",
         "primaryAction": "Ver Proyectos",
         "secondaryAction": "Contáctame"
