@@ -32,12 +32,12 @@ export default function Navbar() {
     return (
         <nav
             className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled
-                ? "bg-white/80 dark:bg-black/80 backdrop-blur-md shadow-sm py-3"
+                ? "bg-background/80 backdrop-blur-md shadow-sm py-3"
                 : "bg-transparent py-5"
                 }`}
         >
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-                <Link href="/" className="text-2xl font-bold tracking-tighter text-[#599692]">
+                <Link href="/" className="text-2xl font-bold tracking-tighter text-primary">
                     AH.
                 </Link>
 
@@ -47,18 +47,18 @@ export default function Navbar() {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-sm font-medium hover:text-[#599692] transition-colors"
+                            className="text-sm font-medium hover:text-primary transition-colors"
                         >
                             {link.name}
                         </Link>
                     ))}
                     <LanguageSelector />
-                   <button
-  disabled
-  className="disabled:cursor-not-allowed"
->
-    <ThemeToggle />
-</button>
+                    <button
+                        disabled
+                        className="disabled:cursor-not-allowed"
+                    >
+                        <ThemeToggle />
+                    </button>
 
                 </div>
 
@@ -79,7 +79,7 @@ export default function Navbar() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-white dark:bg-[#0a0a0a] border-b dark:border-zinc-800"
+                        className="md:hidden bg-background border-b border-border"
                     >
                         <div className="flex flex-col p-6 gap-4">
                             {navLinks.map((link) => (

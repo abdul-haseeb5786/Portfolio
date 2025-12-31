@@ -15,10 +15,10 @@ export default function Home() {
   const { t } = useLanguage();
 
   return (
-    <main className="flex min-h-screen flex-col overflow-hidden relative">
+    <main className="flex min-h-screen flex-col overflow-hidden relative bg-background text-foreground">
       <section className="flex flex-col items-center justify-center p-6 md:p-24 min-h-screen relative">
         {/* Background Gradients */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#599692]/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
 
         <motion.div
@@ -32,14 +32,14 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-[#599692] font-semibold text-lg md:text-xl tracking-wide"
+              className="text-primary font-semibold text-lg md:text-xl tracking-wide"
             >
               {t.hero.greeting}
             </motion.p>
 
             <h1 className="text-4xl md:text-7xl font-bold tracking-tight">
               {t.hero.name}
-              <span className="block text-2xl md:text-4xl mt-4 text-slate-600 dark:text-zinc-400 font-normal">
+              <span className="block text-2xl md:text-4xl mt-4 text-muted font-normal">
                 <Typewriter
                   options={{
                     strings: t.hero.typewriterStrings,
@@ -57,7 +57,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="text-lg md:text-xl text-slate-600 dark:text-zinc-400 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-muted max-w-2xl mx-auto leading-relaxed"
           >
             {t.hero.description}
           </motion.p>
@@ -70,17 +70,17 @@ export default function Home() {
           >
             <Link
               href="/contact"
-              className="group relative px-8 py-4 bg-[#599692] text-white rounded-full font-semibold overflow-hidden transition-all hover:scale-105 active:scale-95"
+              className="group relative px-8 py-4 bg-primary text-primary-foreground rounded-full font-semibold overflow-hidden transition-all hover:scale-105 active:scale-95"
             >
               <span className="relative z-10 flex items-center gap-2">
                 {t.hero.contactMe} <Mail size={18} />
               </span>
-              <div className="absolute inset-0 h-full w-full scale-0 rounded-full transition-all duration-300 group-hover:scale-100 group-hover:bg-[#4a7d7a]" />
+              <div className="absolute inset-0 h-full w-full scale-0 rounded-full transition-all duration-300 group-hover:scale-100 group-hover:brightness-90 opacity-20 bg-black" />
             </Link>
 
             <Link
               href="/projects"
-              className="group px-8 py-4 bg-slate-100 dark:bg-zinc-800 text-slate-900 dark:text-white rounded-full font-semibold transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
+              className="group px-8 py-4 bg-secondary text-secondary-foreground rounded-full font-semibold transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
             >
               {t.hero.viewProjects} <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </Link>
