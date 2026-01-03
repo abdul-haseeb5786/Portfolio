@@ -6,10 +6,8 @@ import Link from "next/link";
 import { ArrowRight, Mail } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import About from "@/components/about";
-import Skills from "@/components/skills";
 import Projects from "@/components/projects-grid";
 import Reviews from "@/components/reviews";
-import Contact from "@/components/contact";
 
 export default function Home() {
   const { t } = useLanguage();
@@ -88,11 +86,26 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <About />
-      <Skills />
-      <Projects />
+      <About summary={true} />
+      <Projects limit={3} />
       <Reviews />
-      <Contact />
+
+      {/* CTA Section */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-primary/5 -z-10" />
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold mb-6">{t.contact?.title || "Ready to Start a Project?"}</h2>
+          <p className="text-xl text-muted mb-8 max-w-2xl mx-auto">
+            {t.contact?.subtitle || "Let's collaborate to bring your ideas to life with high-quality web solutions."}
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-full font-bold text-lg hover:scale-105 transition-transform"
+          >
+            {t.hero.contactMe} <ArrowRight />
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }
