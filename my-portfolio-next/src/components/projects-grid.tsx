@@ -7,9 +7,15 @@ import Link from "next/link";
 import { ExternalLink, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-export default function Projects() {
+interface ProjectsProps {
+    limit?: number;
+}
+
+export default function Projects({ limit }: ProjectsProps) {
     const { t } = useLanguage();
     const projects = t.projects.items;
+
+    const displayedProjects = limit ? projects?.slice(0, limit) : projects;
 
     return (
         <section id="projects" className="py-24 bg-slate-50 dark:bg-zinc-900/50">
@@ -23,16 +29,18 @@ export default function Projects() {
                             {t.projects.description}
                         </p>
                     </div>
-                    <Link
-                        href="/projects"
-                        className="flex items-center gap-2 font-semibold text-[#599692] hover:underline"
-                    >
-                        {t.projects.allProjects} <ArrowRight size={18} />
-                    </Link>
+                    {limit && (
+                        <Link
+                            href="/projects"
+                            className="flex items-center gap-2 font-semibold text-[#599692] hover:underline"
+                        >
+                            {t.projects.allProjects} <ArrowRight size={18} />
+                        </Link>
+                    )}
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects?.slice(0, 6).map((project: any, idx: number) => (
+                    {displayedProjects?.map((project: any, idx: number) => (
                         <motion.div
                             key={project.id}
                             initial={{ opacity: 0, y: 20 }}

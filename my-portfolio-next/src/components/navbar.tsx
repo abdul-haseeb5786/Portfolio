@@ -53,10 +53,7 @@ export default function Navbar() {
                         </Link>
                     ))}
                     <LanguageSelector />
-                    <button
-                        disabled
-                        className="disabled:cursor-not-allowed"
-                    >
+                    <button>
                         <ThemeToggle />
                     </button>
 
