@@ -23,7 +23,7 @@ export default function ProjectDetails() {
                     <h1 className="text-4xl font-bold mb-4">Project Not Found</h1>
                     <button
                         onClick={() => router.push("/projects")}
-                        className="text-[#599692] hover:underline"
+                        className="text-primary hover:underline"
                     >
                         {t.projects.backToProjects}
                     </button>
@@ -80,7 +80,7 @@ export default function ProjectDetails() {
             <div className="max-w-7xl mx-auto px-6 mt-12">
                 <Link
                     href="/projects"
-                    className="inline-flex items-center gap-2 text-zinc-500 hover:text-[#599692] mb-12 transition-colors font-medium"
+                    className="inline-flex items-center gap-2 text-muted hover:text-primary mb-12 transition-colors font-medium"
                 >
                     <ArrowLeft size={20} /> {t.projects.backToProjects}
                 </Link>
@@ -89,7 +89,7 @@ export default function ProjectDetails() {
                     <div className="lg:col-span-2 space-y-12">
                         <section>
                             <h2 className="text-3xl font-bold mb-6 tracking-tight">{t.projects.overview}</h2>
-                            <p className="text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                            <p className="text-xl text-muted leading-relaxed">
                                 {project.longDescription}
                             </p>
                         </section>
@@ -98,8 +98,8 @@ export default function ProjectDetails() {
                             <h2 className="text-3xl font-bold mb-6 tracking-tight">{t.projects.keyFeatures}</h2>
                             <div className="grid sm:grid-cols-2 gap-6">
                                 {featuresList.map((feature: string) => (
-                                    <div key={feature} className="flex gap-3 items-start p-6 bg-zinc-50 dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800">
-                                        <CheckCircle2 className="text-[#599692] shrink-0" size={24} />
+                                    <div key={feature} className="flex gap-3 items-start p-6 bg-card rounded-2xl border border-border">
+                                        <CheckCircle2 className="text-primary shrink-0" size={24} />
                                         <span className="font-medium text-lg">{feature}</span>
                                     </div>
                                 ))}
@@ -111,7 +111,7 @@ export default function ProjectDetails() {
                                 <h2 className="text-3xl font-bold mb-8 tracking-tight">{t.projects.gallery}</h2>
                                 <div className="grid sm:grid-cols-2 gap-8">
                                     {project.extraImages.map((img: string, index: number) => (
-                                        <div key={index} className="relative aspect-video rounded-3xl overflow-hidden border border-zinc-200 dark:border-zinc-800 group">
+                                        <div key={index} className="relative aspect-video rounded-3xl overflow-hidden border border-border group">
                                             <Image
                                                 src={img}
                                                 alt={`${project.title} screenshot ${index + 2}`}
@@ -126,15 +126,15 @@ export default function ProjectDetails() {
                     </div>
 
                     <aside className="space-y-8">
-                        <div className="p-8 bg-zinc-50 dark:bg-zinc-900 rounded-3xl border border-zinc-200 dark:border-zinc-800 sticky top-32">
+                        <div className="p-8 bg-card rounded-3xl border border-border sticky top-32">
                             <h3 className="text-xl font-bold mb-6">{t.projects.projectInfo}</h3>
                             <div className="space-y-4 mb-8">
-                                <div className="flex justify-between py-2 border-b dark:border-zinc-800">
-                                    <span className="text-zinc-500">{t.projects.category}</span>
+                                <div className="flex justify-between py-2 border-b border-border">
+                                    <span className="text-muted">{t.projects.category}</span>
                                     <span className="font-medium">{project.category}</span>
                                 </div>
-                                <div className="flex justify-between py-2 border-b dark:border-zinc-800">
-                                    <span className="text-zinc-500">{t.projects.completionDate}</span>
+                                <div className="flex justify-between py-2 border-b border-border">
+                                    <span className="text-muted">{t.projects.completionDate}</span>
                                     <span className="font-medium">2024</span>
                                 </div>
                             </div>
@@ -143,14 +143,14 @@ export default function ProjectDetails() {
                                 <a
                                     href={project.link}
                                     target="_blank"
-                                    className="w-full py-4 bg-[#599692] text-white rounded-xl font-bold tracking-widest uppercase flex items-center justify-center gap-2 hover:bg-[#4a7d7a] transition-all shadow-lg shadow-[#599692]/20"
+                                    className="w-full py-4 bg-primary text-primary-foreground rounded-xl font-bold tracking-widest uppercase flex items-center justify-center gap-2 hover:brightness-90 transition-all shadow-lg shadow-primary/20"
                                 >
                                     {t.projects.liveDemo} <ExternalLink size={18} />
                                 </a>
                                 <a
                                     href={project.github}
                                     target="_blank"
-                                    className="w-full py-4 border-2 border-zinc-200 dark:border-zinc-800 rounded-xl font-bold tracking-widest uppercase flex items-center justify-center gap-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all font-medium"
+                                    className="w-full py-4 border-2 border-border rounded-xl font-bold tracking-widest uppercase flex items-center justify-center gap-2 hover:bg-secondary transition-all font-medium"
                                 >
                                     {t.projects.githubRepo} <Github size={18} />
                                 </a>

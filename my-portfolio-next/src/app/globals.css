@@ -3,19 +3,25 @@
 :root {
   /* Base */
   --background: #ffffff;
-  --foreground: #1f2937; /* gray-800, softer than slate-700 */
+  --foreground: #1f2937;
+  /* gray-800, softer than slate-700 */
 
   /* Semantic Colors */
   --primary: #599692;
   --primary-foreground: #ffffff;
 
-  --secondary: #ffffff; /* keep cards pure white */
-  --secondary-foreground: #e4ecffe1; /* gray-900 */
+  --secondary: #ffffff;
+  /* keep cards pure white */
+  --secondary-foreground: #000000;
+  /* pure black */
 
-  --muted: #6b7280; /* gray-500 for secondary text */
-  --muted-foreground: #9ca3af; /* gray-400 */
+  --muted: #6b7280;
+  /* gray-500 for secondary text */
+  --muted-foreground: #9ca3af;
+  /* gray-400 */
 
-  --border: #e5e7eb; /* gray-200, very subtle */
+  --border: #e5e7eb;
+  /* gray-200, very subtle */
 }
 
 

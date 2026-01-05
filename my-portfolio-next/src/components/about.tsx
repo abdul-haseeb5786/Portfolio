@@ -45,9 +45,9 @@ export default function About({ summary = false }: AboutProps) {
                             </div>
                             <div className="space-y-4 pt-12">
                                 <div className="h-64 bg-background rounded-2xl shadow-sm border border-border" />
-                                <div className="h-48 bg-blue-500/10 rounded-2xl flex items-center justify-center p-8 text-center border border-blue-500/20">
+                                <div className="h-48 bg-primary/10 rounded-2xl flex items-center justify-center p-8 text-center border border-primary/20">
                                     <div>
-                                        <h3 className="text-4xl font-bold text-blue-500">100+</h3>
+                                        <h3 className="text-4xl font-bold text-primary">100+</h3>
                                         <p className="text-sm font-medium text-foreground">{t.about.stats.projects}</p>
                                     </div>
                                 </div>

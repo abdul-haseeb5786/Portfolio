@@ -61,40 +61,40 @@ export default function Contact() {
     ];
 
     return (
-        <section id="contact" className="py-24 bg-slate-50 dark:bg-zinc-900/50">
+        <section id="contact" className="py-24 bg-secondary/30">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="grid lg:grid-cols-2 gap-16">
                     <div>
-                        <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-8 text-slate-900 dark:text-white">
-                            {t.contact.title} <span className="text-[#599692]">{t.contact.subtitle}</span>
+                        <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-8 text-foreground">
+                            {t.contact.title} <span className="text-primary">{t.contact.subtitle}</span>
                         </h2>
-                        <p className="text-lg text-slate-600 dark:text-zinc-400 mb-12 max-w-md">
+                        <p className="text-lg text-muted mb-12 max-w-md">
                             {t.contact.description}
                         </p>
 
                         <div className="space-y-8">
                             {contactItems.map((item, idx) => (
                                 <div key={idx} className="flex gap-6 items-start group">
-                                    <div className="w-14 h-14 rounded-2xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 flex items-center justify-center group-hover:bg-[#599692] group-hover:text-white transition-all shadow-sm text-slate-600 dark:text-zinc-400">
+                                    <div className="w-14 h-14 rounded-2xl bg-secondary border border-border flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all shadow-sm text-muted">
                                         {Object.values(iconMap)[idx] || <Mail size={24} />}
                                     </div>
                                     <div>
-                                        <h4 className="text-sm uppercase tracking-widest text-[#599692] font-bold mb-1">{item.label}</h4>
-                                        <p className="text-xl font-medium text-slate-900 dark:text-white">{item.value}</p>
+                                        <h4 className="text-sm uppercase tracking-widest text-primary font-bold mb-1">{item.label}</h4>
+                                        <p className="text-xl font-medium text-foreground">{item.value}</p>
                                     </div>
                                 </div>
                             ))}
 
                             {/* Social Links */}
-                            <div className="pt-8 border-t border-slate-200 dark:border-zinc-800">
-                                <h4 className="text-sm uppercase tracking-widest text-[#599692] font-bold mb-6">Social Profiles</h4>
+                            <div className="pt-8 border-t border-border">
+                                <h4 className="text-sm uppercase tracking-widest text-primary font-bold mb-6">Social Profiles</h4>
                                 <div className="flex gap-4">
                                     {t.siteConfig.socials?.github && (
                                         <a
                                             href={t.siteConfig.socials.github}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="w-14 h-14 rounded-2xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 flex items-center justify-center text-slate-600 dark:text-zinc-400 hover:bg-[#599692] hover:text-white transition-all shadow-sm"
+                                            className="w-14 h-14 rounded-2xl bg-secondary border border-border flex items-center justify-center text-muted hover:bg-primary hover:text-primary-foreground transition-all shadow-sm"
                                             title="GitHub"
                                         >
                                             <Github size={24} />
@@ -105,7 +105,7 @@ export default function Contact() {
                                             href={t.siteConfig.socials.linkedin}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="w-14 h-14 rounded-2xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 flex items-center justify-center text-slate-600 dark:text-zinc-400 hover:bg-[#599692] hover:text-white transition-all shadow-sm"
+                                            className="w-14 h-14 rounded-2xl bg-secondary border border-border flex items-center justify-center text-muted hover:bg-primary hover:text-primary-foreground transition-all shadow-sm"
                                             title="LinkedIn"
                                         >
                                             <Linkedin size={24} />
@@ -121,12 +121,12 @@ export default function Contact() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
-                        className="bg-white dark:bg-zinc-900 p-8 md:p-12 rounded-3xl border border-slate-100 dark:border-zinc-800 shadow-xl"
+                        className="bg-card p-8 md:p-12 rounded-3xl border border-border shadow-xl"
                     >
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label className="text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-zinc-500">{t.contact.form.name}</label>
+                                    <label className="text-sm font-bold uppercase tracking-widest text-muted-foreground">{t.contact.form.name}</label>
                                     <input
                                         type="text"
                                         name="name"
@@ -134,11 +134,11 @@ export default function Contact() {
                                         onChange={handleChange}
                                         placeholder={t.contact.form.namePlaceholder}
                                         required
-                                        className="w-full px-6 py-4 bg-slate-50 dark:bg-zinc-800 rounded-xl border-none focus:ring-2 focus:ring-[#599692] transition-all text-slate-900 dark:text-white placeholder:text-slate-400"
+                                        className="w-full px-6 py-4 bg-secondary rounded-xl border-none focus:ring-2 focus:ring-primary transition-all text-foreground placeholder:text-muted"
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-zinc-500">{t.contact.form.email}</label>
+                                    <label className="text-sm font-bold uppercase tracking-widest text-muted-foreground">{t.contact.form.email}</label>
                                     <input
                                         type="email"
                                         name="email"
@@ -146,12 +146,12 @@ export default function Contact() {
                                         onChange={handleChange}
                                         placeholder={t.contact.form.emailPlaceholder}
                                         required
-                                        className="w-full px-6 py-4 bg-slate-50 dark:bg-zinc-800 rounded-xl border-none focus:ring-2 focus:ring-[#599692] transition-all text-slate-900 dark:text-white placeholder:text-slate-400"
+                                        className="w-full px-6 py-4 bg-secondary rounded-xl border-none focus:ring-2 focus:ring-primary transition-all text-foreground placeholder:text-muted"
                                     />
                                 </div>
                             </div>
                             <div className="space-y-2">
-                                <label className="text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-zinc-500">{t.contact.form.subject}</label>
+                                <label className="text-sm font-bold uppercase tracking-widest text-muted-foreground">{t.contact.form.subject}</label>
                                 <input
                                     type="text"
                                     name="subject"
@@ -159,11 +159,11 @@ export default function Contact() {
                                     onChange={handleChange}
                                     placeholder={t.contact.form.subjectPlaceholder}
                                     required
-                                    className="w-full px-6 py-4 bg-slate-50 dark:bg-zinc-800 rounded-xl border-none focus:ring-2 focus:ring-[#599692] transition-all text-slate-900 dark:text-white placeholder:text-slate-400"
+                                    className="w-full px-6 py-4 bg-secondary rounded-xl border-none focus:ring-2 focus:ring-primary transition-all text-foreground placeholder:text-muted"
                                 />
                             </div>
                             <div className="space-y-2">
-                                <label className="text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-zinc-500">{t.contact.form.message}</label>
+                                <label className="text-sm font-bold uppercase tracking-widest text-muted-foreground">{t.contact.form.message}</label>
                                 <textarea
                                     name="message"
                                     rows={5}
@@ -171,7 +171,7 @@ export default function Contact() {
                                     onChange={handleChange}
                                     placeholder={t.contact.form.messagePlaceholder}
                                     required
-                                    className="w-full px-6 py-4 bg-slate-50 dark:bg-zinc-800 rounded-xl border-none focus:ring-2 focus:ring-[#599692] transition-all resize-none text-slate-900 dark:text-white placeholder:text-slate-400"
+                                    className="w-full px-6 py-4 bg-secondary rounded-xl border-none focus:ring-2 focus:ring-primary transition-all resize-none text-foreground placeholder:text-muted"
                                 />
                             </div>
 
@@ -189,7 +189,7 @@ export default function Contact() {
                             <button
                                 type="submit"
                                 disabled={loading}
-                                className="w-full py-4 bg-[#599692] text-white rounded-xl font-bold tracking-widest uppercase flex items-center justify-center gap-2 hover:bg-[#4a7d7a] transition-all shadow-lg shadow-[#599692]/20 disabled:opacity-70 disabled:cursor-not-allowed"
+                                className="w-full py-4 bg-primary text-primary-foreground rounded-xl font-bold tracking-widest uppercase flex items-center justify-center gap-2 hover:brightness-90 transition-all shadow-lg shadow-primary/20 disabled:opacity-70 disabled:cursor-not-allowed"
                             >
                                 {loading ? (t.common?.loading || "Sending...") : t.contact.form.send} <Send size={18} />
                             </button>

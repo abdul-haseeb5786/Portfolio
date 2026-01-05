@@ -17,7 +17,7 @@ export default function Home() {
       <section className="flex flex-col items-center justify-center p-6 md:p-24 min-h-screen relative">
         {/* Background Gradients */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
