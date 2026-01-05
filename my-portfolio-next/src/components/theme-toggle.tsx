@@ -11,7 +11,7 @@ export function ThemeToggle() {
     return (
         <button
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-            className="relative p-2 rounded-full bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200 dark:hover:bg-zinc-700 transition-colors"
+            className="relative p-2 rounded-full bg-secondary hover:bg-muted/20 transition-colors"
         >
             <motion.div
                 initial={false}

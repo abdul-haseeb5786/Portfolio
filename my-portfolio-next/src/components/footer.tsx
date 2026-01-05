@@ -9,7 +9,7 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-slate-50 dark:bg-zinc-950 border-t border-slate-200 dark:border-zinc-800 py-12">
+        <footer className="bg-secondary border-t border-border py-12">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="grid md:grid-cols-4 gap-8 mb-12">
                     <div className="col-span-1 md:col-span-2">
@@ -47,7 +47,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="pt-8 border-t border-slate-200 dark:border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted">
+                <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted">
                     <p>© {currentYear} Abdul Haseeb. All rights reserved.</p>
                     <p className="flex items-center gap-1">
                         Built with <span className="font-semibold text-foreground">Next.js</span> & <span className="font-semibold text-foreground">Tailwind</span>

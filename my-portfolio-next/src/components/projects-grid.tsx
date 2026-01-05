@@ -18,21 +18,21 @@ export default function Projects({ limit }: ProjectsProps) {
     const displayedProjects = limit ? projects?.slice(0, limit) : projects;
 
     return (
-        <section id="projects" className="py-24 bg-slate-50 dark:bg-zinc-900/50">
-            <div className="max-w-7xl mx-auto px-6">
+        <section id="projects" className="py-24 bg-secondary/30">
+            <div className={`max-w-7xl mx-auto px-6`}>
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
                     <div>
-                        <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4 text-slate-900 dark:text-white">
-                            {t.projects.title} <span className="text-[#599692]">{t.projects.subtitle}</span>
+                        <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4 text-foreground">
+                            {t.projects.title} <span className="text-primary">{t.projects.subtitle}</span>
                         </h2>
-                        <p className="text-slate-600 dark:text-zinc-400 max-w-xl text-lg">
+                        <p className="text-muted max-w-xl text-lg">
                             {t.projects.description}
                         </p>
                     </div>
                     {limit && (
                         <Link
                             href="/projects"
-                            className="flex items-center gap-2 font-semibold text-[#599692] hover:underline"
+                            className="flex items-center gap-2 font-semibold text-primary hover:underline"
                         >
                             {t.projects.allProjects} <ArrowRight size={18} />
                         </Link>
@@ -47,7 +47,7 @@ export default function Projects({ limit }: ProjectsProps) {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: idx * 0.1 }}
                             viewport={{ once: true }}
-                            className="group relative bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden border border-slate-100 dark:border-zinc-800 hover:shadow-2xl transition-all h-full flex flex-col"
+                            className="group relative bg-background rounded-3xl overflow-hidden border border-border hover:shadow-2xl transition-all h-full flex flex-col"
                         >
                             <div className="relative h-64 w-full overflow-hidden">
                                 <Image
@@ -62,7 +62,7 @@ export default function Projects({ limit }: ProjectsProps) {
                                             href={project.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="p-3 bg-white text-black rounded-full hover:bg-[#599692] hover:text-white transition-colors"
+                                            className="p-3 bg-secondary text-foreground rounded-full hover:bg-primary hover:text-white transition-colors"
                                             onClick={(e) => e.stopPropagation()}
                                         >
                                             <ExternalLink size={20} />
@@ -76,21 +76,21 @@ export default function Projects({ limit }: ProjectsProps) {
                                     {project.tech.map((t: string) => (
                                         <span
                                             key={t}
-                                            className="text-[10px] uppercase tracking-widest font-bold px-2 py-1 bg-slate-50 dark:bg-zinc-800 rounded-md text-slate-500 dark:text-zinc-400"
+                                            className="text-[10px] uppercase tracking-widest font-bold px-2 py-1 bg-secondary rounded-md text-muted-foreground"
                                         >
                                             {t}
                                         </span>
                                     ))}
                                 </div>
-                                <h3 className="text-2xl font-bold mb-3 group-hover:text-[#599692] transition-colors text-slate-900 dark:text-white">
+                                <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors text-foreground">
                                     {project.title}
                                 </h3>
-                                <p className="text-slate-600 dark:text-zinc-400 mb-6 flex-grow">
+                                <p className="text-muted mb-6 flex-grow">
                                     {project.description}
                                 </p>
                                 <Link
                                     href={`/projects/${project.id}`}
-                                    className="inline-flex items-center gap-2 font-bold text-sm tracking-widest uppercase hover:gap-3 transition-all underline decoration-[#599692] decoration-2 underline-offset-4 text-slate-900 dark:text-white"
+                                    className="inline-flex items-center gap-2 font-bold text-sm tracking-widest uppercase hover:gap-3 transition-all underline decoration-primary decoration-2 underline-offset-4 text-foreground"
                                 >
                                     {t.projects.viewCaseStudy}
                                 </Link>

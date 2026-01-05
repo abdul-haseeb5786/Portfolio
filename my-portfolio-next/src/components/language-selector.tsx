@@ -21,7 +21,7 @@ export default function LanguageSelector() {
         <div className="relative">
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="flex items-center gap-2 px-3 py-2 rounded-full bg-slate-100 dark:bg-zinc-800 hover:bg-slate-200 dark:hover:bg-zinc-700 transition-colors"
+                className="flex items-center gap-2 px-3 py-2 rounded-full bg-secondary hover:bg-muted/20 transition-colors"
                 aria-label="Select language"
             >
                 <Globe size={18} />
@@ -42,7 +42,7 @@ export default function LanguageSelector() {
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -10 }}
-                            className="absolute top-full mt-2 right-0 bg-white dark:bg-zinc-900 rounded-2xl shadow-xl border border-slate-200 dark:border-zinc-800 overflow-hidden z-50 min-w-[160px]"
+                            className="absolute top-full mt-2 right-0 bg-card rounded-2xl shadow-xl border border-border overflow-hidden z-50 min-w-[160px]"
                         >
                             {languages.map((lang) => (
                                 <button
@@ -51,13 +51,13 @@ export default function LanguageSelector() {
                                         setLanguage(lang.code);
                                         setIsOpen(false);
                                     }}
-                                    className={`w-full px-4 py-3 flex items-center gap-3 hover:bg-slate-50 dark:hover:bg-zinc-800 transition-colors ${language === lang.code ? "bg-slate-50 dark:bg-zinc-800" : ""
+                                    className={`w-full px-4 py-3 flex items-center gap-3 hover:bg-secondary transition-colors ${language === lang.code ? "bg-secondary" : ""
                                         }`}
                                 >
                                     <span className="text-xl">{lang.flag}</span>
                                     <span className="text-sm font-medium">{lang.name}</span>
                                     {language === lang.code && (
-                                        <span className="ml-auto text-[#599692]">✓</span>
+                                        <span className="ml-auto text-primary">✓</span>
                                     )}
                                 </button>
                             ))}
