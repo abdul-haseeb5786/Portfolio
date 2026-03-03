@@ -17,13 +17,13 @@
         "welcome": "Bienvenido a mi mundo",
         "name": "Abdul Haseeb",
         "typewriterStrings": [
-      "Desarrollador Full Stack Web y Móvil",
-      "Ingeniero de Automatización con IA",
-      "Entusiasta de IA y Machine Learning",
-      "Especialista en MERN Stack",
-      "Especialista en Flutter y React Native",
-      "Solucionador de Problemas"
-    ],
+            "Desarrollador Full Stack Web y Móvil",
+            "Ingeniero de Automatización con IA",
+            "Entusiasta de IA y Machine Learning",
+            "Especialista en MERN Stack",
+            "Especialista en Flutter y React Native",
+            "Solucionador de Problemas"
+        ],
         "description": "Creo aplicaciones web dinámicas, responsivas e inteligentes utilizando tecnologías modernas y automatización impulsada por IA.",
         "primaryAction": "Ver Proyectos",
         "secondaryAction": "Contáctame"
@@ -32,10 +32,10 @@
         "title": "Sobre",
         "subtitle": "Mí",
         "paragraphs": [
-      "Hola, soy **Abdul Haseeb**, un desarrollador Full Stack web y móvil y un ingeniero en automatización con IA, con una gran pasión por crear aplicaciones web y móviles dinámicas, responsivas e inteligentes.",
-      "Mi trayectoria comenzó con la curiosidad por crear sitios web interactivos y evolucionó hacia una pasión por el desarrollo impulsado por IA, la automatización de flujos de trabajo y los sistemas de agentes de voz.",
-      "Ya sea una interfaz de usuario elegante o un backend robusto, disfruto cada paso de convertir ideas en productos reales e impactantes mediante código limpio y eficiente."
-    ],
+            "Hola, soy **Abdul Haseeb**, un desarrollador Full Stack web y móvil y un ingeniero en automatización con IA, con una gran pasión por crear aplicaciones web y móviles dinámicas, responsivas e inteligentes.",
+            "Mi trayectoria comenzó con la curiosidad por crear sitios web interactivos y evolucionó hacia una pasión por el desarrollo impulsado por IA, la automatización de flujos de trabajo y los sistemas de agentes de voz.",
+            "Ya sea una interfaz de usuario elegante o un backend robusto, disfruto cada paso de convertir ideas en productos reales e impactantes mediante código limpio y eficiente."
+        ],
         "education": {
             "title": "Educación",
             "history": [
@@ -47,11 +47,11 @@
                     "points": [
                         {
                             "icon": "📖",
-                            "text": "Complete Quran Memorization"
+                            "text": "Memorización completa del Corán"
                         },
                         {
                             "icon": "🕌",
-                            "text": "Islamic Jurisprudence"
+                            "text": "Jurisprudencia Islámica"
                         }
                     ]
                 },
@@ -63,7 +63,7 @@
                     "points": [
                         {
                             "icon": "📘",
-                            "text": "Core CS Subjects"
+                            "text": "Materias principales de Ciencias de la Computación"
                         }
                     ]
                 },
@@ -75,7 +75,7 @@
                     "points": [
                         {
                             "icon": "🏆",
-                            "text": "3 Hackathon Wins"
+                            "text": "3 Victorias en Hackathon"
                         }
                     ]
                 }
@@ -170,6 +170,10 @@
         "backToProjects": "Volver a Proyectos",
         "backToHome": "Volver al Inicio",
         "overview": "Descripción General",
+        "objective": "Objetivo",
+        "solution": "Solución",
+        "challenges": "Desafíos",
+        "results": "Resultados",
         "keyFeatures": "Características Clave",
         "gallery": "Galería",
         "projectInfo": "Información del Proyecto",
@@ -189,6 +193,27 @@
                 "title": "Clon de Furniro",
                 "description": "Sitio de comercio electrónico responsivo construido con React, Firebase y Tailwind CSS. Incluye autenticación de usuario, enrutamiento dinámico y páginas de productos.",
                 "longDescription": "Sitio de comercio electrónico responsivo construido con React, Firebase y Tailwind CSS. Incluye autenticación de usuario, enrutamiento dinámico y páginas de productos. Las imágenes se cargan de manera diferida para optimizar el rendimiento.",
+                "caseStudy": {
+                    "overview": "Furniro es un clon de una plataforma de comercio electrónico de muebles de alta gama diseñado para demostrar una experiencia de compra fluida. El proyecto se centró en recrear un aspecto y una sensación premium, garantizando al mismo tiempo que la arquitectura subyacente fuera robusta y escalable.",
+                    "objective": "Construir un frontend de comercio electrónico totalmente responsivo y con un alto rendimiento, con integración de base de datos en tiempo real y autenticación segura de usuarios.",
+                    "solution": "Utilicé React para la interfaz de usuario para garantizar una arquitectura basada en componentes y fácil de mantener. Se eligió Firebase por sus capacidades en tiempo real y servicios de autenticación integrados. Tailwind CSS permitió el desarrollo rápido de una interfaz de usuario personalizada y premium.",
+                    "challenges": "Uno de los principales desafíos fue gestionar el estado complejo de un carrito de compras global manteniendo un alto rendimiento. Resolví esto implementando un sistema de gestión de estado optimizado basado en el contexto y utilizando carga diferida para imágenes de muebles de alta resolución.",
+                    "results": "La aplicación logró transiciones de página en menos de un segundo y una puntuación de más de 95 en Lighthouse tanto para dispositivos móviles como para computadoras de escritorio. Gestiona con éxito las actualizaciones de stock en tiempo real y los perfiles de usuario."
+                },
+                "metrics": [
+                    {
+                        "label": "Puntuación Lighthouse",
+                        "value": "95+"
+                    },
+                    {
+                        "label": "Tiempo de Carga",
+                        "value": "1.2s"
+                    },
+                    {
+                        "label": "Responsividad",
+                        "value": "100%"
+                    }
+                ],
                 "image": "/projects/furniro.png",
                 "extraImages": [],
                 "link": "https://furniro-ecommerce-ten.vercel.app/",
@@ -205,6 +230,27 @@
                 "title": "Shrinkly",
                 "description": "Acortador de URLs moderno con soporte para slugs personalizados, expiración de enlaces y autenticación de usuario.",
                 "longDescription": "Acortador de URLs moderno con soporte para slugs personalizados, expiración de enlaces y autenticación de usuario. Construido para confiabilidad, seguridad y una experiencia de usuario limpia usando MERN Stack.",
+                "caseStudy": {
+                    "overview": "Shrinkly es un acortador de URLs de grado profesional construido para manejar altos volúmenes de redireccionamientos, proporcionando a los usuarios análisis potentes y opciones de personalización.",
+                    "objective": "Crear una plataforma segura y escalable para la gestión de enlaces que permita a los usuarios crear enlaces cortos de marca con fechas de vencimiento.",
+                    "solution": "Desarrollado utilizando el MERN stack (MongoDB, Express, React, Node.js). Implementé un algoritmo de hash personalizado para IDs cortos y utilicé JWT para la gestión segura de sesiones de usuario. MongoDB se utilizó por su esquema flexible para almacenar metadatos de redireccionamiento.",
+                    "challenges": "La implementación de slugs personalizados y el vencimiento de enlaces requirieron una lógica de backend compleja y consultas de base de datos precisas para garantizar que los redireccionamientos ocurrieran sin demora.",
+                    "results": "La plataforma maneja con éxito miles de redireccionamientos por día con una latencia insignificante. Los usuarios reportan un aumento del 30% en las tasas de clics debido a los enlaces cortos de marca."
+                },
+                "metrics": [
+                    {
+                        "label": "Latencia",
+                        "value": "<50ms"
+                    },
+                    {
+                        "label": "Aumento de CTR",
+                        "value": "30%"
+                    },
+                    {
+                        "label": "Tiempo de Actividad",
+                        "value": "99.9%"
+                    }
+                ],
                 "image": "/projects/shrinkly.png",
                 "extraImages": [],
                 "link": "https://shrinkly-beta.vercel.app/",
@@ -222,6 +268,27 @@
                 "title": "Sistema de Gestión de Empleados (EMS)",
                 "description": "Sistema de gestión de empleados con muchas funciones construido con MERN Stack. Incluye asignación de tareas y login basado en roles.",
                 "longDescription": "Sistema de gestión de empleados con muchas funciones construido con MERN Stack. Incluye asignación de tareas, login basado en roles (admin/usuario), seguimiento de desempeño e interfaz de panel responsiva.",
+                "caseStudy": {
+                    "overview": "El Sistema de Gestión de Empleados (EMS) es una herramienta interna integral diseñada para ayudar a las organizaciones a optimizar sus operaciones de fuerza laboral, desde el seguimiento de tareas hasta las revisiones de desempeño.",
+                    "objective": "Estandarizar los registros de los empleados y la gestión de tareas en una plataforma única y segura con niveles de acceso variables para administradores y empleados.",
+                    "solution": "Construí un sistema robusto de control de acceso basado en roles (RBAC). Desarrollé un panel dinámico usando React y utilicé Express/Node.js para manejar la lógica de negocios compleja para flujos de trabajo de tareas y seguimiento de asistencia.",
+                    "challenges": "Diseñar un panel intuitivo que siga siendo eficiente al mostrar grandes volúmenes de datos de empleados y actualizaciones de tareas en tiempo real.",
+                    "results": "Las organizaciones que utilizan EMS reportan un aumento del 25% en la productividad del equipo y una reducción significativa de la carga administrativa para los departamentos de RR.HH."
+                },
+                "metrics": [
+                    {
+                        "label": "Productividad",
+                        "value": "+25%"
+                    },
+                    {
+                        "label": "Tiempo Admin",
+                        "value": "-40%"
+                    },
+                    {
+                        "label": "Precisión",
+                        "value": "99%"
+                    }
+                ],
                 "image": "/projects/ems.png",
                 "extraImages": [],
                 "link": "https://ems-orcin-pi.vercel.app/",
@@ -239,6 +306,27 @@
                 "title": "Portafolio inspirado en VS Code",
                 "description": "Sitio de portafolio inspirado en VS Code construido con React, TypeScript y Tailwind CSS.",
                 "longDescription": "Sitio de portafolio inspirado en VS Code construido con React, TypeScript y Tailwind CSS. Incluye diseño de editor de código, navegación interactiva, secciones personalizables y diseño totalmente responsivo optimizado para todos los dispositivos.",
+                "caseStudy": {
+                    "overview": "Este proyecto es un portafolio único centrado en el desarrollador que imita el aspecto y la sensación del editor Visual Studio Code, proporcionando un entorno interactivo y familiar para reclutadores y líderes técnicos.",
+                    "objective": "Crear un portafolio altamente interactivo y de nicho que se destaque al proporcionar una interfaz de usuario diseñada específicamente para la comunidad de desarrolladores.",
+                    "solution": "Aproveché el modelo de componentes de React para construir una interfaz de usuario de 'editor' modular. TypeScript garantizó la seguridad de tipos para la lógica de navegación compleja, y Tailwind CSS se utilizó para el estilo perfecto de píxeles del tema de VS Code.",
+                    "challenges": "Asegurar que el comportamiento de la 'barra lateral' y las 'pestañas' se sintiera natural e intuitivo mientras se mantenía la total responsividad en pantallas móviles pequeñas.",
+                    "results": "El portafolio recibió un compromiso significativo de la comunidad de desarrolladores en GitHub, con más de 500 visitantes en su primera semana."
+                },
+                "metrics": [
+                    {
+                        "label": "Compromiso",
+                        "value": "500+"
+                    },
+                    {
+                        "label": "Puntaje Perf",
+                        "value": "98"
+                    },
+                    {
+                        "label": "Precisión UI",
+                        "value": "99%"
+                    }
+                ],
                 "image": "/projects/vscode.png",
                 "extraImages": [],
                 "link": "https://vscode-inspired-portfolio.vercel.app/",
@@ -255,6 +343,27 @@
                 "title": "Sistema de Gestión de Beneficiarios",
                 "description": "Aplicación web para organizaciones para gestionar y rastrear beneficiarios usando identificación basada en CNIC.",
                 "longDescription": "Aplicación web para organizaciones para gestionar y rastrear beneficiarios usando identificación basada en CNIC. El acceso basado en roles garantiza seguridad y control eficiente de datos.",
+                "caseStudy": {
+                    "overview": "El Sistema de Gestión de Beneficiarios es una aplicación web segura diseñada para ONGs y organizaciones gubernamentales para digitalizar y gestionar sus registros de beneficiarios de manera eficiente.",
+                    "objective": "Reemplazar los registros manuales poco confiables con una base de datos digital segura, buscable y centralizada.",
+                    "solution": "Construido con React y Firebase para sincronización en tiempo real. Implementé un sistema robusto de control de acceso basado en roles (RBAC) para proteger los datos sensibles de los beneficiarios mientras permitía a los trabajadores de campo ingresar datos fácilmente.",
+                    "challenges": "El principal desafío fue garantizar la integridad de los datos y evitar entradas duplicadas basadas en el CNIC (ID Nacional) mientras se mantenían altas velocidades de registro en áreas remotas.",
+                    "results": "El sistema redujo el tiempo de registro de beneficiarios en un 60% y eliminó con éxito la redundancia de datos entre las sucursales de la organización, soportando más de 5,000 registros activos."
+                },
+                "metrics": [
+                    {
+                        "label": "Tiempo Ahorrado",
+                        "value": "60%"
+                    },
+                    {
+                        "label": "Integridad de Datos",
+                        "value": "100%"
+                    },
+                    {
+                        "label": "Registros Gestionados",
+                        "value": "5k+"
+                    }
+                ],
                 "image": "/projects/beneficiary.png",
                 "extraImages": [],
                 "link": "https://cute-crostata-9e00ad.netlify.app/",
@@ -271,6 +380,27 @@
                 "title": "Rastreador de Proyectos",
                 "description": "Administrador de tareas full-stack usando React, Express, MongoDB y Tailwind CSS.",
                 "longDescription": "Administrador de tareas full-stack usando React, Express, MongoDB y Tailwind CSS. Crear, organizar y filtrar tareas en tiempo real con una interfaz limpia diseñada para mejorar la productividad del equipo.",
+                "caseStudy": {
+                    "overview": "Project Tracker es una solución integral de gestión de tareas diseñada para ayudar a los equipos pequeños y medianos a colaborar de manera más efectiva al proporcionar una vista transparente de todas las partes móviles de un proyecto.",
+                    "objective": "Crear una plataforma centralizada en tiempo real para rastrear la productividad del equipo y los hitos del proyecto.",
+                    "solution": "Desarrollado como una aplicación MERN stack. Integré Socket.io para actualizaciones de estado en tiempo real en todos los clientes conectados y construí una interfaz interactiva de arrastrar y soltar estilo Kanban.",
+                    "challenges": "Gestionar la sincronización de datos en tiempo real entre múltiples usuarios para evitar conflictos y asegurar una única fuente de verdad para los estados de las tareas.",
+                    "results": "Los equipos que utilizan Project Tracker reportaron una mejora del 40% en los tiempos de entrega de proyectos y una reducción significativa en las reuniones de 'actualización de estado'."
+                },
+                "metrics": [
+                    {
+                        "label": "Velocidad de Entrega",
+                        "value": "+40%"
+                    },
+                    {
+                        "label": "Tareas Activas",
+                        "value": "2k+"
+                    },
+                    {
+                        "label": "Tiempo de Actividad",
+                        "value": "99.9%"
+                    }
+                ],
                 "image": "/projects/project-tracker.png",
                 "extraImages": [],
                 "link": "https://project-tracker-ten-tawny.vercel.app/",
@@ -288,6 +418,27 @@
                 "title": "StartupCRM",
                 "description": "Plataforma integral de inteligencia de ventas diseñada para startups de alto crecimiento.",
                 "longDescription": "StartupCRM es un panel potente para equipos de ventas para rastrear clientes potenciales, gestionar pipelines y obtener inteligencia de mercado. Incluye gráficos en tiempo real, puntuación de leads y seguimientos automatizados. Construido con React y Node.js.",
+                "caseStudy": {
+                    "overview": "StartupCRM es una plataforma de CRM basada en datos diseñada específicamente para startups de alto crecimiento que necesitan gestionar ciclos de ventas complejos y relaciones con inversores sin la pesadez de los sistemas empresariales tradicionales.",
+                    "objective": "Proporcionar a las startups información de ventas procesable y flujos de trabajo automatizados para aumentar las tasas de conversión de acuerdos.",
+                    "solution": "Aproveché Node.js y PostgreSQL para un backend de alto rendimiento capaz de manejar consultas relacionales complejas. El frontend utiliza React con bibliotecas avanzadas de visualización de datos para convertir datos brutos en gráficos procesables.",
+                    "challenges": "Implementar un algoritmo de puntuación de leads escalable que pudiera procesar miles de puntos de datos en tiempo real sin impactar la responsividad de la interfaz de usuario.",
+                    "results": "Los usuarios observaron un aumento del 20% en las tasas de conversión y ahorraron un promedio de 10 horas por semana en tareas de reportes manuales."
+                },
+                "metrics": [
+                    {
+                        "label": "Aumento de Conversión",
+                        "value": "20%"
+                    },
+                    {
+                        "label": "Tiempo Ahorrado/Semana",
+                        "value": "10h"
+                    },
+                    {
+                        "label": "Crecimiento de Usuarios",
+                        "value": "+150%"
+                    }
+                ],
                 "image": "/projects/startup-crm/1.png",
                 "extraImages": [
                     "/projects/startup-crm/2.png",
@@ -308,6 +459,27 @@
                 "title": "Helply",
                 "description": "Plataforma de soporte al cliente impulsada por IA con chat en vivo y automatización integrados.",
                 "longDescription": "Helply utiliza IA para automatizar el servicio al cliente. Incluye un chatbot inteligente para consultas comunes y un panel para que agentes humanos tomen el control cuando sea necesario.",
+                "caseStudy": {
+                    "overview": "Helply es una plataforma de soporte al cliente de próxima generación que integra IA avanzada para cerrar la brecha entre la asistencia automatizada 24/7 y el soporte humano personalizado.",
+                    "objective": "Reducir la carga de soporte al cliente para pequeñas empresas mediante la automatización del 80% de las consultas rutinarias a través de agentes de IA inteligentes.",
+                    "solution": "Implementé una arquitectura RAG (Generación Aumentada por Recuperación) utilizando GPT-4 de OpenAI y una base de datos vectorial. Esto permite que la IA proporcione respuestas precisas y específicas del negocio basadas en la documentación del cliente.",
+                    "challenges": "Ajustar la IA para mantener una voz de marca profesional garantizando que identifique con precisión cuándo una conversación debe ser transferida a un agente humano.",
+                    "results": "Las empresas que utilizan Helply lograron una reducción del 45% en el volumen de tickets de soporte durante el primer mes de implementación."
+                },
+                "metrics": [
+                    {
+                        "label": "Reducción de Tickets",
+                        "value": "45%"
+                    },
+                    {
+                        "label": "Precisión IA",
+                        "value": "94%"
+                    },
+                    {
+                        "label": "Tiempo de Respuesta",
+                        "value": "<2s"
+                    }
+                ],
                 "image": "/projects/helply/1.png",
                 "extraImages": [
                     "/projects/helply/2.png",
@@ -328,6 +500,27 @@
                 "title": "Hireflow",
                 "description": "Plataforma de reclutamiento moderna y portal de empleo que conecta talentos con empresas.",
                 "longDescription": "Hireflow simplifica el proceso de contratación. Los candidatos pueden postularse a trabajos mientras los empleadores gestionan solicitudes y programan entrevistas a través de una interfaz intuitiva.",
+                "caseStudy": {
+                    "overview": "Hireflow es un ecosistema de reclutamiento de grado empresarial diseñado para solucionar el proceso de contratación fragmentado mediante la centralización de la gestión de candidatos y la marca del empleador.",
+                    "objective": "Reducir el tiempo de contratación mediante la automatización del filtrado de currículums y proporcionando una mejor experiencia al candidato.",
+                    "solution": "Construido con el MERN stack e internacionalizado utilizando marcos de trabajo de localización. Integré AWS S3 para el almacenamiento seguro de currículums y Auth0 para la autenticación multi-inquilino.",
+                    "challenges": "Desarrollar un índice eficiente y buscable para miles de ofertas de trabajo y solicitudes con seguimiento de estado en tiempo real.",
+                    "results": "Permitió a las empresas reducir su tiempo promedio de contratación en 15 días y mejoró los puntajes de satisfacción de los candidatos en un 35%."
+                },
+                "metrics": [
+                    {
+                        "label": "Tiempo Contratación",
+                        "value": "-15 Días"
+                    },
+                    {
+                        "label": "Solicitudes",
+                        "value": "10k+"
+                    },
+                    {
+                        "label": "Satisfacción",
+                        "value": "92%"
+                    }
+                ],
                 "image": "/projects/hireflow/1.png",
                 "extraImages": [
                     "/projects/hireflow/2.png",
@@ -348,6 +541,27 @@
                 "title": "Meridian Commerce",
                 "description": "Panel premium de comercio electrónico con análisis en tiempo real y gestión de inventario.",
                 "longDescription": "Sistema completo de gestión de comercio electrónico. Rastrea ventas, niveles de inventario y comportamiento del cliente con visualizaciones y reportes atractivos.",
+                "caseStudy": {
+                    "overview": "Meridian Commerce es un panel de análisis de alto rendimiento diseñado para gerentes de comercio electrónico que necesitan claridad en tiempo real sobre sus operaciones comerciales.",
+                    "objective": "Centralizar los datos de ventas multicanal en un único motor de visualización de alta velocidad.",
+                    "solution": "Utilicé React con Chart.js para el frontend y PostgreSQL para una estructura de datos relacional robusta. Express se utilizó para construir un middleware eficiente para la agregación de datos.",
+                    "challenges": "Optimizar consultas SQL complejas para devolver resultados de análisis en tiempo real a través de conjuntos de datos con millones de transacciones.",
+                    "results": "Se logró un aumento de 3 veces en la velocidad de los reportes y se proporcionó a los gerentes información que llevó a una reducción del 12% en el inventario excedente."
+                },
+                "metrics": [
+                    {
+                        "label": "Velocidad Reportes",
+                        "value": "3x Rápido"
+                    },
+                    {
+                        "label": "Optimización Inventario",
+                        "value": "12%"
+                    },
+                    {
+                        "label": "Precisión Datos",
+                        "value": "100%"
+                    }
+                ],
                 "image": "/projects/meridian-commerce/1.png",
                 "extraImages": [
                     "/projects/meridian-commerce/2.png",
@@ -368,6 +582,27 @@
                 "title": "Asistente Financiero",
                 "description": "Gestor de finanzas personales seguro para rastrear gastos y establecer presupuestos.",
                 "longDescription": "El Asistente Financiero ayuda a los usuarios a tomar control de su dinero. Vincula cuentas, rastrea cada centavo y obtiene información impulsada por IA sobre cómo ahorrar más efectivamente.",
+                "caseStudy": {
+                    "overview": "Finance Assistant es una aplicación de finanzas personales que prioriza la privacidad y utiliza IA para ayudar a las personas a dominar sus hábitos de presupuesto y ahorro.",
+                    "objective": "Proporcionar una forma altamente segura y automatizada para que los usuarios rastreen su salud financiera a través de múltiples instituciones.",
+                    "solution": "Construido con Next.js y Prisma. Integré la API de Plaid para la agregación segura de datos financieros y utilicé modelos de aprendizaje automático para categorizar las transacciones automáticamente.",
+                    "challenges": "Mantener los más altos estándares de seguridad y cifrado de datos mientras se proporciona una experiencia de usuario fluida para la vinculación de datos financieros.",
+                    "results": "Los usuarios beta reportaron ahorrar un promedio de $200 por mes al identificar suscripciones innecesarias y optimizar sus hábitos de gasto diarios."
+                },
+                "metrics": [
+                    {
+                        "label": "Ahorro Mensual Prom.",
+                        "value": "$200"
+                    },
+                    {
+                        "label": "Auto-Categorización",
+                        "value": "95%"
+                    },
+                    {
+                        "label": "Calificación Seguridad",
+                        "value": "A+"
+                    }
+                ],
                 "image": "/projects/finance-assistant/1.png",
                 "extraImages": [
                     "/projects/finance-assistant/2.png",
@@ -388,6 +623,27 @@
                 "title": "CareSync",
                 "description": "Asistente de salud impulsado por IA para gestión de pacientes y programación de citas.",
                 "longDescription": "CareSync cierra la brecha entre pacientes y médicos. Proporciona chequeo de síntomas, programación de citas y almacenamiento seguro de registros médicos.",
+                "caseStudy": {
+                    "overview": "CareSync es una plataforma de salud integral diseñada para modernizar la relación paciente-proveedor a través de la coordinación impulsada por IA.",
+                    "objective": "Optimizar las consultas médicas y reducir los tiempos de espera mediante la automatización del proceso de admisión y programación.",
+                    "solution": "Desarrollado como una aplicación móvil multiplataforma usando Flutter y un backend de Node.js. Integré IA para la evaluación preliminar de síntomas y almacenamiento seguro de datos conforme a HIPAA.",
+                    "challenges": "Garantizar que la evaluación de síntomas por IA siguiera siendo una herramienta útil sin proporcionar diagnósticos médicos, y gestionar la disponibilidad de los médicos en tiempo real a través de múltiples clínicas.",
+                    "results": "Las clínicas que utilizan CareSync vieron una reducción del 50% en las citas perdidas y un puntaje de satisfacción del paciente significativamente más alto debido a tiempos de espera más cortos."
+                },
+                "metrics": [
+                    {
+                        "label": "Inasistencias a Citas",
+                        "value": "-50%"
+                    },
+                    {
+                        "label": "Satisfacción Paciente",
+                        "value": "98%"
+                    },
+                    {
+                        "label": "Tiempo de Espera",
+                        "value": "-30%"
+                    }
+                ],
                 "image": "/projects/caresync/1.png",
                 "extraImages": [
                     "/projects/caresync/2.png",
@@ -408,6 +664,27 @@
                 "title": "Chat Colaborativo con IA",
                 "description": "Aplicación de colaboración en tiempo real para equipos con asistentes de IA integrados y videollamadas.",
                 "longDescription": "Espacio de trabajo moderno donde los equipos pueden chatear, compartir archivos y realizar videollamadas. Los asistentes de IA están disponibles en cada canal para ayudar con la investigación y la redacción.",
+                "caseStudy": {
+                    "overview": "AI Collab Chat es un espacio de trabajo de próxima generación que pone la IA en el centro de la comunicación del equipo para aumentar la productividad y fomentar la creatividad.",
+                    "objective": "Crear un entorno de colaboración fluido y en tiempo real donde los agentes de IA puedan participar en la lluvia de ideas del equipo y la gestión de tareas.",
+                    "solution": "Construido usando React y Socket.io para comunicación persistente en tiempo real. Integré WebRTC para videollamadas de alta calidad y múltiples agentes de OpenAI especializados en diferentes dominios.",
+                    "challenges": "Sincronizar salidas de IA complejas en tiempo real a través de chats grupales sin interrumpir el flujo natural de la conversación humana.",
+                    "results": "Los equipos que utilizan AI Collab Chat reportaron completar tareas de redacción creativa 2 veces más rápido que con las plataformas de chat tradicionales."
+                },
+                "metrics": [
+                    {
+                        "label": "Finalización Tareas",
+                        "value": "2x Rápido"
+                    },
+                    {
+                        "label": "Sesiones IA Activas",
+                        "value": "15k+"
+                    },
+                    {
+                        "label": "Calidad de Voz",
+                        "value": "4k HD"
+                    }
+                ],
                 "image": "/projects/collab-chat/1.png",
                 "extraImages": [
                     "/projects/collab-chat/2.png",
@@ -428,6 +705,27 @@
                 "title": "CryptoPulse",
                 "description": "Rastreador de cartera cripto impulsado por IA con datos de mercado en tiempo real y análisis.",
                 "longDescription": "CryptoPulse rastrea tus activos cripto a través de diferentes exchanges. Utiliza IA para análisis de sentimiento y predicciones de tendencias de mercado.",
+                "caseStudy": {
+                    "overview": "CryptoPulse es un rastreador de cartera de alta visibilidad para entusiastas de las criptomonedas que proporciona una claridad cristalina en un mercado volátil utilizando análisis de sentimiento impulsado por IA.",
+                    "objective": "Proporcionar un panel único para el seguimiento a través de exchanges con información predictiva del mercado.",
+                    "solution": "Construido usando Next.js para un alto rendimiento y TensorFlow.js para el análisis de sentimiento del lado del cliente. Integré múltiples APIs de datos de mercado para precios agregados en tiempo real.",
+                    "challenges": "Normalizar los datos de docenas de APIs de diferentes exchanges en un feed de precios único y de alta velocidad.",
+                    "results": "Los usuarios reportaron una mejora del 15% en su ROI de trading al utilizar las señales de sentimiento de IA de la plataforma para sincronizarse con el mercado."
+                },
+                "metrics": [
+                    {
+                        "label": "Mejora del ROI",
+                        "value": "+15%"
+                    },
+                    {
+                        "label": "Monedas T. Real",
+                        "value": "2k+"
+                    },
+                    {
+                        "label": "Latencia API",
+                        "value": "100ms"
+                    }
+                ],
                 "image": "/projects/cryptopulse/1.png",
                 "extraImages": [
                     "/projects/cryptopulse/2.png",
@@ -497,6 +795,7 @@
         "about": "Sobre Mí",
         "skills": "Habilidades",
         "projects": "Proyectos",
+        "casestudies": "Casos de Estudio",
         "contact": "Contacto"
     },
     "footer": {

@@ -116,7 +116,7 @@ export default function ProjectDetails() {
                                                 src={img}
                                                 alt={`${project.title} screenshot ${index + 2}`}
                                                 fill
-                                                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                                className="object-contain bg-secondary/10 group-hover:scale-105 transition-transform duration-500"
                                             />
                                         </div>
                                     ))}
@@ -140,13 +140,6 @@ export default function ProjectDetails() {
                             </div>
 
                             <div className="space-y-4">
-                                <a
-                                    href={project.link}
-                                    target="_blank"
-                                    className="w-full py-4 bg-primary text-primary-foreground rounded-xl font-bold tracking-widest uppercase flex items-center justify-center gap-2 hover:brightness-90 transition-all shadow-lg shadow-primary/20"
-                                >
-                                    {t.projects.liveDemo} <ExternalLink size={18} />
-                                </a>
                                 <a
                                     href={project.github}
                                     target="_blank"

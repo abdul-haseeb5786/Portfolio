@@ -49,12 +49,12 @@ export default function Projects({ limit }: ProjectsProps) {
                             viewport={{ once: true }}
                             className="group relative bg-background rounded-3xl overflow-hidden border border-border hover:shadow-2xl transition-all h-full flex flex-col"
                         >
-                            <div className="relative h-64 w-full overflow-hidden">
+                            <div className="relative h-64 w-full overflow-hidden bg-secondary/30">
                                 <Image
                                     src={project.image}
                                     alt={project.title}
                                     fill
-                                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                    className="object-contain group-hover:scale-105 transition-transform duration-700"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
                                     <div className="flex gap-3">
@@ -89,7 +89,7 @@ export default function Projects({ limit }: ProjectsProps) {
                                     {project.description}
                                 </p>
                                 <Link
-                                    href={`/projects/${project.id}`}
+                                    href={`/casestudy/${project.id}`}
                                     className="inline-flex items-center gap-2 font-bold text-sm tracking-widest uppercase hover:gap-3 transition-all underline decoration-primary decoration-2 underline-offset-4 text-foreground"
                                 >
                                     {t.projects.viewCaseStudy}
