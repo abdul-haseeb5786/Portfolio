@@ -740,6 +740,87 @@
                     "Tailwind"
                 ],
                 "category": "Crypto"
+            },
+            {
+                "id": "ads-management-system",
+                "title": "Ads Management System (ADM)",
+                "description": "Advanced performance marketing dashboard for agency-side reporting and strategic analysis.",
+                "longDescription": "Ads Management System (ADM) is a premium reporting platform designed for marketing agencies. It centralizes cross-channel performance data into high-fidelity dashboards, enabling deep-dive intelligence and strategic KPI tracking.",
+                "caseStudy": {
+                    "overview": "ADM was built to solve the fragmentation in agency reporting, providing a single source of truth for advertising performance across various platforms.",
+                    "objective": "To create a high-performance, real-time analytics engine that transforms raw marketing data into actionable strategic insights.",
+                    "solution": "Developed with a MERN stack architecture, utilizing a robust data aggregation layer. The frontend features custom data visualization components for pixel-perfect performance reports.",
+                    "challenges": "Handling high-frequency data updates from multiple ad APIs while maintaining low latency and high UI responsiveness.",
+                    "results": "Agencies using ADM reported a 50% reduction in manual reporting time and a 20% increase in client retention due to more transparent reporting."
+                },
+                "metrics": [
+                    {
+                        "label": "Reporting Efficiency",
+                        "value": "+50%"
+                    },
+                    {
+                        "label": "Client Retention",
+                        "value": "+20%"
+                    },
+                    {
+                        "label": "Data Fidelity",
+                        "value": "100%"
+                    }
+                ],
+                "image": "/projects/ADM(AdsManagementSystem)/Screenshot 2026-03-04 155731.png",
+                "extraImages": [
+                    "/projects/ADM(AdsManagementSystem)/Screenshot 2026-03-04 155017.png",
+                    "/projects/ADM(AdsManagementSystem)/Screenshot 2026-03-04 155754.png"
+                ],
+                "link": "https://github.com/abdul-haseeb5786",
+                "github": "https://github.com/abdul-haseeb5786",
+                "tech": [
+                    "React",
+                    "Node.js",
+                    "MongoDB",
+                    "Tailwind CSS"
+                ],
+                "category": "Marketing Tech"
+            },
+            {
+                "id": "software-agency-management",
+                "title": "Software Agency Management",
+                "description": "Comprehensive management platform for software agencies to streamline project workflows and team collaboration.",
+                "longDescription": "A robust SaaS platform designed specifically for software development agencies. Manages the entire project lifecycle from initial client intake to final delivery, featuring integrated performance metrics and client portals.",
+                "caseStudy": {
+                    "overview": "This project addressed the operational challenges of growing software agencies by centralizing project management, client communications, and financial tracking.",
+                    "objective": "To build a scalable, multi-tenant platform that improves operational efficiency and provides real-time visibility into agency health.",
+                    "solution": "Built using Next.js for a performant frontend and Prisma with PostgreSQL for a relational backend capable of handling complex project hierarchies.",
+                    "challenges": "Designing an intuitive multi-tenant architecture with strict data isolation and complex permission levels for different team roles.",
+                    "results": "Pilot agencies observed a 30% improvement in project delivery times and significantly reduced administrative overhead."
+                },
+                "metrics": [
+                    {
+                        "label": "Delivery Speed",
+                        "value": "+30%"
+                    },
+                    {
+                        "label": "Admin Overhead",
+                        "value": "-40%"
+                    },
+                    {
+                        "label": "Uptime",
+                        "value": "99.99%"
+                    }
+                ],
+                "image": "/projects/softwareAgencyManagement/Screenshot 2026-03-05 154933.png",
+                "extraImages": [
+                    "/projects/softwareAgencyManagement/Screenshot 2026-03-05 155002.png"
+                ],
+                "link": "https://github.com/abdul-haseeb5786",
+                "github": "https://github.com/abdul-haseeb5786",
+                "tech": [
+                    "Next.js",
+                    "Prisma",
+                    "PostgreSQL",
+                    "Tailwind"
+                ],
+                "category": "SaaS"
             }
         ]
     },

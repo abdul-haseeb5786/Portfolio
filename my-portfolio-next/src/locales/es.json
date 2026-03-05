@@ -740,6 +740,87 @@
                     "Tailwind"
                 ],
                 "category": "Cripto"
+            },
+            {
+                "id": "ads-management-system",
+                "title": "Sistema de gestión de anuncios (ADM)",
+                "description": "Panel de marketing de rendimiento avanzado para informes de agencias y análisis estratégico.",
+                "longDescription": "Ads Management System (ADM) es una plataforma de informes premium diseñada para agencias de marketing. Centraliza los datos de rendimiento de canales cruzados en paneles de alta fidelidad, lo que permite una inteligencia profunda y el seguimiento de KPI estratégicos.",
+                "caseStudy": {
+                    "overview": "ADM se creó para resolver la fragmentación en los informes de las agencias, proporcionando una única fuente de verdad para el rendimiento publicitario en varias plataformas.",
+                    "objective": "Crear un motor de análisis en tiempo real de alto rendimiento que transforme los datos de marketing sin procesar en conocimientos estratégicos procesables.",
+                    "solution": "Desarrollado con una arquitectura MERN stack, utilizando una robusta capa de agregación de datos. El frontend presenta componentes de visualización de datos personalizados para informes de rendimiento perfectos.",
+                    "challenges": "Manejo de actualizaciones de datos de alta frecuencia de múltiples API de anuncios mientras se mantiene una baja latencia y una alta capacidad de respuesta de la interfaz de usuario.",
+                    "results": "Las agencias que utilizan ADM informaron una reducción del 50% en el tiempo de generación de informes manuales y un aumento del 20% en la retención de clientes debido a informes más transparentes."
+                },
+                "metrics": [
+                    {
+                        "label": "Eficiencia en reportes",
+                        "value": "+50%"
+                    },
+                    {
+                        "label": "Retención de clientes",
+                        "value": "+20%"
+                    },
+                    {
+                        "label": "Fidelidad de datos",
+                        "value": "100%"
+                    }
+                ],
+                "image": "/projects/ADM(AdsManagementSystem)/Screenshot 2026-03-04 155731.png",
+                "extraImages": [
+                    "/projects/ADM(AdsManagementSystem)/Screenshot 2026-03-04 155017.png",
+                    "/projects/ADM(AdsManagementSystem)/Screenshot 2026-03-04 155754.png"
+                ],
+                "link": "https://github.com/abdul-haseeb5786",
+                "github": "https://github.com/abdul-haseeb5786",
+                "tech": [
+                    "React",
+                    "Node.js",
+                    "MongoDB",
+                    "Tailwind CSS"
+                ],
+                "category": "Marketing Tech"
+            },
+            {
+                "id": "software-agency-management",
+                "title": "Gestión de agencias de software",
+                "description": "Plataforma de gestión integral para agencias de software para agilizar los flujos de trabajo de los proyectos y la colaboración en equipo.",
+                "longDescription": "Una plataforma SaaS robusta diseñada específicamente para agencias de desarrollo de software. Gestiona todo el ciclo de vida del proyecto, desde la recepción inicial del cliente hasta la entrega final, con métricas de rendimiento integradas y portales de clientes.",
+                "caseStudy": {
+                    "overview": "Este proyecto abordó los desafíos operativos de las agencias de software en crecimiento centralizando la gestión de proyectos, las comunicaciones con los clientes y el seguimiento financiero.",
+                    "objective": "Construir una plataforma escalable y multi-tenant que mejore la eficiencia operativa y proporcione visibilidad en tiempo real de la salud de la agencia.",
+                    "solution": "Construido con Next.js para un frontend de alto rendimiento y Prisma con PostgreSQL para un backend relacional capaz de manejar jerarquías de proyectos complejas.",
+                    "challenges": "Diseñar una arquitectura multi-tenant intuitiva con un estricto aislamiento de datos y niveles de permisos complejos para diferentes roles de equipo.",
+                    "results": "Las agencias piloto observaron una mejora del 30% en los tiempos de entrega de proyectos y redujeron significativamente los gastos administrativos."
+                },
+                "metrics": [
+                    {
+                        "label": "Velocidad de entrega",
+                        "value": "+30%"
+                    },
+                    {
+                        "label": "Gastos administrativos",
+                        "value": "-40%"
+                    },
+                    {
+                        "label": "Tiempo de actividad",
+                        "value": "99.99%"
+                    }
+                ],
+                "image": "/projects/softwareAgencyManagement/Screenshot 2026-03-05 154933.png",
+                "extraImages": [
+                    "/projects/softwareAgencyManagement/Screenshot 2026-03-05 155002.png"
+                ],
+                "link": "https://github.com/abdul-haseeb5786",
+                "github": "https://github.com/abdul-haseeb5786",
+                "tech": [
+                    "Next.js",
+                    "Prisma",
+                    "PostgreSQL",
+                    "Tailwind"
+                ],
+                "category": "SaaS"
             }
         ]
     },
