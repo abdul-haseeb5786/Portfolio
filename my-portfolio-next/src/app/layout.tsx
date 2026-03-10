@@ -6,7 +6,7 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import { Analytics } from '@vercel/analytics/next';
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { constructMetadata } from "@/lib/seo";
+import { constructMetadata, BASE_URL } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -26,8 +26,8 @@ const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Abdul Haseeb",
-  url: "https://abdulhaseeb-portfolio.vercel.app/",
-  image: "https://abdulhaseeb-portfolio.vercel.app/my-profile-pic.jpg",
+  url: `${BASE_URL}/`,
+  image: `${BASE_URL}/my-profile-pic.jpg`,
   jobTitle: "MERN Stack Developer",
   sameAs: [
     "https://www.linkedin.com/in/abdul-haseeb200",
@@ -39,7 +39,7 @@ const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Abdul Haseeb Portfolio",
-  url: "https://abdulhaseeb-portfolio.vercel.app/",
+  url: `${BASE_URL}/`,
   author: "Abdul Haseeb",
   description: "Portfolio of Abdul Haseeb, a MERN Stack Developer focusing on React, Node.js, and MongoDB.",
 };
