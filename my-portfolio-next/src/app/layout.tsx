@@ -3,7 +3,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { LanguageProvider } from "@/contexts/LanguageContext";
-
+import { Analytics } from '@vercel/analytics/next';
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
@@ -93,6 +93,7 @@ export default function RootLayout({
           >
             <Navbar />
             {children}
+                    <Analytics />
             <Footer />
           </ThemeProvider>
         </LanguageProvider>
