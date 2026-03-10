@@ -6,6 +6,8 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import { Analytics } from '@vercel/analytics/next';
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { constructMetadata } from "@/lib/seo";
+import JsonLd from "@/components/JsonLd";
 
 const inter = Inter({ subsets: ["latin"] });
 const geistSans = Geist({
@@ -18,50 +20,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const metadata: Metadata = constructMetadata();
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://abdulhaseeb-portfolio.vercel.app"),
-  title: {
-    default: "Abdul Haseeb Portfolio - MERN Stack Developer | React, Node.js, MongoDB",
-    template: "%s | Abdul Haseeb",
-  },
-  description: "Hi, I'm Abdul Haseeb, a MERN Stack Developer skilled in React, Node.js, MongoDB & Express. Check out my portfolio & projects!",
-  keywords: ["MERN Stack", "React", "Node.js", "MongoDB", "Express", "Web Development", "Portfolio", "Freelancer"],
-  authors: [{ name: "Abdul Haseeb" }],
-  creator: "Abdul Haseeb",
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    title: "Abdul Haseeb - MERN Stack Developer | MongoDB, ExpressJs, ReactJS, Node.js",
-    description: "Explore my portfolio showcasing MERN stack projects and expertise in web development.",
-    url: "https://abdulhaseeb-portfolio.vercel.app/",
-    siteName: "Abdul Haseeb Portfolio",
-    images: [
-      {
-        url: "/Portofolio.png?v=3", // Assuming user will place this in public/ or uses the remote URL
-        width: 1200,
-        height: 630,
-        alt: "Abdul Haseeb MERN Stack Developer Portfolio",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Abdul Haseeb - MERN Stack Developer | MongoDB, ExpressJs, ReactJS, Node.js",
-    description: "Showcasing expertise in MERN stack web development.",
-    images: ["/Portofolio.png?v=3"],
-    // site: "@yourtwitterhandle", // User needs to provide this or we comment it out
-  },
-  icons: {
-    icon: "/Adobe-Express-file.png?v=3",
-    apple: "/Adobe-Express-file.png?v=3",
-  },
-};
-
-const jsonLd = {
+const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Abdul Haseeb",
@@ -72,6 +33,15 @@ const jsonLd = {
     "https://www.linkedin.com/in/abdul-haseeb200",
     "https://github.com/abdul-haseeb5786",
   ],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Abdul Haseeb Portfolio",
+  url: "https://abdulhaseeb-portfolio.vercel.app/",
+  author: "Abdul Haseeb",
+  description: "Portfolio of Abdul Haseeb, a MERN Stack Developer focusing on React, Node.js, and MongoDB.",
 };
 
 export default function RootLayout({
@@ -92,15 +62,15 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Navbar />
-            {children}
-                    <Analytics />
+            <main id="main-content">
+              {children}
+            </main>
+            <Analytics />
             <Footer />
           </ThemeProvider>
         </LanguageProvider>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <JsonLd data={personJsonLd} />
+        <JsonLd data={websiteJsonLd} />
       </body>
     </html>
   );

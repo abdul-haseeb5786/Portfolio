@@ -23,7 +23,7 @@ export default function About({ summary = false }: AboutProps) {
     };
 
     return (
-        <section id="about" className="py-24 bg-secondary/30">
+        <section id="about" className="py-24 bg-secondary/30" aria-labelledby="about-heading">
             <div className={`max-w-7xl mx-auto px-6`}>
                 <div className="grid md:grid-cols-2 gap-16 items-center">
                     <motion.div
@@ -32,6 +32,7 @@ export default function About({ summary = false }: AboutProps) {
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
                         className="hidden md:block"
+                        aria-hidden="true"
                     >
                         <div className="grid grid-cols-2 gap-4">
                             <div className="space-y-4">
@@ -61,7 +62,7 @@ export default function About({ summary = false }: AboutProps) {
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tighter text-foreground">
+                        <h2 id="about-heading" className="text-4xl md:text-5xl font-bold mb-8 tracking-tighter text-foreground">
                             {t.about.title} <span className="text-primary">{t.about.subtitle}</span>
                         </h2>
                         <div className="space-y-6 text-lg text-muted leading-relaxed">

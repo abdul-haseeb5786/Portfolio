@@ -9,7 +9,7 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-secondary border-t border-border py-12">
+        <footer className="bg-secondary border-t border-border py-12" role="contentinfo" aria-label="Site Footer">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="grid md:grid-cols-4 gap-8 mb-12">
                     <div className="col-span-1 md:col-span-2">
@@ -34,13 +34,13 @@ export default function Footer() {
                     <div>
                         <h3 className="font-bold text-foreground mb-4">Connect</h3>
                         <div className="flex gap-4">
-                            <a href="https://github.com/abdul-haseeb5786" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
+                            <a href="https://github.com/abdul-haseeb5786" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors" aria-label="GitHub Profile">
                                 <Github size={20} />
                             </a>
-                            <a href="https://www.linkedin.com/in/abdul-haseeb200" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors">
+                            <a href="https://www.linkedin.com/in/abdul-haseeb200" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors" aria-label="LinkedIn Profile">
                                 <Linkedin size={20} />
                             </a>
-                            <a href="mailto:abdulhaseebsohail115@gmail.com" className="text-muted hover:text-primary transition-colors">
+                            <a href="mailto:abdulhaseebsohail115@gmail.com" className="text-muted hover:text-primary transition-colors" aria-label="Send Email">
                                 <Mail size={20} />
                             </a>
                         </div>

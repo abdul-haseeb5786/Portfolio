@@ -18,11 +18,11 @@ export default function Projects({ limit }: ProjectsProps) {
     const displayedProjects = limit ? projects?.slice(0, limit) : projects;
 
     return (
-        <section id="projects" className="py-24 bg-secondary/30">
+        <section id="projects" className="py-24 bg-secondary/30" aria-labelledby="projects-heading">
             <div className={`max-w-7xl mx-auto px-6`}>
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
                     <div>
-                        <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4 text-foreground">
+                        <h2 id="projects-heading" className="text-4xl md:text-5xl font-bold tracking-tighter mb-4 text-foreground">
                             {t.projects.title} <span className="text-primary">{t.projects.subtitle}</span>
                         </h2>
                         <p className="text-muted max-w-xl text-lg">

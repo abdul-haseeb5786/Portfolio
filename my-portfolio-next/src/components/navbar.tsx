@@ -35,6 +35,7 @@ export default function Navbar() {
                 ? "bg-background/80 backdrop-blur-md shadow-sm py-3"
                 : "bg-transparent py-5"
                 }`}
+            aria-label="Main Navigation"
         >
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
                 <Link href="/" className="text-2xl font-bold tracking-tighter text-primary">
@@ -63,7 +64,12 @@ export default function Navbar() {
                 <div className="flex md:hidden items-center gap-4">
                     <LanguageSelector />
                     <ThemeToggle />
-                    <button onClick={() => setIsOpen(!isOpen)} className="p-1">
+                    <button
+                        onClick={() => setIsOpen(!isOpen)}
+                        className="p-1"
+                        aria-label={isOpen ? "Close Menu" : "Open Menu"}
+                        aria-expanded={isOpen}
+                    >
                         {isOpen ? <X /> : <Menu />}
                     </button>
                 </div>
