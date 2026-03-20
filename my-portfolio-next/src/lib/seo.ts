@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-export const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://abdulhaseeb-portfolio.vercel.app";
+export const BASE_URL = "https://abdulhaseeb-portfolio.vercel.app";
 
 interface MetadataProps {
     title?: string;
