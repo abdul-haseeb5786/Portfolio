@@ -113,15 +113,19 @@ export default function CaseStudyDetails() {
 
                                 {/* Metrics */}
                                 {project.metrics && project.metrics.length > 0 && (
-                                    <section className="grid sm:grid-cols-3 gap-8">
+                                    <section className="grid sm:grid-cols-3 gap-6 md:gap-8">
                                         {project.metrics.map((metric: any, idx: number) => (
                                             <motion.div
                                                 key={idx}
                                                 whileHover={{ y: -5 }}
-                                                className="p-10 bg-gradient-to-br from-primary/10 to-transparent rounded-[2rem] border border-primary/20 text-center"
+                                                className="p-6 md:p-10 bg-gradient-to-br from-primary/10 to-transparent rounded-[2rem] border border-primary/20 text-center flex flex-col justify-center min-h-[160px]"
                                             >
-                                                <div className="text-5xl font-extrabold text-primary mb-3">{metric.value}</div>
-                                                <div className="text-xs text-muted-foreground uppercase tracking-[0.2em] font-bold">{metric.label}</div>
+                                                <div className={`${metric.value.toString().length > 7 ? 'text-2xl md:text-3xl lg:text-4xl' : 'text-4xl md:text-5xl'} font-extrabold text-primary mb-3 break-words`}>
+                                                    {metric.value}
+                                                </div>
+                                                <div className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-[0.2em] font-bold">
+                                                    {metric.label}
+                                                </div>
                                             </motion.div>
                                         ))}
                                     </section>

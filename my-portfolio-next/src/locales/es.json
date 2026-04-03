@@ -189,6 +189,53 @@
         },
         "items": [
             {
+                "id": "adpulse",
+                "title": "AdPulse - Gestión de Anuncios a Nivel Industrial",
+                "description": "Una plataforma de gestión de anuncios robusta y lista para la industria, construida con arquitectura de microservicios, Docker y las mejores prácticas empresariales.",
+                "longDescription": "AdPulse es un ecosistema de gestión de publicidad de alto rendimiento. A diferencia de los proyectos de interfaz de usuario simples, AdPulse presenta una arquitectura de microservicios distribuida, sincronización de datos en tiempo real con Socket.io y servicios en contenedores utilizando Docker. Implementa estándares de la industria para seguridad, escalabilidad y optimización del rendimiento.",
+                "caseStudy": {
+                    "overview": "AdPulse es un sistema de gestión de anuncios de grado profesional diseñado para manejar flujos de trabajo de campañas complejos y seguimiento del rendimiento en tiempo real. Sirve como una demostración de la arquitectura backend moderna y las prácticas de DevOps.",
+                    "objective": "Construir una plataforma escalable de múltiples servicios que proporcione información de campaña en tiempo real, generación creativa impulsada por IA y sistemas de alerta automatizados.",
+                    "solution": "Implementé una arquitectura de microservicios donde la API principal y los servicios de IA están desacoplados. Se utilizó PostgreSQL para la integridad de los datos relacionales, mientras que Socket.io proporciona notificaciones en tiempo real. Todo el sistema está contenedorizado con Docker para una implementación consistente.",
+                    "challenges": "Coordinar las actualizaciones de datos en tiempo real en múltiples servicios y garantizar que el microservicio de IA pudiera manejar respuestas de transmisión (SSE) de manera eficiente mientras se mantiene la estabilidad del sistema.",
+                    "results": "La plataforma demuestra una latencia de API inferior a 100 ms, alertas en tiempo real fluidas basadas en umbrales de ROAS/CTR y un flujo de trabajo CI/CD listo para producción."
+                },
+                "metrics": [
+                    {
+                        "label": "Latencia",
+                        "value": "<100ms"
+                    },
+                    {
+                        "label": "Arquitectura",
+                        "value": "Microservicios"
+                    },
+                    {
+                        "label": "Disponibilidad",
+                        "value": "99.9%"
+                    }
+                ],
+                "image": "/projects/AdsPulse/Screenshot (18).png",
+                "extraImages": [
+                    "/projects/AdsPulse/Screenshot (19).png",
+                    "/projects/AdsPulse/Screenshot (20).png",
+                    "/projects/AdsPulse/Screenshot (21).png",
+                    "/projects/AdsPulse/Screenshot (22).png"
+                ],
+                "link": "https://ad-pulse-seven.vercel.app/",
+                "github": "https://github.com/abdul-haseeb5786/AdPulse-",
+                "tech": [
+                    "React 18",
+                    "Node.js",
+                    "Express",
+                    "PostgreSQL",
+                    "Docker",
+                    "Socket.io",
+                    "OpenRouter AI"
+                ],
+                "category": "Proyecto Industrial / Microservicios",
+                "completionDate": "2 de abr de 2026"
+            },
+            {
                 "id": "furniro",
                 "title": "Clon de Furniro",
                 "description": "Sitio de comercio electrónico responsivo construido con React, Firebase y Tailwind CSS. Incluye autenticación de usuario, enrutamiento dinámico y páginas de productos.",

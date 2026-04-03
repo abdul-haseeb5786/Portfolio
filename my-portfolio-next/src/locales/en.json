@@ -189,6 +189,53 @@
         },
         "items": [
             {
+                "id": "adpulse",
+                "title": "AdPulse - Industry-Level Ad Management",
+                "description": "A robust, industry-ready ad management platform built with microservices architecture, Docker, and enterprise best practices.",
+                "longDescription": "AdPulse is a high-performance advertising management ecosystem. Unlike simple UI projects, AdPulse features a distributed microservices architecture, real-time data synchronization with Socket.io, and containerized services using Docker. It implements industry standards for security, scalability, and performance optimization.",
+                "caseStudy": {
+                    "overview": "AdPulse is a professional-grade ad management system designed to handle complex campaign workflows and real-time performance tracking. It serves as a demonstration of modern backend architecture and DevOps practices.",
+                    "objective": "To build a scalable, multi-service platform that provides real-time campaign insights, AI-driven creative generation, and automated alerting systems.",
+                    "solution": "I implemented a microservices architecture where the core API and AI services are decoupled. PostgreSQL was used for relational data integrity, while Socket.io provides real-time notifications. The entire system is containerized with Docker for consistent deployment.",
+                    "challenges": "Coordinating real-time data updates across multiple services and ensuring the AI microservice could handle streaming responses (SSE) efficiently while maintaining system stability.",
+                    "results": "The platform demonstrates sub-100ms API latency, seamless real-time alerting based on ROAS/CTR thresholds, and a production-ready CI/CD workflow."
+                },
+                "metrics": [
+                    {
+                        "label": "Latency",
+                        "value": "<100ms"
+                    },
+                    {
+                        "label": "Architecture",
+                        "value": "Microservices"
+                    },
+                    {
+                        "label": "Availability",
+                        "value": "99.9%"
+                    }
+                ],
+                "image": "/projects/AdsPulse/Screenshot (18).png",
+                "extraImages": [
+                    "/projects/AdsPulse/Screenshot (19).png",
+                    "/projects/AdsPulse/Screenshot (20).png",
+                    "/projects/AdsPulse/Screenshot (21).png",
+                    "/projects/AdsPulse/Screenshot (22).png"
+                ],
+                "link": "https://ad-pulse-seven.vercel.app/",
+                "github": "https://github.com/abdul-haseeb5786/AdPulse-",
+                "tech": [
+                    "React 18",
+                    "Node.js",
+                    "Express",
+                    "PostgreSQL",
+                    "Docker",
+                    "Socket.io",
+                    "OpenRouter AI"
+                ],
+                "category": "Industry Project / Microservices",
+                "completionDate": "Apr 2, 2026"
+            },
+            {
                 "id": "furniro",
                 "title": "Furniro Clone",
                 "description": "Responsive e-commerce site built with React, Firebase, and Tailwind CSS. Features user auth, dynamic routing, and product pages.",
