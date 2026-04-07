@@ -27,6 +27,15 @@ export function constructMetadata({
     return {
         title: pageTitle,
         description,
+        manifest: "/manifest.json",
+        appleWebApp: {
+            capable: true,
+            statusBarStyle: "default",
+            title: pageTitle,
+        },
+        formatDetection: {
+            telephone: false,
+        },
         keywords: [
             "MERN Stack",
             "React",
@@ -66,7 +75,10 @@ export function constructMetadata({
             images: [image],
             creator: "@abdulhaseeb", // Placeholder if not known
         },
-        icons,
+        icons: {
+            ...(icons as object),
+            apple: "/icon-192x192.png",
+        },
         robots: {
             index: !noIndex,
             follow: !noIndex,
