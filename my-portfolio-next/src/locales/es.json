@@ -189,6 +189,161 @@
         },
         "items": [
             {
+                "id": "shiptag",
+                "title": "ShipTag — Portal de Envío y Logística",
+                "description": "Portal comercial de extremo a extremo para una plataforma SaaS de envíos que sirve a empresas de comercio electrónico en Arabia Saudita y mercados internacionales.",
+                "longDescription": "Se construyó un portal comercial integral para una plataforma SaaS logística. Integración de APIs de envío multicarrier (UPS, FedEx, DHL, Aramex) para comparación de tarifas en tiempo real, generación de etiquetas de envío (PDF/ZPL) y sincronización automatizada de pedidos con plataformas como Shopify y WooCommerce.",
+                "caseStudy": {
+                    "overview": "ShipTag es una solución logística diseñada para simplificar los envíos para comerciantes de comercio electrónico en el Medio Oriente y a nivel mundial.",
+                    "objective": "Crear un panel centralizado para gestionar envíos a través de múltiples transportistas con automatización de documentación y flujos de trabajo de integración.",
+                    "solution": "Portal desarrollado con React con integraciones profundas de REST API. Implementación de soporte de impresión térmica para etiquetas y un flujo robusto de documentación aduanera.",
+                    "challenges": "Gestión de diversas respuestas de API de múltiples transportistas de envío y garantía de actualizaciones de estado en tiempo real en diferentes sistemas de seguimiento.",
+                    "results": "Proceso de envío optimizado para cientos de comerciantes, reduciendo el tiempo de creación manual de etiquetas en un 80%."
+                },
+                "metrics": [
+                    {
+                        "label": "Generación de Etiquetas",
+                        "value": "PDF/ZPL"
+                    },
+                    {
+                        "label": "Comparación Tarifas",
+                        "value": "Tiempo Real"
+                    },
+                    {
+                        "label": "Sincronización",
+                        "value": "Automatizada"
+                    }
+                ],
+                "image": "/projects/ShipTag/thumbnail.png",
+                "extraImages": [],
+                "link": "https://github.com/abdul-haseeb5786",
+                "github": "https://github.com/abdul-haseeb5786",
+                "tech": [
+                    "React.js",
+                    "REST API",
+                    "Node.js",
+                    "Tailwind CSS"
+                ],
+                "category": "SaaS / Logística"
+            },
+            {
+                "id": "luxury-studio",
+                "title": "Luxury Studio — Comercio Electrónico de Ropa",
+                "description": "Escaparate de comercio electrónico completo para una marca de ropa con filtrado, búsqueda y pasarela de pago integrada.",
+                "longDescription": "Una plataforma de comercio electrónico de alto rendimiento construida con React y Vite. Incluye filtrado avanzado de productos, navegación por categorías, una experiencia de carrito de compras fluida y una interfaz responsiva optimizada para todos los dispositivos.",
+                "caseStudy": {
+                    "overview": "Luxury Studio proporciona una experiencia de compra en línea premium para marcas de moda de alta gama.",
+                    "objective": "Construir un escaparate rápido y fácil de usar que mejore el valor de la marca y simplifique el proceso de pago.",
+                    "solution": "Aprovechamiento de la gestión de estado de React para una experiencia de compra fluida y optimización de activos de imagen para carga rápida.",
+                    "challenges": "Implementación de filtrado de productos complejo y garantía de transiciones suaves entre diferentes categorías de productos.",
+                    "results": "Se logró una puntuación de rendimiento Lighthouse de 98 y se mejoró significativamente el compromiso del usuario móvil."
+                },
+                "metrics": [
+                    {
+                        "label": "Puntaje Lighthouse",
+                        "value": "98"
+                    },
+                    {
+                        "label": "Responsivo",
+                        "value": "100%"
+                    },
+                    {
+                        "label": "Flujo de Pago",
+                        "value": "Optimizado"
+                    }
+                ],
+                "image": "/projects/luxury-studio/thumbnail.png",
+                "extraImages": [],
+                "link": "https://github.com/abdul-haseeb5786",
+                "github": "https://github.com/abdul-haseeb5786",
+                "tech": [
+                    "React.js",
+                    "Vite",
+                    "Tailwind CSS",
+                    "Framer Motion"
+                ],
+                "category": "Comercio electrónico"
+            },
+            {
+                "id": "luxury-studio-admin",
+                "title": "Luxury Studio — Panel de Administración",
+                "description": "Panel de administración completo para la gestión integral de la tienda, incluyendo seguimiento de inventario y análisis de ventas.",
+                "longDescription": "Un panel de gestión integral para la plataforma Luxury Studio. Permite a los administradores gestionar productos, rastrear inventario en tiempo real, procesar pedidos y ver análisis detallados de ventas.",
+                "caseStudy": {
+                    "overview": "El Panel de Administración es el sistema nervioso central para el ecosistema de comercio electrónico Luxury Studio.",
+                    "objective": "Proporcionar a los gerentes de tienda herramientas potentes para el control de inventario, cumplimiento de pedidos e informes comerciales.",
+                    "solution": "Se construyó un panel de control con gran cantidad de datos usando React. Implementación de actualizaciones de estado de pedidos en tiempo real y monitoreo automatizado de niveles de stock.",
+                    "challenges": "Diseño de una interfaz intuitiva para gestionar miles de variantes de productos y flujos de trabajo de pedidos complejos.",
+                    "results": "Aumento de la eficiencia administrativa en un 40% y reducción de discrepancias de inventario mediante el seguimiento automatizado."
+                },
+                "metrics": [
+                    {
+                        "label": "Procesamiento Pedidos",
+                        "value": "Tiempo Real"
+                    },
+                    {
+                        "label": "Eficiencia Admin",
+                        "value": "+40%"
+                    },
+                    {
+                        "label": "Precisión Datos",
+                        "value": "100%"
+                    }
+                ],
+                "image": "/projects/luxury-studio-admin-panel/thumbnail.png",
+                "extraImages": [],
+                "link": "https://github.com/abdul-haseeb5786",
+                "github": "https://github.com/abdul-haseeb5786",
+                "tech": [
+                    "React.js",
+                    "Vite",
+                    "Node.js",
+                    "Dashboard UI"
+                ],
+                "category": "Sistema de gestión"
+            },
+            {
+                "id": "ads-management-system",
+                "title": "Sistema de gestión de anuncios (ADM)",
+                "description": "Panel de marketing de rendimiento avanzado para informes de agencias y análisis estratégico.",
+                "longDescription": "Ads Management System (ADM) es una plataforma de informes premium diseñada para agencias de marketing. Centraliza los datos de rendimiento de canales cruzados en paneles de alta fidelidad, lo que permite una inteligencia profunda y el seguimiento de KPI estratégicos.",
+                "caseStudy": {
+                    "overview": "ADM se creó para resolver la fragmentación en los informes de las agencias, proporcionando una única fuente de verdad para el rendimiento publicitario en varias plataformas.",
+                    "objective": "Crear un motor de análisis en tiempo real de alto rendimiento que transforme los datos de marketing sin procesar en conocimientos estratégicos procesables.",
+                    "solution": "Desarrollado con una arquitectura MERN stack, utilizando una robusta capa de agregación de datos. El frontend presenta componentes de visualización de datos personalizados para informes de rendimiento perfectos.",
+                    "challenges": "Manejo de actualizaciones de datos de alta frecuencia de múltiples API de anuncios mientras se mantiene una baja latencia y una alta capacidad de respuesta de la interfaz de usuario.",
+                    "results": "Las agencias que utilizan ADM informaron una reducción del 50% en el tiempo de generación de informes manuales y un aumento del 20% en la retención de clientes debido a informes más transparentes."
+                },
+                "metrics": [
+                    {
+                        "label": "Eficiencia en reportes",
+                        "value": "+50%"
+                    },
+                    {
+                        "label": "Retención de clientes",
+                        "value": "+20%"
+                    },
+                    {
+                        "label": "Fidelidad de datos",
+                        "value": "100%"
+                    }
+                ],
+                "image": "/projects/ADM(AdsManagementSystem)/thumbnail.png",
+                "extraImages": [
+                    "/projects/ADM(AdsManagementSystem)/Screenshot 2026-03-04 155017.png",
+                    "/projects/ADM(AdsManagementSystem)/Screenshot 2026-03-04 155754.png"
+                ],
+                "link": "https://github.com/abdul-haseeb5786",
+                "github": "https://github.com/abdul-haseeb5786",
+                "tech": [
+                    "React",
+                    "Node.js",
+                    "MongoDB",
+                    "Tailwind CSS"
+                ],
+                "category": "Marketing Tech"
+            },
+            {
                 "id": "adpulse",
                 "title": "AdPulse - Gestión de Anuncios a Nivel Industrial",
                 "description": "Una plataforma de gestión de anuncios robusta y lista para la industria, construida con arquitectura de microservicios, Docker y las mejores prácticas empresariales.",
@@ -214,7 +369,7 @@
                         "value": "99.9%"
                     }
                 ],
-                "image": "/projects/AdsPulse/Screenshot (18).png",
+                "image": "/projects/AdsPulse/thumbnail.png",
                 "extraImages": [
                     "/projects/AdsPulse/Screenshot (19).png",
                     "/projects/AdsPulse/Screenshot (20).png",
@@ -234,6 +389,374 @@
                 ],
                 "category": "Proyecto Industrial / Microservicios",
                 "completionDate": "2 de abr de 2026"
+            },
+            {
+                "id": "caresync",
+                "title": "CareSync",
+                "description": "Asistente de salud impulsado por IA para gestión de pacientes y programación de citas.",
+                "longDescription": "CareSync cierra la brecha entre pacientes y médicos. Proporciona chequeo de síntomas, programación de citas y almacenamiento seguro de registros médicos.",
+                "caseStudy": {
+                    "overview": "CareSync es una plataforma de salud integral diseñada para modernizar la relación paciente-proveedor a través de la coordinación impulsada por IA.",
+                    "objective": "Optimizar las consultas médicas y reducir los tiempos de espera mediante la automatización del proceso de admisión y programación.",
+                    "solution": "Desarrollado como una aplicación móvil multiplataforma usando Flutter y un backend de Node.js. Integré IA para la evaluación preliminar de síntomas y almacenamiento seguro de datos conforme a HIPAA.",
+                    "challenges": "Garantizar que la evaluación de síntomas por IA siguiera siendo una herramienta útil sin proporcionar diagnósticos médicos, y gestionar la disponibilidad de los médicos en tiempo real a través de múltiples clínicas.",
+                    "results": "Las clínicas que utilizan CareSync vieron una reducción del 50% en las citas perdidas y un puntaje de satisfacción del paciente significativamente más alto debido a tiempos de espera más cortos."
+                },
+                "metrics": [
+                    {
+                        "label": "Inasistencias a Citas",
+                        "value": "-50%"
+                    },
+                    {
+                        "label": "Satisfacción Paciente",
+                        "value": "98%"
+                    },
+                    {
+                        "label": "Tiempo de Espera",
+                        "value": "-30%"
+                    }
+                ],
+                "image": "/projects/caresync/thumbnail.png",
+                "extraImages": [
+                    "/projects/caresync/2.png",
+                    "/projects/caresync/3.png"
+                ],
+                "link": "https://caresync-health.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "Flutter",
+                    "Firebase",
+                    "Node.js",
+                    "Python"
+                ],
+                "category": "HealthTech"
+            },
+            {
+                "id": "collab-chat",
+                "title": "Chat Colaborativo con IA",
+                "description": "Aplicación de colaboración en tiempo real para equipos con asistentes de IA integrados y videollamadas.",
+                "longDescription": "Espacio de trabajo moderno donde los equipos pueden chatear, compartir archivos y realizar videollamadas. Los asistentes de IA están disponibles en cada canal para ayudar con la investigación y la redacción.",
+                "caseStudy": {
+                    "overview": "AI Collab Chat es un espacio de trabajo de próxima generación que pone la IA en el centro de la comunicación del equipo para aumentar la productividad y fomentar la creatividad.",
+                    "objective": "Crear un entorno de colaboración fluido y en tiempo real donde los agentes de IA puedan participar en la lluvia de ideas del equipo y la gestión de tareas.",
+                    "solution": "Construido usando React y Socket.io para comunicación persistente en tiempo real. Integré WebRTC para videollamadas de alta calidad y múltiples agentes de OpenAI especializados en diferentes dominios.",
+                    "challenges": "Sincronizar salidas de IA complejas en tiempo real a través de chats grupales sin interrumpir el flujo natural de la conversación humana.",
+                    "results": "Los equipos que utilizan AI Collab Chat reportaron completar tareas de redacción creativa 2 veces más rápido que con las plataformas de chat tradicionales."
+                },
+                "metrics": [
+                    {
+                        "label": "Finalización Tareas",
+                        "value": "2x Rápido"
+                    },
+                    {
+                        "label": "Sesiones IA Activas",
+                        "value": "15k+"
+                    },
+                    {
+                        "label": "Calidad de Voz",
+                        "value": "4k HD"
+                    }
+                ],
+                "image": "/projects/collab-chat/thumbnail.png",
+                "extraImages": [
+                    "/projects/collab-chat/2.png",
+                    "/projects/collab-chat/3.png"
+                ],
+                "link": "https://collab-chat.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "React",
+                    "Socket.io",
+                    "WebRTC",
+                    "OpenAI"
+                ],
+                "category": "Comunicación"
+            },
+            {
+                "id": "cryptopulse",
+                "title": "CryptoPulse",
+                "description": "Rastreador de cartera cripto impulsado por IA con datos de mercado en tiempo real y análisis.",
+                "longDescription": "CryptoPulse rastrea tus activos cripto a través de diferentes exchanges. Utiliza IA para análisis de sentimiento y predicciones de tendencias de mercado.",
+                "caseStudy": {
+                    "overview": "CryptoPulse es un rastreador de cartera de alta visibilidad para entusiastas de las criptomonedas que proporciona una claridad cristalina en un mercado volátil utilizando análisis de sentimiento impulsado por IA.",
+                    "objective": "Proporcionar un panel único para el seguimiento a través de exchanges con información predictiva del mercado.",
+                    "solution": "Construido usando Next.js para un alto rendimiento y TensorFlow.js para el análisis de sentimiento del lado del cliente. Integré múltiples APIs de datos de mercado para precios agregados en tiempo real.",
+                    "challenges": "Normalizar los datos de docenas de APIs de diferentes exchanges en un feed de precios único y de alta velocidad.",
+                    "results": "Los usuarios reportaron una mejora del 15% en su ROI de trading al utilizar las señales de sentimiento de IA de la plataforma para sincronizarse con el mercado."
+                },
+                "metrics": [
+                    {
+                        "label": "Mejora del ROI",
+                        "value": "+15%"
+                    },
+                    {
+                        "label": "Monedas T. Real",
+                        "value": "2k+"
+                    },
+                    {
+                        "label": "Latencia API",
+                        "value": "100ms"
+                    }
+                ],
+                "image": "/projects/cryptopulse/thumbnail.png",
+                "extraImages": [
+                    "/projects/cryptopulse/2.png",
+                    "/projects/cryptopulse/3.png"
+                ],
+                "link": "https://cryptopulse.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "Next.js",
+                    "CoinGecko API",
+                    "TensorFlow.js",
+                    "Tailwind"
+                ],
+                "category": "Cripto"
+            },
+            {
+                "id": "finance-assistant",
+                "title": "Asistente Financiero",
+                "description": "Gestor de finanzas personales seguro para rastrear gastos y establecer presupuestos.",
+                "longDescription": "El Asistente Financiero ayuda a los usuarios a tomar control de su dinero. Vincula cuentas, rastrea cada centavo y obtiene información impulsada por IA sobre cómo ahorrar más efectivamente.",
+                "caseStudy": {
+                    "overview": "Finance Assistant es una aplicación de finanzas personales que prioriza la privacidad y utiliza IA para ayudar a las personas a dominar sus hábitos de presupuesto y ahorro.",
+                    "objective": "Proporcionar una forma altamente segura y automatizada para que los usuarios rastreen su salud financiera a través de múltiples instituciones.",
+                    "solution": "Construido con Next.js y Prisma. Integré la API de Plaid para la agregación segura de datos financieros y utilicé modelos de aprendizaje automático para categorizar las transacciones automáticamente.",
+                    "challenges": "Mantener los más altos estándares de seguridad y cifrado de datos mientras se proporciona una experiencia de usuario fluida para la vinculación de datos financieros.",
+                    "results": "Los usuarios beta reportaron ahorrar un promedio de $200 por mes al identificar suscripciones innecesarias y optimizar sus hábitos de gasto diarios."
+                },
+                "metrics": [
+                    {
+                        "label": "Ahorro Mensual Prom.",
+                        "value": "$200"
+                    },
+                    {
+                        "label": "Auto-Categorización",
+                        "value": "95%"
+                    },
+                    {
+                        "label": "Calificación Seguridad",
+                        "value": "A+"
+                    }
+                ],
+                "image": "/projects/finance-assistant/thumbnail.png",
+                "extraImages": [
+                    "/projects/finance-assistant/2.png",
+                    "/projects/finance-assistant/3.png"
+                ],
+                "link": "https://finance-smart.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "TypeScript",
+                    "Next.js",
+                    "Prisma",
+                    "Plaid"
+                ],
+                "category": "FinTech"
+            },
+            {
+                "id": "helply",
+                "title": "Helply",
+                "description": "Plataforma de soporte al cliente impulsada por IA con chat en vivo y automatización integrados.",
+                "longDescription": "Helply utiliza IA para automatizar el servicio al cliente. Incluye un chatbot inteligente para consultas comunes y un panel para que agentes humanos tomen el control cuando sea necesario.",
+                "caseStudy": {
+                    "overview": "Helply es una plataforma de soporte al cliente de próxima generación que integra IA avanzada para cerrar la brecha entre la asistencia automatizada 24/7 y el soporte humano personalizado.",
+                    "objective": "Reducir la carga de soporte al cliente para pequeñas empresas mediante la automatización del 80% de las consultas rutinarias a través de agentes de IA inteligentes.",
+                    "solution": "Implementé una arquitectura RAG (Generación Aumentada por Recuperación) utilizando GPT-4 de OpenAI y una base de datos vectorial. Esto permite que la IA proporcione respuestas precisas y específicas del negocio basadas en la documentación del cliente.",
+                    "challenges": "Ajustar la IA para mantener una voz de marca profesional garantizando que identifique con precisión cuándo una conversación debe ser transferida a un agente humano.",
+                    "results": "Las empresas que utilizan Helply lograron una reducción del 45% en el volumen de tickets de soporte durante el primer mes de implementación."
+                },
+                "metrics": [
+                    {
+                        "label": "Reducción de Tickets",
+                        "value": "45%"
+                    },
+                    {
+                        "label": "Precisión IA",
+                        "value": "94%"
+                    },
+                    {
+                        "label": "Tiempo de Respuesta",
+                        "value": "<2s"
+                    }
+                ],
+                "image": "/projects/helply/thumbnail.png",
+                "extraImages": [
+                    "/projects/helply/2.png",
+                    "/projects/helply/3.png"
+                ],
+                "link": "https://helply-ai.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "Next.js",
+                    "OpenAI",
+                    "Firebase",
+                    "TypeScript"
+                ],
+                "category": "Plataforma de IA"
+            },
+            {
+                "id": "hireflow",
+                "title": "Hireflow",
+                "description": "Plataforma de reclutamiento moderna y portal de empleo que conecta talentos con empresas.",
+                "longDescription": "Hireflow simplifica el proceso de contratación. Los candidatos pueden postularse a trabajos mientras los empleadores gestionan solicitudes y programan entrevistas a través de una interfaz intuitiva.",
+                "caseStudy": {
+                    "overview": "Hireflow es un ecosistema de reclutamiento de grado empresarial diseñado para solucionar el proceso de contratación fragmentado mediante la centralización de la gestión de candidatos y la marca del empleador.",
+                    "objective": "Reducir el tiempo de contratación mediante la automatización del filtrado de currículums y proporcionando una mejor experiencia al candidato.",
+                    "solution": "Construido con el MERN stack e internacionalizado utilizando marcos de trabajo de localización. Integré AWS S3 para el almacenamiento seguro de currículums y Auth0 para la autenticación multi-inquilino.",
+                    "challenges": "Desarrollar un índice eficiente y buscable para miles de ofertas de trabajo y solicitudes con seguimiento de estado en tiempo real.",
+                    "results": "Permitió a las empresas reducir su tiempo promedio de contratación en 15 días y mejoró los puntajes de satisfacción de los candidatos en un 35%."
+                },
+                "metrics": [
+                    {
+                        "label": "Tiempo Contratación",
+                        "value": "-15 Días"
+                    },
+                    {
+                        "label": "Solicitudes",
+                        "value": "10k+"
+                    },
+                    {
+                        "label": "Satisfacción",
+                        "value": "92%"
+                    }
+                ],
+                "image": "/projects/hireflow/thumbnail.png",
+                "extraImages": [
+                    "/projects/hireflow/2.png",
+                    "/projects/hireflow/3.png"
+                ],
+                "link": "https://hireflow-jobs.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "MERN Stack",
+                    "AWS",
+                    "Auth0",
+                    "Tailwind"
+                ],
+                "category": "Portal de empleo"
+            },
+            {
+                "id": "meridian-commerce",
+                "title": "Meridian Commerce",
+                "description": "Panel premium de comercio electrónico con análisis en tiempo real y gestión de inventario.",
+                "longDescription": "Sistema completo de gestión de comercio electrónico. Rastrea ventas, niveles de inventario y comportamiento del cliente con visualizaciones y reportes atractivos.",
+                "caseStudy": {
+                    "overview": "Meridian Commerce es un panel de análisis de alto rendimiento diseñado para gerentes de comercio electrónico que necesitan claridad en tiempo real sobre sus operaciones comerciales.",
+                    "objective": "Centralizar los datos de ventas multicanal en un único motor de visualización de alta velocidad.",
+                    "solution": "Utilicé React con Chart.js para el frontend y PostgreSQL para una estructura de datos relacional robusta. Express se utilizó para construir un middleware eficiente para la agregación de datos.",
+                    "challenges": "Optimizar consultas SQL complejas para devolver resultados de análisis en tiempo real a través de conjuntos de datos con millones de transacciones.",
+                    "results": "Se logró un aumento de 3 veces en la velocidad de los reportes y se proporcionó a los gerentes información que llevó a una reducción del 12% en el inventario excedente."
+                },
+                "metrics": [
+                    {
+                        "label": "Velocidad Reportes",
+                        "value": "3x Rápido"
+                    },
+                    {
+                        "label": "Optimización Inventario",
+                        "value": "12%"
+                    },
+                    {
+                        "label": "Precisión Datos",
+                        "value": "100%"
+                    }
+                ],
+                "image": "/projects/meridian-commerce/thumbnail.png",
+                "extraImages": [
+                    "/projects/meridian-commerce/2.png",
+                    "/projects/meridian-commerce/3.png"
+                ],
+                "link": "https://meridian-shop.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "React",
+                    "PostgreSQL",
+                    "Express",
+                    "Chart.js"
+                ],
+                "category": "Comercio electrónico"
+            },
+            {
+                "id": "software-agency-management",
+                "title": "Gestión de agencias de software",
+                "description": "Plataforma de gestión integral para agencias de software para agilizar los flujos de trabajo de los proyectos y la colaboración en equipo.",
+                "longDescription": "Una plataforma SaaS robusta diseñada específicamente para agencias de desarrollo de software. Gestiona todo el ciclo de vida del proyecto, desde la recepción inicial del cliente hasta la entrega final, con métricas de rendimiento integradas y portales de clientes.",
+                "caseStudy": {
+                    "overview": "Este proyecto abordó los desafíos operativos de las agencias de software en crecimiento centralizando la gestión de proyectos, las comunicaciones con los clientes y el seguimiento financiero.",
+                    "objective": "Construir una plataforma escalable y multi-tenant que mejore la eficiencia operativa y proporcione visibilidad en tiempo real de la salud de la agencia.",
+                    "solution": "Construido con Next.js para un frontend de alto rendimiento y Prisma con PostgreSQL para un backend relacional capaz de manejar jerarquías de proyectos complejas.",
+                    "challenges": "Diseñar una arquitectura multi-tenant intuitiva con un estricto aislamiento de datos y niveles de permisos complejos para diferentes roles de equipo.",
+                    "results": "Las agencias piloto observaron una mejora del 30% en los tiempos de entrega de proyectos y redujeron significativamente los gastos administrativos."
+                },
+                "metrics": [
+                    {
+                        "label": "Velocidad de entrega",
+                        "value": "+30%"
+                    },
+                    {
+                        "label": "Gastos administrativos",
+                        "value": "-40%"
+                    },
+                    {
+                        "label": "Tiempo de actividad",
+                        "value": "99.99%"
+                    }
+                ],
+                "image": "/projects/softwareAgencyManagement/thumbnail.png",
+                "extraImages": [
+                    "/projects/softwareAgencyManagement/Screenshot 2026-03-05 155002.png"
+                ],
+                "link": "https://github.com/abdul-haseeb5786",
+                "github": "https://github.com/abdul-haseeb5786",
+                "tech": [
+                    "Next.js",
+                    "Prisma",
+                    "PostgreSQL",
+                    "Tailwind"
+                ],
+                "category": "SaaS"
+            },
+            {
+                "id": "startup-crm",
+                "title": "StartupCRM",
+                "description": "Plataforma integral de inteligencia de ventas diseñada para startups de alto crecimiento.",
+                "longDescription": "StartupCRM es un panel potente para equipos de ventas para rastrear clientes potenciales, gestionar pipelines y obtener inteligencia de mercado. Incluye gráficos en tiempo real, puntuación de leads y seguimientos automatizados. Construido con React y Node.js.",
+                "caseStudy": {
+                    "overview": "StartupCRM es una plataforma de CRM basada en datos diseñada específicamente para startups de alto crecimiento que necesitan gestionar ciclos de ventas complejos y relaciones con inversores sin la pesadez de los sistemas empresariales tradicionales.",
+                    "objective": "Proporcionar a las startups información de ventas procesable y flujos de trabajo automatizados para aumentar las tasas de conversión de acuerdos.",
+                    "solution": "Aproveché Node.js y PostgreSQL para un backend de alto rendimiento capaz de manejar consultas relacionales complejas. El frontend utiliza React con bibliotecas avanzadas de visualización de datos para convertir datos brutos en gráficos procesables.",
+                    "challenges": "Implementar un algoritmo de puntuación de leads escalable que pudiera procesar miles de puntos de datos en tiempo real sin impactar la responsividad de la interfaz de usuario.",
+                    "results": "Los usuarios observaron un aumento del 20% en las tasas de conversión y ahorraron un promedio de 10 horas por semana en tareas de reportes manuales."
+                },
+                "metrics": [
+                    {
+                        "label": "Aumento de Conversión",
+                        "value": "20%"
+                    },
+                    {
+                        "label": "Tiempo Ahorrado/Semana",
+                        "value": "10h"
+                    },
+                    {
+                        "label": "Crecimiento de Usuarios",
+                        "value": "+150%"
+                    }
+                ],
+                "image": "/projects/startup-crm/thumbnail.png",
+                "extraImages": [
+                    "/projects/startup-crm/2.png",
+                    "/projects/startup-crm/3.png"
+                ],
+                "link": "https://startup-crm.vercel.app",
+                "github": "https://github.com",
+                "tech": [
+                    "React",
+                    "Node.js",
+                    "MongoDB",
+                    "Tailwind"
+                ],
+                "category": "SaaS"
             },
             {
                 "id": "furniro",
@@ -459,415 +982,6 @@
                     "Tailwind CSS"
                 ],
                 "category": "Productividad"
-            },
-            {
-                "id": "startup-crm",
-                "title": "StartupCRM",
-                "description": "Plataforma integral de inteligencia de ventas diseñada para startups de alto crecimiento.",
-                "longDescription": "StartupCRM es un panel potente para equipos de ventas para rastrear clientes potenciales, gestionar pipelines y obtener inteligencia de mercado. Incluye gráficos en tiempo real, puntuación de leads y seguimientos automatizados. Construido con React y Node.js.",
-                "caseStudy": {
-                    "overview": "StartupCRM es una plataforma de CRM basada en datos diseñada específicamente para startups de alto crecimiento que necesitan gestionar ciclos de ventas complejos y relaciones con inversores sin la pesadez de los sistemas empresariales tradicionales.",
-                    "objective": "Proporcionar a las startups información de ventas procesable y flujos de trabajo automatizados para aumentar las tasas de conversión de acuerdos.",
-                    "solution": "Aproveché Node.js y PostgreSQL para un backend de alto rendimiento capaz de manejar consultas relacionales complejas. El frontend utiliza React con bibliotecas avanzadas de visualización de datos para convertir datos brutos en gráficos procesables.",
-                    "challenges": "Implementar un algoritmo de puntuación de leads escalable que pudiera procesar miles de puntos de datos en tiempo real sin impactar la responsividad de la interfaz de usuario.",
-                    "results": "Los usuarios observaron un aumento del 20% en las tasas de conversión y ahorraron un promedio de 10 horas por semana en tareas de reportes manuales."
-                },
-                "metrics": [
-                    {
-                        "label": "Aumento de Conversión",
-                        "value": "20%"
-                    },
-                    {
-                        "label": "Tiempo Ahorrado/Semana",
-                        "value": "10h"
-                    },
-                    {
-                        "label": "Crecimiento de Usuarios",
-                        "value": "+150%"
-                    }
-                ],
-                "image": "/projects/startup-crm/1.png",
-                "extraImages": [
-                    "/projects/startup-crm/2.png",
-                    "/projects/startup-crm/3.png"
-                ],
-                "link": "https://startup-crm.vercel.app",
-                "github": "https://github.com",
-                "tech": [
-                    "React",
-                    "Node.js",
-                    "MongoDB",
-                    "Tailwind"
-                ],
-                "category": "SaaS"
-            },
-            {
-                "id": "helply",
-                "title": "Helply",
-                "description": "Plataforma de soporte al cliente impulsada por IA con chat en vivo y automatización integrados.",
-                "longDescription": "Helply utiliza IA para automatizar el servicio al cliente. Incluye un chatbot inteligente para consultas comunes y un panel para que agentes humanos tomen el control cuando sea necesario.",
-                "caseStudy": {
-                    "overview": "Helply es una plataforma de soporte al cliente de próxima generación que integra IA avanzada para cerrar la brecha entre la asistencia automatizada 24/7 y el soporte humano personalizado.",
-                    "objective": "Reducir la carga de soporte al cliente para pequeñas empresas mediante la automatización del 80% de las consultas rutinarias a través de agentes de IA inteligentes.",
-                    "solution": "Implementé una arquitectura RAG (Generación Aumentada por Recuperación) utilizando GPT-4 de OpenAI y una base de datos vectorial. Esto permite que la IA proporcione respuestas precisas y específicas del negocio basadas en la documentación del cliente.",
-                    "challenges": "Ajustar la IA para mantener una voz de marca profesional garantizando que identifique con precisión cuándo una conversación debe ser transferida a un agente humano.",
-                    "results": "Las empresas que utilizan Helply lograron una reducción del 45% en el volumen de tickets de soporte durante el primer mes de implementación."
-                },
-                "metrics": [
-                    {
-                        "label": "Reducción de Tickets",
-                        "value": "45%"
-                    },
-                    {
-                        "label": "Precisión IA",
-                        "value": "94%"
-                    },
-                    {
-                        "label": "Tiempo de Respuesta",
-                        "value": "<2s"
-                    }
-                ],
-                "image": "/projects/helply/1.png",
-                "extraImages": [
-                    "/projects/helply/2.png",
-                    "/projects/helply/3.png"
-                ],
-                "link": "https://helply-ai.vercel.app",
-                "github": "https://github.com",
-                "tech": [
-                    "Next.js",
-                    "OpenAI",
-                    "Firebase",
-                    "TypeScript"
-                ],
-                "category": "Plataforma de IA"
-            },
-            {
-                "id": "hireflow",
-                "title": "Hireflow",
-                "description": "Plataforma de reclutamiento moderna y portal de empleo que conecta talentos con empresas.",
-                "longDescription": "Hireflow simplifica el proceso de contratación. Los candidatos pueden postularse a trabajos mientras los empleadores gestionan solicitudes y programan entrevistas a través de una interfaz intuitiva.",
-                "caseStudy": {
-                    "overview": "Hireflow es un ecosistema de reclutamiento de grado empresarial diseñado para solucionar el proceso de contratación fragmentado mediante la centralización de la gestión de candidatos y la marca del empleador.",
-                    "objective": "Reducir el tiempo de contratación mediante la automatización del filtrado de currículums y proporcionando una mejor experiencia al candidato.",
-                    "solution": "Construido con el MERN stack e internacionalizado utilizando marcos de trabajo de localización. Integré AWS S3 para el almacenamiento seguro de currículums y Auth0 para la autenticación multi-inquilino.",
-                    "challenges": "Desarrollar un índice eficiente y buscable para miles de ofertas de trabajo y solicitudes con seguimiento de estado en tiempo real.",
-                    "results": "Permitió a las empresas reducir su tiempo promedio de contratación en 15 días y mejoró los puntajes de satisfacción de los candidatos en un 35%."
-                },
-                "metrics": [
-                    {
-                        "label": "Tiempo Contratación",
-                        "value": "-15 Días"
-                    },
-                    {
-                        "label": "Solicitudes",
-                        "value": "10k+"
-                    },
-                    {
-                        "label": "Satisfacción",
-                        "value": "92%"
-                    }
-                ],
-                "image": "/projects/hireflow/1.png",
-                "extraImages": [
-                    "/projects/hireflow/2.png",
-                    "/projects/hireflow/3.png"
-                ],
-                "link": "https://hireflow-jobs.vercel.app",
-                "github": "https://github.com",
-                "tech": [
-                    "MERN Stack",
-                    "AWS",
-                    "Auth0",
-                    "Tailwind"
-                ],
-                "category": "Portal de empleo"
-            },
-            {
-                "id": "meridian-commerce",
-                "title": "Meridian Commerce",
-                "description": "Panel premium de comercio electrónico con análisis en tiempo real y gestión de inventario.",
-                "longDescription": "Sistema completo de gestión de comercio electrónico. Rastrea ventas, niveles de inventario y comportamiento del cliente con visualizaciones y reportes atractivos.",
-                "caseStudy": {
-                    "overview": "Meridian Commerce es un panel de análisis de alto rendimiento diseñado para gerentes de comercio electrónico que necesitan claridad en tiempo real sobre sus operaciones comerciales.",
-                    "objective": "Centralizar los datos de ventas multicanal en un único motor de visualización de alta velocidad.",
-                    "solution": "Utilicé React con Chart.js para el frontend y PostgreSQL para una estructura de datos relacional robusta. Express se utilizó para construir un middleware eficiente para la agregación de datos.",
-                    "challenges": "Optimizar consultas SQL complejas para devolver resultados de análisis en tiempo real a través de conjuntos de datos con millones de transacciones.",
-                    "results": "Se logró un aumento de 3 veces en la velocidad de los reportes y se proporcionó a los gerentes información que llevó a una reducción del 12% en el inventario excedente."
-                },
-                "metrics": [
-                    {
-                        "label": "Velocidad Reportes",
-                        "value": "3x Rápido"
-                    },
-                    {
-                        "label": "Optimización Inventario",
-                        "value": "12%"
-                    },
-                    {
-                        "label": "Precisión Datos",
-                        "value": "100%"
-                    }
-                ],
-                "image": "/projects/meridian-commerce/1.png",
-                "extraImages": [
-                    "/projects/meridian-commerce/2.png",
-                    "/projects/meridian-commerce/3.png"
-                ],
-                "link": "https://meridian-shop.vercel.app",
-                "github": "https://github.com",
-                "tech": [
-                    "React",
-                    "PostgreSQL",
-                    "Express",
-                    "Chart.js"
-                ],
-                "category": "Comercio electrónico"
-            },
-            {
-                "id": "finance-assistant",
-                "title": "Asistente Financiero",
-                "description": "Gestor de finanzas personales seguro para rastrear gastos y establecer presupuestos.",
-                "longDescription": "El Asistente Financiero ayuda a los usuarios a tomar control de su dinero. Vincula cuentas, rastrea cada centavo y obtiene información impulsada por IA sobre cómo ahorrar más efectivamente.",
-                "caseStudy": {
-                    "overview": "Finance Assistant es una aplicación de finanzas personales que prioriza la privacidad y utiliza IA para ayudar a las personas a dominar sus hábitos de presupuesto y ahorro.",
-                    "objective": "Proporcionar una forma altamente segura y automatizada para que los usuarios rastreen su salud financiera a través de múltiples instituciones.",
-                    "solution": "Construido con Next.js y Prisma. Integré la API de Plaid para la agregación segura de datos financieros y utilicé modelos de aprendizaje automático para categorizar las transacciones automáticamente.",
-                    "challenges": "Mantener los más altos estándares de seguridad y cifrado de datos mientras se proporciona una experiencia de usuario fluida para la vinculación de datos financieros.",
-                    "results": "Los usuarios beta reportaron ahorrar un promedio de $200 por mes al identificar suscripciones innecesarias y optimizar sus hábitos de gasto diarios."
-                },
-                "metrics": [
-                    {
-                        "label": "Ahorro Mensual Prom.",
-                        "value": "$200"
-                    },
-                    {
-                        "label": "Auto-Categorización",
-                        "value": "95%"
-                    },
-                    {
-                        "label": "Calificación Seguridad",
-                        "value": "A+"
-                    }
-                ],
-                "image": "/projects/finance-assistant/1.png",
-                "extraImages": [
-                    "/projects/finance-assistant/2.png",
-                    "/projects/finance-assistant/3.png"
-                ],
-                "link": "https://finance-smart.vercel.app",
-                "github": "https://github.com",
-                "tech": [
-                    "TypeScript",
-                    "Next.js",
-                    "Prisma",
-                    "Plaid"
-                ],
-                "category": "FinTech"
-            },
-            {
-                "id": "caresync",
-                "title": "CareSync",
-                "description": "Asistente de salud impulsado por IA para gestión de pacientes y programación de citas.",
-                "longDescription": "CareSync cierra la brecha entre pacientes y médicos. Proporciona chequeo de síntomas, programación de citas y almacenamiento seguro de registros médicos.",
-                "caseStudy": {
-                    "overview": "CareSync es una plataforma de salud integral diseñada para modernizar la relación paciente-proveedor a través de la coordinación impulsada por IA.",
-                    "objective": "Optimizar las consultas médicas y reducir los tiempos de espera mediante la automatización del proceso de admisión y programación.",
-                    "solution": "Desarrollado como una aplicación móvil multiplataforma usando Flutter y un backend de Node.js. Integré IA para la evaluación preliminar de síntomas y almacenamiento seguro de datos conforme a HIPAA.",
-                    "challenges": "Garantizar que la evaluación de síntomas por IA siguiera siendo una herramienta útil sin proporcionar diagnósticos médicos, y gestionar la disponibilidad de los médicos en tiempo real a través de múltiples clínicas.",
-                    "results": "Las clínicas que utilizan CareSync vieron una reducción del 50% en las citas perdidas y un puntaje de satisfacción del paciente significativamente más alto debido a tiempos de espera más cortos."
-                },
-                "metrics": [
-                    {
-                        "label": "Inasistencias a Citas",
-                        "value": "-50%"
-                    },
-                    {
-                        "label": "Satisfacción Paciente",
-                        "value": "98%"
-                    },
-                    {
-                        "label": "Tiempo de Espera",
-                        "value": "-30%"
-                    }
-                ],
-                "image": "/projects/caresync/1.png",
-                "extraImages": [
-                    "/projects/caresync/2.png",
-                    "/projects/caresync/3.png"
-                ],
-                "link": "https://caresync-health.vercel.app",
-                "github": "https://github.com",
-                "tech": [
-                    "Flutter",
-                    "Firebase",
-                    "Node.js",
-                    "Python"
-                ],
-                "category": "HealthTech"
-            },
-            {
-                "id": "collab-chat",
-                "title": "Chat Colaborativo con IA",
-                "description": "Aplicación de colaboración en tiempo real para equipos con asistentes de IA integrados y videollamadas.",
-                "longDescription": "Espacio de trabajo moderno donde los equipos pueden chatear, compartir archivos y realizar videollamadas. Los asistentes de IA están disponibles en cada canal para ayudar con la investigación y la redacción.",
-                "caseStudy": {
-                    "overview": "AI Collab Chat es un espacio de trabajo de próxima generación que pone la IA en el centro de la comunicación del equipo para aumentar la productividad y fomentar la creatividad.",
-                    "objective": "Crear un entorno de colaboración fluido y en tiempo real donde los agentes de IA puedan participar en la lluvia de ideas del equipo y la gestión de tareas.",
-                    "solution": "Construido usando React y Socket.io para comunicación persistente en tiempo real. Integré WebRTC para videollamadas de alta calidad y múltiples agentes de OpenAI especializados en diferentes dominios.",
-                    "challenges": "Sincronizar salidas de IA complejas en tiempo real a través de chats grupales sin interrumpir el flujo natural de la conversación humana.",
-                    "results": "Los equipos que utilizan AI Collab Chat reportaron completar tareas de redacción creativa 2 veces más rápido que con las plataformas de chat tradicionales."
-                },
-                "metrics": [
-                    {
-                        "label": "Finalización Tareas",
-                        "value": "2x Rápido"
-                    },
-                    {
-                        "label": "Sesiones IA Activas",
-                        "value": "15k+"
-                    },
-                    {
-                        "label": "Calidad de Voz",
-                        "value": "4k HD"
-                    }
-                ],
-                "image": "/projects/collab-chat/1.png",
-                "extraImages": [
-                    "/projects/collab-chat/2.png",
-                    "/projects/collab-chat/3.png"
-                ],
-                "link": "https://collab-chat.vercel.app",
-                "github": "https://github.com",
-                "tech": [
-                    "React",
-                    "Socket.io",
-                    "WebRTC",
-                    "OpenAI"
-                ],
-                "category": "Comunicación"
-            },
-            {
-                "id": "cryptopulse",
-                "title": "CryptoPulse",
-                "description": "Rastreador de cartera cripto impulsado por IA con datos de mercado en tiempo real y análisis.",
-                "longDescription": "CryptoPulse rastrea tus activos cripto a través de diferentes exchanges. Utiliza IA para análisis de sentimiento y predicciones de tendencias de mercado.",
-                "caseStudy": {
-                    "overview": "CryptoPulse es un rastreador de cartera de alta visibilidad para entusiastas de las criptomonedas que proporciona una claridad cristalina en un mercado volátil utilizando análisis de sentimiento impulsado por IA.",
-                    "objective": "Proporcionar un panel único para el seguimiento a través de exchanges con información predictiva del mercado.",
-                    "solution": "Construido usando Next.js para un alto rendimiento y TensorFlow.js para el análisis de sentimiento del lado del cliente. Integré múltiples APIs de datos de mercado para precios agregados en tiempo real.",
-                    "challenges": "Normalizar los datos de docenas de APIs de diferentes exchanges en un feed de precios único y de alta velocidad.",
-                    "results": "Los usuarios reportaron una mejora del 15% en su ROI de trading al utilizar las señales de sentimiento de IA de la plataforma para sincronizarse con el mercado."
-                },
-                "metrics": [
-                    {
-                        "label": "Mejora del ROI",
-                        "value": "+15%"
-                    },
-                    {
-                        "label": "Monedas T. Real",
-                        "value": "2k+"
-                    },
-                    {
-                        "label": "Latencia API",
-                        "value": "100ms"
-                    }
-                ],
-                "image": "/projects/cryptopulse/1.png",
-                "extraImages": [
-                    "/projects/cryptopulse/2.png",
-                    "/projects/cryptopulse/3.png"
-                ],
-                "link": "https://cryptopulse.vercel.app",
-                "github": "https://github.com",
-                "tech": [
-                    "Next.js",
-                    "CoinGecko API",
-                    "TensorFlow.js",
-                    "Tailwind"
-                ],
-                "category": "Cripto"
-            },
-            {
-                "id": "ads-management-system",
-                "title": "Sistema de gestión de anuncios (ADM)",
-                "description": "Panel de marketing de rendimiento avanzado para informes de agencias y análisis estratégico.",
-                "longDescription": "Ads Management System (ADM) es una plataforma de informes premium diseñada para agencias de marketing. Centraliza los datos de rendimiento de canales cruzados en paneles de alta fidelidad, lo que permite una inteligencia profunda y el seguimiento de KPI estratégicos.",
-                "caseStudy": {
-                    "overview": "ADM se creó para resolver la fragmentación en los informes de las agencias, proporcionando una única fuente de verdad para el rendimiento publicitario en varias plataformas.",
-                    "objective": "Crear un motor de análisis en tiempo real de alto rendimiento que transforme los datos de marketing sin procesar en conocimientos estratégicos procesables.",
-                    "solution": "Desarrollado con una arquitectura MERN stack, utilizando una robusta capa de agregación de datos. El frontend presenta componentes de visualización de datos personalizados para informes de rendimiento perfectos.",
-                    "challenges": "Manejo de actualizaciones de datos de alta frecuencia de múltiples API de anuncios mientras se mantiene una baja latencia y una alta capacidad de respuesta de la interfaz de usuario.",
-                    "results": "Las agencias que utilizan ADM informaron una reducción del 50% en el tiempo de generación de informes manuales y un aumento del 20% en la retención de clientes debido a informes más transparentes."
-                },
-                "metrics": [
-                    {
-                        "label": "Eficiencia en reportes",
-                        "value": "+50%"
-                    },
-                    {
-                        "label": "Retención de clientes",
-                        "value": "+20%"
-                    },
-                    {
-                        "label": "Fidelidad de datos",
-                        "value": "100%"
-                    }
-                ],
-                "image": "/projects/ADM(AdsManagementSystem)/Screenshot 2026-03-04 155731.png",
-                "extraImages": [
-                    "/projects/ADM(AdsManagementSystem)/Screenshot 2026-03-04 155017.png",
-                    "/projects/ADM(AdsManagementSystem)/Screenshot 2026-03-04 155754.png"
-                ],
-                "link": "https://github.com/abdul-haseeb5786",
-                "github": "https://github.com/abdul-haseeb5786",
-                "tech": [
-                    "React",
-                    "Node.js",
-                    "MongoDB",
-                    "Tailwind CSS"
-                ],
-                "category": "Marketing Tech"
-            },
-            {
-                "id": "software-agency-management",
-                "title": "Gestión de agencias de software",
-                "description": "Plataforma de gestión integral para agencias de software para agilizar los flujos de trabajo de los proyectos y la colaboración en equipo.",
-                "longDescription": "Una plataforma SaaS robusta diseñada específicamente para agencias de desarrollo de software. Gestiona todo el ciclo de vida del proyecto, desde la recepción inicial del cliente hasta la entrega final, con métricas de rendimiento integradas y portales de clientes.",
-                "caseStudy": {
-                    "overview": "Este proyecto abordó los desafíos operativos de las agencias de software en crecimiento centralizando la gestión de proyectos, las comunicaciones con los clientes y el seguimiento financiero.",
-                    "objective": "Construir una plataforma escalable y multi-tenant que mejore la eficiencia operativa y proporcione visibilidad en tiempo real de la salud de la agencia.",
-                    "solution": "Construido con Next.js para un frontend de alto rendimiento y Prisma con PostgreSQL para un backend relacional capaz de manejar jerarquías de proyectos complejas.",
-                    "challenges": "Diseñar una arquitectura multi-tenant intuitiva con un estricto aislamiento de datos y niveles de permisos complejos para diferentes roles de equipo.",
-                    "results": "Las agencias piloto observaron una mejora del 30% en los tiempos de entrega de proyectos y redujeron significativamente los gastos administrativos."
-                },
-                "metrics": [
-                    {
-                        "label": "Velocidad de entrega",
-                        "value": "+30%"
-                    },
-                    {
-                        "label": "Gastos administrativos",
-                        "value": "-40%"
-                    },
-                    {
-                        "label": "Tiempo de actividad",
-                        "value": "99.99%"
-                    }
-                ],
-                "image": "/projects/softwareAgencyManagement/Screenshot 2026-03-05 154933.png",
-                "extraImages": [
-                    "/projects/softwareAgencyManagement/Screenshot 2026-03-05 155002.png"
-                ],
-                "link": "https://github.com/abdul-haseeb5786",
-                "github": "https://github.com/abdul-haseeb5786",
-                "tech": [
-                    "Next.js",
-                    "Prisma",
-                    "PostgreSQL",
-                    "Tailwind"
-                ],
-                "category": "SaaS"
             }
         ]
     },
