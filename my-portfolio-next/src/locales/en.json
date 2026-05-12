@@ -81,6 +81,65 @@
                 }
             ]
         },
+        "experience": {
+            "title": "Experience",
+            "history": [
+                {
+                    "id": 1,
+                    "title": "Full Stack Engineer",
+                    "company": "Nosh Solutions",
+                    "type": "Full-time",
+                    "date": "Sep 2025 - Present",
+                    "location": "Karachi, Pakistan",
+                    "description": "Joined as an engineer, ended up owning entire products end to end. Built full-stack automation systems — designed the architecture, developed the backend logic, integrated third-party APIs, and shipped working products. From CareSync's appointment booking system to AI-powered voice agents, every project went from problem to production under my ownership.",
+                    "points": [
+                        {
+                            "icon": "💻",
+                            "text": "Full Stack Development"
+                        },
+                        {
+                            "icon": "🤖",
+                            "text": "AI & Automation Systems"
+                        },
+                        {
+                            "icon": "⚙️",
+                            "text": "Backend Architecture"
+                        },
+                        {
+                            "icon": "🏗️",
+                            "text": "Product Engineering"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "Frontend Developer",
+                    "company": "Ship+Tag",
+                    "type": "Contract",
+                    "date": "Apr 2025 - Sep 2025",
+                    "location": "Saudi Arabia",
+                    "description": "Designed and developed the entire portal UI for ShipTag, a Saudi logistics company. Translated detailed Figma designs into responsive, reusable components using React.js, Tailwind CSS, and HeroUI. Optimized layout performance, ensuring cross-device responsiveness and smooth user experience.",
+                    "points": [
+                        {
+                            "icon": "⚛️",
+                            "text": "React.js"
+                        },
+                        {
+                            "icon": "🌐",
+                            "text": "Next.js"
+                        },
+                        {
+                            "icon": "🎨",
+                            "text": "Tailwind CSS"
+                        },
+                        {
+                            "icon": "📱",
+                            "text": "Responsive UI"
+                        }
+                    ]
+                }
+            ]
+        },
         "stats": {
             "experience": "Years Experience",
             "projects": "Projects Done"

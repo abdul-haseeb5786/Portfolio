@@ -81,6 +81,65 @@
                 }
             ]
         },
+        "experience": {
+            "title": "Experiencia",
+            "history": [
+                {
+                    "id": 1,
+                    "title": "Ingeniero Full Stack",
+                    "company": "Nosh Solutions",
+                    "type": "Tiempo completo",
+                    "date": "Sep 2025 - Presente",
+                    "location": "Karachi, Pakistán",
+                    "description": "Me uní como ingeniero y terminé liderando productos completos de principio a fin. Construí sistemas de automatización full-stack: diseñé la arquitectura, desarrollé la lógica del backend, integré APIs de terceros y entregué productos funcionales. Desde el sistema de reserva de citas de CareSync hasta agentes de voz impulsados por IA, cada proyecto pasó de problema a producción bajo mi responsabilidad.",
+                    "points": [
+                        {
+                            "icon": "💻",
+                            "text": "Desarrollo Full Stack"
+                        },
+                        {
+                            "icon": "🤖",
+                            "text": "Sistemas de IA y Automatización"
+                        },
+                        {
+                            "icon": "⚙️",
+                            "text": "Arquitectura Backend"
+                        },
+                        {
+                            "icon": "🏗️",
+                            "text": "Ingeniería de Productos"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "Desarrollador Frontend",
+                    "company": "Ship+Tag",
+                    "type": "Contrato",
+                    "date": "Abr 2025 - Sep 2025",
+                    "location": "Arabia Saudita",
+                    "description": "Diseñé y desarrollé toda la interfaz de usuario del portal para ShipTag, una empresa de logística saudí. Traduje diseños detallados de Figma en componentes reutilizables y receptivos utilizando React.js, Tailwind CSS y HeroUI. Optimicé el rendimiento del diseño, asegurando la capacidad de respuesta en todos los dispositivos y una experiencia de usuario fluida.",
+                    "points": [
+                        {
+                            "icon": "⚛️",
+                            "text": "React.js"
+                        },
+                        {
+                            "icon": "🌐",
+                            "text": "Next.js"
+                        },
+                        {
+                            "icon": "🎨",
+                            "text": "Tailwind CSS"
+                        },
+                        {
+                            "icon": "📱",
+                            "text": "UI Receptiva"
+                        }
+                    ]
+                }
+            ]
+        },
         "stats": {
             "experience": "Años de Experiencia",
             "projects": "Proyectos Completados"
