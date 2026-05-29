@@ -283,7 +283,127 @@
                     "Node.js",
                     "Tailwind CSS"
                 ],
-                "category": "SaaS / خدمات لوجستية"
+                "category": "SaaS / خدمات لوجستية",
+                "filter": "full-stack"
+            },
+            {
+                "id": "ai-lead-qualification",
+                "title": "أتمتة تأهيل العملاء المحتملين ومسار المبيعات بالذكاء الاصطناعي",
+                "description": "سير عمل مؤتمت لالتقاط العملاء المحتملين وتقييمهم وتوجيههم في نظام CRM باستخدام n8n والذكاء الاصطناعي لتحديد الفرص الذهبية فوراً.",
+                "longDescription": "قمت ببناء مسار مؤتمت لتأهيل العملاء المحتملين باستخدام n8n وOpenAI. يلتقط عمليات إرسال النماذج عبر Webhook، ويقيم كل عميل محتمل من 0 إلى 100 باستخدام GPT-4o-mini، ويوجههم إلى ثلاثة مسارات — تتم إضافة العملاء المحتملين الساخنين على الفور إلى HubSpot CRM مع إنشاء صفقة وتنبيه فريق المبيعات على Slack. يتلقى العملاء الدافئون رداً تلقائياً مخصصاً. ويدخل العملاء الباردون في تسلسل رعاية تلقائي، مع تسجيل جميع العملاء في Google Sheets تلقائياً.",
+                "caseStudy": {
+                    "overview": "بناء مسار مؤتمت لتأهيل العملاء وتقييمهم باستخدام n8n وOpenAI لتحسين أوقات استجابة المبيعات وإدارة البيانات.",
+                    "objective": "أتمتة تقييم العملاء المحتملين وتنبيه فرق المبيعات فوراً للفرص عالية القيمة، مما يقلل وقت الاستجابة من ساعات إلى ثوانٍ.",
+                    "solution": "تصميم سير عمل n8n يعمل عبر webhook. دمج GPT-4o-mini للتحليل الذكي، ونظام HubSpot لإدارة الصفقات، وواجهات Slack للتنبيهات الفورية.",
+                    "challenges": "تصميم معايير تقييم قوية لـ GPT-4o-mini لتصنيف العملاء بدقة بناءً على مدخلات عامة، وضمان توجيه سلس للـ CRM.",
+                    "results": "تقليل وقت استجابة المبيعات بنسبة 95%، وزيادة معدل تحويل العملاء الساخنين بنسبة 25%، وتسجيل تلقائي للبيانات بنسبة 100%."
+                },
+                "metrics": [
+                    {
+                        "label": "وقت الاستجابة",
+                        "value": "< 10 ثوانٍ"
+                    },
+                    {
+                        "label": "زيادة التحويل",
+                        "value": "+25%"
+                    },
+                    {
+                        "label": "تسجيل البيانات",
+                        "value": "100% تلقائي"
+                    }
+                ],
+                "image": "/projects/Ai Lead Qualification Automation/8.png",
+                "extraImages": [],
+                "link": "https://github.com/abdul-haseeb5786",
+                "github": "https://github.com/abdul-haseeb5786",
+                "tech": [
+                    "n8n",
+                    "OpenAI API",
+                    "HubSpot CRM",
+                    "Slack API",
+                    "Google Sheets"
+                ],
+                "category": "الذكاء الاصطناعي والأتمتة",
+                "filter": "automation"
+            },
+            {
+                "id": "ecommerce-order-orchestration",
+                "title": "أتمتة تنسيق طلبات التجارة الإلكترونية — من البداية إلى النهاية",
+                "description": "محرك متكامل ومؤتمت بالكامل لتلبية الطلبات وإشعارات العملاء عبر القنوات المختلفة مبني باستخدام n8n وShipEngine وTwilio وShopify.",
+                "longDescription": "قمت ببناء نظام أتمتة كامل لتلبية طلبات متجر تجارة إلكترونية باستخدام n8n. عند تقديم الطلب، يتحقق سير العمل من المخزون، ويخصم الكمية، ويخطر المستودع، ويولد ملصق شحن عبر ShipEngine API، ويرسل رسالة WhatsApp وبريد تأكيد للعميل، ثم يرسل طلباً للمراجعة تلقائياً بعد 3 أيام. الطلبات غير المتوفرة تفعل إشعاراً مخصصاً للعميل وتنبيهاً للفريق على Slack.",
+                "caseStudy": {
+                    "overview": "نظام متكامل لتنسيق الطلبات يدمج المخزون والمستودعات والخدمات اللوجستية والاتصالات في سير عمل مؤتمت واحد عبر n8n.",
+                    "objective": "القضاء على المهام اليدوية لتلبية الطلبات، وتقليل أخطاء الشحن، وتقديم تحديثات فورية ومؤتمتة للعملاء.",
+                    "solution": "تطوير نظام أتمتة n8n يستفيد من Shopify webhooks، وShipEngine API لتوليد ملصقات الشحن تلقائياً، ورسائل Twilio WhatsApp، ورسائل البريد المؤتمتة.",
+                    "challenges": "معالجة حالات نفاد المخزون بمرونة دون إيقاف المسار الرئيسي لمعالجة الطلبات، وتزامن تحديثات التتبع عبر Shopify والناقلين.",
+                    "results": "أتمتة 100% من مهام تلبية الطلبات القياسية، وتقليل تأخير شحن المستودع بمقدار 12 ساعة، وزيادة المراجعات المجمعة."
+                },
+                "metrics": [
+                    {
+                        "label": "تلبية الطلبات",
+                        "value": "100% تلقائي"
+                    },
+                    {
+                        "label": "تأخير الشحن",
+                        "value": "-12 ساعة"
+                    },
+                    {
+                        "label": "المراجعات المجمعة",
+                        "value": "+40%"
+                    }
+                ],
+                "image": "/projects/Ecommerce Order Orchestration Automation/9.png",
+                "extraImages": [],
+                "link": "https://github.com/abdul-haseeb5786",
+                "github": "https://github.com/abdul-haseeb5786",
+                "tech": [
+                    "n8n",
+                    "Shopify API",
+                    "ShipEngine API",
+                    "Twilio API",
+                    "WhatsApp API"
+                ],
+                "category": "أتمتة التجارة الإلكترونية",
+                "filter": "automation"
+            },
+            {
+                "id": "competitor-price-monitor",
+                "title": "أتمتة مراقبة أسعار المنافسين عبر n8n مع التحليل بالذكاء الاصطناعي",
+                "description": "سير عمل مؤتمت لكشط أسعار المنافسين يومياً والتحليل بالذكاء الاصطناعي يقدم توصيات لتعديل الأسعار وتنبيهات على Slack.",
+                "longDescription": "قمت ببناء نظام مؤتمت لمراقبة وتحليل أسعار المنافسين باستخدام n8n والذكاء الاصطناعي. يقوم سير العمل تلقائياً بكشط بيانات أسعار المنافسين يومياً، ويستخدم GPT-4 لتحليل اتجاهات الأسعار واستراتيجيات التموضع، ويضبط أسعار متجرنا ديناميكياً عبر واجهة برمجة التطبيقات، وينبه الفريق على Slack بتقرير تسعير يومي شامل.",
+                "caseStudy": {
+                    "overview": "نظام ذكاء سوقي مؤتمت يحافظ على تنافسية علامة تجارية للتجارة الإلكترونية في الوقت الفعلي من خلال كشط وتحليل أسعار المنافسين باستخدام n8n والذكاء الاصطناعي.",
+                    "objective": "الحفاظ على أسعار تنافسية ومنع خسارة هامش الربح من خلال أتمتة المهمة الشاقة المتمثلة في الفحص اليومي اليدوي لأسعار المنافسين.",
+                    "solution": "تصميم سير عمل n8n مجدول يومياً للقيام بكشط مواقع منافسين متعددة، واستخدام OpenAI GPT-4 لتحليل نماذج التسعير، وإرسال تقارير غنية على Slack.",
+                    "challenges": "كشط مواقع ذات هياكل HTML متنوعة ومحتوى ديناميكي، وتصميم مطالبات ذكاء اصطناعي توصي بتغييرات تسعير دقيقة بناءً على هوامش الربح الحالية.",
+                    "results": "توفير أكثر من 10 ساعات أسبوعياً من التحليل اليدوي للمنافسين، وتحسين هوامش المنتجات بنسبة 8%، وضمان تنافسية الأسعار بنسبة 100% على المنتجات الرئيسية."
+                },
+                "metrics": [
+                    {
+                        "label": "الوقت الموفر أسبوعياً",
+                        "value": "10+ ساعات"
+                    },
+                    {
+                        "label": "هوامش المنتجات",
+                        "value": "+8%"
+                    },
+                    {
+                        "label": "مزامنة السوق",
+                        "value": "يومياً"
+                    }
+                ],
+                "image": "/projects/Competitor Price Monitor Automation/7.png",
+                "extraImages": [],
+                "link": "https://github.com/abdul-haseeb5786",
+                "github": "https://github.com/abdul-haseeb5786",
+                "tech": [
+                    "n8n",
+                    "OpenAI API",
+                    "Web Scraping",
+                    "Slack API"
+                ],
+                "category": "الذكاء الاصطناعي والأتمتة",
+                "filter": "automation"
             },
             {
                 "id": "luxury-studio",
@@ -321,7 +441,8 @@
                     "Tailwind CSS",
                     "Framer Motion"
                 ],
-                "category": "تجارة إلكترونية"
+                "category": "تجارة إلكترونية",
+                "filter": "full-stack"
             },
             {
                 "id": "luxury-studio-admin",
@@ -359,7 +480,8 @@
                     "Node.js",
                     "Dashboard UI"
                 ],
-                "category": "نظام إدارة"
+                "category": "نظام إدارة",
+                "filter": "full-stack"
             },
             {
                 "id": "ads-management-system",
@@ -400,7 +522,8 @@
                     "MongoDB",
                     "Tailwind CSS"
                 ],
-                "category": "تقنية التسويق"
+                "category": "تقنية التسويق",
+                "filter": "full-stack"
             },
             {
                 "id": "adpulse",
@@ -447,7 +570,8 @@
                     "OpenRouter AI"
                 ],
                 "category": "مشروع صناعي / خدمات مصغرة",
-                "completionDate": "2 أبريل 2026"
+                "completionDate": "2 أبريل 2026",
+                "filter": "full-stack"
             },
             {
                 "id": "caresync",
@@ -488,7 +612,8 @@
                     "Node.js",
                     "Python"
                 ],
-                "category": "تكنولوجيا الرعاية الصحية"
+                "category": "تكنولوجيا الرعاية الصحية",
+                "filter": "full-stack"
             },
             {
                 "id": "collab-chat",
@@ -529,7 +654,8 @@
                     "WebRTC",
                     "OpenAI"
                 ],
-                "category": "التواصل"
+                "category": "التواصل",
+                "filter": "full-stack"
             },
             {
                 "id": "cryptopulse",
@@ -570,7 +696,8 @@
                     "TensorFlow.js",
                     "Tailwind"
                 ],
-                "category": "عملات رقمية"
+                "category": "عملات رقمية",
+                "filter": "full-stack"
             },
             {
                 "id": "finance-assistant",
@@ -611,7 +738,8 @@
                     "Prisma",
                     "Plaid"
                 ],
-                "category": "تكنولوجيا مالية"
+                "category": "تكنولوجيا مالية",
+                "filter": "full-stack"
             },
             {
                 "id": "helply",
@@ -652,7 +780,8 @@
                     "Firebase",
                     "TypeScript"
                 ],
-                "category": "منصة ذكاء اصطناعي"
+                "category": "منصة ذكاء اصطناعي",
+                "filter": "full-stack"
             },
             {
                 "id": "hireflow",
@@ -693,7 +822,8 @@
                     "Auth0",
                     "Tailwind"
                 ],
-                "category": "بوابة وظائف"
+                "category": "بوابة وظائف",
+                "filter": "full-stack"
             },
             {
                 "id": "meridian-commerce",
@@ -734,7 +864,8 @@
                     "Express",
                     "Chart.js"
                 ],
-                "category": "تجارة إلكترونية"
+                "category": "تجارة إلكترونية",
+                "filter": "full-stack"
             },
             {
                 "id": "software-agency-management",
@@ -774,7 +905,8 @@
                     "PostgreSQL",
                     "Tailwind"
                 ],
-                "category": "SaaS"
+                "category": "SaaS",
+                "filter": "full-stack"
             },
             {
                 "id": "startup-crm",
@@ -815,7 +947,8 @@
                     "MongoDB",
                     "Tailwind"
                 ],
-                "category": "SaaS"
+                "category": "SaaS",
+                "filter": "full-stack"
             },
             {
                 "id": "furniro",
@@ -852,7 +985,8 @@
                     "Firebase",
                     "Tailwind CSS"
                 ],
-                "category": "تجارة إلكترونية"
+                "category": "تجارة إلكترونية",
+                "filter": "full-stack"
             },
             {
                 "id": "shrinkly",
@@ -890,7 +1024,8 @@
                     "Express",
                     "React"
                 ],
-                "category": "تطبيق ويب"
+                "category": "تطبيق ويب",
+                "filter": "full-stack"
             },
             {
                 "id": "ems",
@@ -928,7 +1063,8 @@
                     "Express",
                     "React"
                 ],
-                "category": "نظام إدارة"
+                "category": "نظام إدارة",
+                "filter": "full-stack"
             },
             {
                 "id": "vscode-portfolio",
@@ -965,7 +1101,8 @@
                     "TypeScript",
                     "Tailwind CSS"
                 ],
-                "category": "محفظة أعمال"
+                "category": "محفظة أعمال",
+                "filter": "full-stack"
             },
             {
                 "id": "beneficiary-management",
@@ -1002,7 +1139,8 @@
                     "Firebase",
                     "Tailwind CSS"
                 ],
-                "category": "نظام إدارة"
+                "category": "نظام إدارة",
+                "filter": "full-stack"
             },
             {
                 "id": "project-tracker",
@@ -1040,9 +1178,15 @@
                     "MongoDB",
                     "Tailwind CSS"
                 ],
-                "category": "إنتاجية"
+                "category": "إنتاجية",
+                "filter": "full-stack"
             }
-        ]
+        ],
+        "filters": {
+            "all": "جميع المشاريع",
+            "fullStack": "فول ستاك",
+            "automation": "أتمتة"
+        }
     },
     "reviews": {
         "title": "آراء",
@@ -1100,7 +1244,11 @@
         "contact": "تواصل"
     },
     "footer": {
-        "rights": "جميع الحقوق محفوظة."
+        "rights": "جميع الحقوق محفوظة.",
+        "description": "صياغة تجارب رقمية باستخدام تقنيات الويب الحديثة. متخصص في تطوير MERN وأتمتة الذكاء الاصطناعي.",
+        "navigation": "التصفح",
+        "connect": "اتصل بي",
+        "builtWith": "مبني باستخدام"
     },
     "common": {
         "loading": "جاري التحميل...",

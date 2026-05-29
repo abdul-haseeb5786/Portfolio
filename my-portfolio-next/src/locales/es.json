@@ -283,7 +283,127 @@
                     "Node.js",
                     "Tailwind CSS"
                 ],
-                "category": "SaaS / Logística"
+                "category": "SaaS / Logística",
+                "filter": "full-stack"
+            },
+            {
+                "id": "ai-lead-qualification",
+                "title": "Automatización de Calificación de Clientes Potenciales con IA y Canal de CRM",
+                "description": "Flujo de trabajo automatizado de captura, puntuación y enrutamiento en CRM de clientes potenciales usando n8n e IA para identificar prospectos calientes.",
+                "longDescription": "Construí un canal automatizado de calificación de clientes potenciales utilizando n8n y OpenAI. Captura envíos de formularios a través de un webhook, puntúa cada cliente de 0 a 100 usando GPT-4o-mini y los enruta en tres caminos — los clientes calientes se agregan instantáneamente a HubSpot CRM creándose un trato y alertando al equipo en Slack. Los clientes tibios reciben una respuesta automática. Los clientes fríos entran en una secuencia de nutrición. Todos se registran en Google Sheets automáticamente.",
+                "caseStudy": {
+                    "overview": "Se construyó un canal automatizado de calificación de clientes potenciales utilizando n8n y OpenAI para optimizar los tiempos de respuesta y la gestión de datos.",
+                    "objective": "Automatizar la puntuación de clientes potenciales y alertar de inmediato a los equipos de ventas sobre prospectos de alto valor, reduciendo el tiempo de respuesta a segundos.",
+                    "solution": "Diseñé un flujo de trabajo en n8n activado por webhook. Integración de GPT-4o-mini para análisis inteligente, HubSpot CRM para seguimiento y Slack para alertas.",
+                    "challenges": "Diseñar una rúbrica de puntuación sólida para GPT-4o-mini que califique de manera constante a partir de entradas vagas, y garantizar un enrutamiento CRM fluido.",
+                    "results": "Reducción del tiempo de respuesta en un 95%, aumento de la tasa de conversión en un 25% y registro de datos automatizado para el 100% de los clientes potenciales."
+                },
+                "metrics": [
+                    {
+                        "label": "Tiempo Respuesta",
+                        "value": "< 10 Seg"
+                    },
+                    {
+                        "label": "Aumento Conversión",
+                        "value": "+25%"
+                    },
+                    {
+                        "label": "Registro Datos",
+                        "value": "100% Auto"
+                    }
+                ],
+                "image": "/projects/Ai Lead Qualification Automation/8.png",
+                "extraImages": [],
+                "link": "https://github.com/abdul-haseeb5786",
+                "github": "https://github.com/abdul-haseeb5786",
+                "tech": [
+                    "n8n",
+                    "OpenAI API",
+                    "HubSpot CRM",
+                    "Slack API",
+                    "Google Sheets"
+                ],
+                "category": "IA y Automatización",
+                "filter": "automation"
+            },
+            {
+                "id": "ecommerce-order-orchestration",
+                "title": "Automatización de Orquestación de Pedidos de Comercio Electrónico — Extremo a Extremo",
+                "description": "Un motor de cumplimiento de pedidos y notificaciones multicanal completamente automatizado con n8n, ShipEngine, Twilio y Shopify.",
+                "longDescription": "Construí una automatización completa de cumplimiento de pedidos usando n8n para una tienda de comercio electrónico. Al realizar un pedido, el flujo verifica el inventario, descuenta el stock, notifica al almacén, genera una etiqueta de envío mediante ShipEngine, envía un mensaje de WhatsApp y correo de confirmación al cliente, y programa una solicitud de reseña 3 días después. Los pedidos sin stock activan alertas en Slack y correos personalizados.",
+                "caseStudy": {
+                    "overview": "Un sistema completo de orquestación de pedidos que integra inventario, almacenamiento, logística y comunicaciones en un solo flujo automatizado de n8n.",
+                    "objective": "Eliminar tareas manuales de cumplimiento, reducir errores de envío y proporcionar actualizaciones automatizadas inmediatas a los clientes.",
+                    "solution": "Desarrollo de una automatización en n8n utilizando webhooks de Shopify, API de ShipEngine para etiquetas de envío, WhatsApp de Twilio y correos automatizados.",
+                    "challenges": "Manejo de casos de falta de stock de manera elegante sin detener el flujo principal de pedidos y sincronización de estados de seguimiento en Shopify.",
+                    "results": "Automatización del 100% de las tareas de cumplimiento estándar, reducción del retraso de despacho en 12 horas y aumento de reseñas recolectadas."
+                },
+                "metrics": [
+                    {
+                        "label": "Cumplimiento",
+                        "value": "100% Auto"
+                    },
+                    {
+                        "label": "Retraso Despacho",
+                        "value": "-12 Horas"
+                    },
+                    {
+                        "label": "Reseñas Recibidas",
+                        "value": "+40%"
+                    }
+                ],
+                "image": "/projects/Ecommerce Order Orchestration Automation/9.png",
+                "extraImages": [],
+                "link": "https://github.com/abdul-haseeb5786",
+                "github": "https://github.com/abdul-haseeb5786",
+                "tech": [
+                    "n8n",
+                    "Shopify API",
+                    "ShipEngine API",
+                    "Twilio API",
+                    "WhatsApp API"
+                ],
+                "category": "Automatización de Comercio",
+                "filter": "automation"
+            },
+            {
+                "id": "competitor-price-monitor",
+                "title": "Automatización de Monitoreo de Precios de Competidores con n8n y Análisis de IA",
+                "description": "Flujo de trabajo automatizado de raspado de precios de competidores y análisis de IA que ofrece informes diarios y alertas en Slack.",
+                "longDescription": "Construí un sistema automatizado de monitoreo y análisis de precios de competidores utilizando n8n e IA. El flujo raspa automáticamente datos de precios de competidores diariamente, utiliza GPT-4 para analizar tendencias de precios y estrategias de posicionamiento, ajusta dinámicamente nuestros precios mediante API y alerta al equipo en Slack con informes completos de reajuste de precios.",
+                "caseStudy": {
+                    "overview": "Un sistema automatizado de inteligencia de mercado que mantiene competitiva a una marca en tiempo real al raspar y analizar precios de la competencia usando n8n e IA.",
+                    "objective": "Mantener precios competitivos y evitar la pérdida de márgenes de beneficio automatizando la tarea diaria de verificar manualmente los precios de la competencia.",
+                    "solution": "Diseñé un flujo de trabajo en n8n programado diariamente. Raspa múltiples sitios web de competidores, usa OpenAI GPT-4 para analizar modelos de precios y entrega informes visuales en Slack.",
+                    "challenges": "Raspado de sitios con estructuras HTML variables y contenido dinámico, y diseño de prompts de IA que recomienden de manera precisa ajustes basados en el margen de beneficio.",
+                    "results": "Ahorro de más de 10 horas semanales de análisis manual, mejora del margen de productos en un 8% y garantía del 100% de competitividad de precios en productos clave."
+                },
+                "metrics": [
+                    {
+                        "label": "Tiempo Ahorrado/Sem",
+                        "value": "10+ Horas"
+                    },
+                    {
+                        "label": "Márgenes Producto",
+                        "value": "+8%"
+                    },
+                    {
+                        "label": "Sinc. Mercado",
+                        "value": "Diario"
+                    }
+                ],
+                "image": "/projects/Competitor Price Monitor Automation/7.png",
+                "extraImages": [],
+                "link": "https://github.com/abdul-haseeb5786",
+                "github": "https://github.com/abdul-haseeb5786",
+                "tech": [
+                    "n8n",
+                    "OpenAI API",
+                    "Web Scraping",
+                    "Slack API"
+                ],
+                "category": "IA y Automatización",
+                "filter": "automation"
             },
             {
                 "id": "luxury-studio",
@@ -321,7 +441,8 @@
                     "Tailwind CSS",
                     "Framer Motion"
                 ],
-                "category": "Comercio electrónico"
+                "category": "Comercio electrónico",
+                "filter": "full-stack"
             },
             {
                 "id": "luxury-studio-admin",
@@ -359,7 +480,8 @@
                     "Node.js",
                     "Dashboard UI"
                 ],
-                "category": "Sistema de gestión"
+                "category": "Sistema de gestión",
+                "filter": "full-stack"
             },
             {
                 "id": "ads-management-system",
@@ -400,7 +522,8 @@
                     "MongoDB",
                     "Tailwind CSS"
                 ],
-                "category": "Marketing Tech"
+                "category": "Marketing Tech",
+                "filter": "full-stack"
             },
             {
                 "id": "adpulse",
@@ -447,7 +570,8 @@
                     "OpenRouter AI"
                 ],
                 "category": "Proyecto Industrial / Microservicios",
-                "completionDate": "2 de abr de 2026"
+                "completionDate": "2 de abr de 2026",
+                "filter": "full-stack"
             },
             {
                 "id": "caresync",
@@ -488,7 +612,8 @@
                     "Node.js",
                     "Python"
                 ],
-                "category": "HealthTech"
+                "category": "HealthTech",
+                "filter": "full-stack"
             },
             {
                 "id": "collab-chat",
@@ -529,7 +654,8 @@
                     "WebRTC",
                     "OpenAI"
                 ],
-                "category": "Comunicación"
+                "category": "Comunicación",
+                "filter": "full-stack"
             },
             {
                 "id": "cryptopulse",
@@ -570,7 +696,8 @@
                     "TensorFlow.js",
                     "Tailwind"
                 ],
-                "category": "Cripto"
+                "category": "Cripto",
+                "filter": "full-stack"
             },
             {
                 "id": "finance-assistant",
@@ -611,7 +738,8 @@
                     "Prisma",
                     "Plaid"
                 ],
-                "category": "FinTech"
+                "category": "FinTech",
+                "filter": "full-stack"
             },
             {
                 "id": "helply",
@@ -652,7 +780,8 @@
                     "Firebase",
                     "TypeScript"
                 ],
-                "category": "Plataforma de IA"
+                "category": "Plataforma de IA",
+                "filter": "full-stack"
             },
             {
                 "id": "hireflow",
@@ -693,7 +822,8 @@
                     "Auth0",
                     "Tailwind"
                 ],
-                "category": "Portal de empleo"
+                "category": "Portal de empleo",
+                "filter": "full-stack"
             },
             {
                 "id": "meridian-commerce",
@@ -734,7 +864,8 @@
                     "Express",
                     "Chart.js"
                 ],
-                "category": "Comercio electrónico"
+                "category": "Comercio electrónico",
+                "filter": "full-stack"
             },
             {
                 "id": "software-agency-management",
@@ -774,7 +905,8 @@
                     "PostgreSQL",
                     "Tailwind"
                 ],
-                "category": "SaaS"
+                "category": "SaaS",
+                "filter": "full-stack"
             },
             {
                 "id": "startup-crm",
@@ -815,7 +947,8 @@
                     "MongoDB",
                     "Tailwind"
                 ],
-                "category": "SaaS"
+                "category": "SaaS",
+                "filter": "full-stack"
             },
             {
                 "id": "furniro",
@@ -852,7 +985,8 @@
                     "Firebase",
                     "Tailwind CSS"
                 ],
-                "category": "Comercio electrónico"
+                "category": "Comercio electrónico",
+                "filter": "full-stack"
             },
             {
                 "id": "shrinkly",
@@ -890,7 +1024,8 @@
                     "Express",
                     "React"
                 ],
-                "category": "Aplicación web"
+                "category": "Aplicación web",
+                "filter": "full-stack"
             },
             {
                 "id": "ems",
@@ -928,7 +1063,8 @@
                     "Express",
                     "React"
                 ],
-                "category": "Sistema de gestión"
+                "category": "Sistema de gestión",
+                "filter": "full-stack"
             },
             {
                 "id": "vscode-portfolio",
@@ -965,7 +1101,8 @@
                     "TypeScript",
                     "Tailwind CSS"
                 ],
-                "category": "Portafolio"
+                "category": "Portafolio",
+                "filter": "full-stack"
             },
             {
                 "id": "beneficiary-management",
@@ -1002,7 +1139,8 @@
                     "Firebase",
                     "Tailwind CSS"
                 ],
-                "category": "Sistema de gestión"
+                "category": "Sistema de gestión",
+                "filter": "full-stack"
             },
             {
                 "id": "project-tracker",
@@ -1040,9 +1178,15 @@
                     "MongoDB",
                     "Tailwind CSS"
                 ],
-                "category": "Productividad"
+                "category": "Productividad",
+                "filter": "full-stack"
             }
-        ]
+        ],
+        "filters": {
+            "all": "Todos los Proyectos",
+            "fullStack": "Full Stack",
+            "automation": "Automatización"
+        }
     },
     "reviews": {
         "title": "Opiniones",
@@ -1100,7 +1244,11 @@
         "contact": "Contacto"
     },
     "footer": {
-        "rights": "Todos los derechos reservados."
+        "rights": "Todos los derechos reservados.",
+        "description": "Creando experiencias digitales con tecnologías web modernas. Especializado en el stack MERN y la automatización de IA.",
+        "navigation": "Navegación",
+        "connect": "Conectar",
+        "builtWith": "Creado con"
     },
     "common": {
         "loading": "Cargando...",

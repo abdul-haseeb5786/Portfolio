@@ -17,22 +17,22 @@ export default function Footer() {
                             AH.
                         </Link>
                         <p className="text-muted max-w-sm">
-                            Crafting digital experiences with modern web technologies. Specialized in the MERN stack and AI automation.
+                            {t.footer.description}
                         </p>
                     </div>
 
                     <div>
-                        <h3 className="font-bold text-foreground mb-4">Navigation</h3>
+                        <h3 className="font-bold text-foreground mb-4">{t.footer.navigation}</h3>
                         <ul className="space-y-2">
-                            <li><Link href="/" className="text-muted hover:text-primary transition-colors">Home</Link></li>
-                            <li><Link href="/about" className="text-muted hover:text-primary transition-colors">About</Link></li>
-                            <li><Link href="/projects" className="text-muted hover:text-primary transition-colors">Projects</Link></li>
-                            <li><Link href="/contact" className="text-muted hover:text-primary transition-colors">Contact</Link></li>
+                            <li><Link href="/" className="text-muted hover:text-primary transition-colors">{t.nav.home}</Link></li>
+                            <li><Link href="/about" className="text-muted hover:text-primary transition-colors">{t.nav.about}</Link></li>
+                            <li><Link href="/projects" className="text-muted hover:text-primary transition-colors">{t.nav.projects}</Link></li>
+                            <li><Link href="/contact" className="text-muted hover:text-primary transition-colors">{t.nav.contact}</Link></li>
                         </ul>
                     </div>
 
                     <div>
-                        <h3 className="font-bold text-foreground mb-4">Connect</h3>
+                        <h3 className="font-bold text-foreground mb-4">{t.footer.connect}</h3>
                         <div className="flex gap-4">
                             <a href="https://github.com/abdul-haseeb5786" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-primary transition-colors" aria-label="GitHub Profile">
                                 <Github size={20} />
@@ -48,9 +48,9 @@ export default function Footer() {
                 </div>
 
                 <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted">
-                    <p>© {currentYear} Abdul Haseeb. All rights reserved.</p>
+                    <p>© {currentYear} Abdul Haseeb. {t.footer.rights}</p>
                     <p className="flex items-center gap-1">
-                        Built with <span className="font-semibold text-foreground">Next.js</span> & <span className="font-semibold text-foreground">Tailwind</span>
+                        {t.footer.builtWith} <span className="font-semibold text-foreground">Next.js</span> & <span className="font-semibold text-foreground">Tailwind</span>
                     </p>
                 </div>
             </div>

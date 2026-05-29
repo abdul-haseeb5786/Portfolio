@@ -283,7 +283,127 @@
                     "Node.js",
                     "Tailwind CSS"
                 ],
-                "category": "SaaS / Logistics"
+                "category": "SaaS / Logistics",
+                "filter": "full-stack"
+            },
+            {
+                "id": "ai-lead-qualification",
+                "title": "AI-Powered Lead Qualification & CRM Pipeline Automation",
+                "description": "Automated lead capture, scoring, and CRM routing workflow using n8n and OpenAI to qualify and route hot leads instantly.",
+                "longDescription": "Built an automated lead qualification pipeline using n8n and OpenAI. Captures form submissions via webhook, scores each lead 0-100 using GPT-4o-mini, and routes them into three paths — hot leads are added to HubSpot CRM with a deal created and sales team alerted on Slack instantly. Warm leads receive an auto-reply. Cold leads enter a nurture sequence. All leads logged to Google Sheets automatically.",
+                "caseStudy": {
+                    "overview": "Built an automated lead qualification pipeline using n8n and OpenAI to optimize sales response times and CRM data management.",
+                    "objective": "To automate lead scoring and immediately alert sales teams for high-value prospects, reducing response time from hours to seconds.",
+                    "solution": "Designed a webhook-triggered n8n workflow. Integrated GPT-4o-mini for intelligent lead analysis, HubSpot CRM for deal tracking, and Slack APIs for instant notifications.",
+                    "challenges": "Designing a robust scoring rubric for GPT-4o-mini that consistently scores leads based on vague user inputs, and ensuring smooth CRM routing.",
+                    "results": "Reduced sales response time by 95%, boosted hot lead conversion rates by 25%, and automated data logging for 100% of incoming leads."
+                },
+                "metrics": [
+                    {
+                        "label": "Response Time",
+                        "value": "< 10 Sec"
+                    },
+                    {
+                        "label": "Conversion Lift",
+                        "value": "+25%"
+                    },
+                    {
+                        "label": "Data Logging",
+                        "value": "100% Auto"
+                    }
+                ],
+                "image": "/projects/Ai Lead Qualification Automation/8.png",
+                "extraImages": [],
+                "link": "https://github.com/abdul-haseeb5786",
+                "github": "https://github.com/abdul-haseeb5786",
+                "tech": [
+                    "n8n",
+                    "OpenAI API",
+                    "HubSpot CRM",
+                    "Slack API",
+                    "Google Sheets"
+                ],
+                "category": "AI & Automation",
+                "filter": "automation"
+            },
+            {
+                "id": "ecommerce-order-orchestration",
+                "title": "E-commerce Order Orchestration Automation — End-to-End",
+                "description": "A fully automated order fulfillment and customer notifications engine built with n8n, ShipEngine, Twilio, and Shopify.",
+                "longDescription": "Built a complete order fulfillment automation using n8n for an e-commerce store. On order placement, the workflow checks inventory, deducts stock, notifies the warehouse, generates a shipping label via ShipEngine API, sends the customer a WhatsApp message and confirmation email, then automatically sends a review request 3 days later. Out-of-stock orders trigger a separate customer notification and team Slack alert.",
+                "caseStudy": {
+                    "overview": "A complete, multi-channel order orchestration system that integrates inventory, warehousing, logistics, and communications into a single n8n workflow.",
+                    "objective": "To eliminate manual order fulfillment tasks, reduce shipping errors, and provide immediate, automated updates to customers.",
+                    "solution": "Developed an n8n automation utilizing Shopify webhooks, ShipEngine API for automated shipping label generation, Twilio WhatsApp API, and automated email workflows.",
+                    "challenges": "Handling out-of-stock edge cases gracefully without stalling the primary order pipeline, and synchronizing tracking updates across Shopify and shipping APIs.",
+                    "results": "Successfully automated 100% of standard order fulfillment tasks, reduced warehouse dispatch delay by 12 hours, and boosted reviews via automated post-purchase outreach."
+                },
+                "metrics": [
+                    {
+                        "label": "Fulfillment",
+                        "value": "100% Auto"
+                    },
+                    {
+                        "label": "Dispatch Delay",
+                        "value": "-12 Hours"
+                    },
+                    {
+                        "label": "Reviews Collected",
+                        "value": "+40%"
+                    }
+                ],
+                "image": "/projects/Ecommerce Order Orchestration Automation/9.png",
+                "extraImages": [],
+                "link": "https://github.com/abdul-haseeb5786",
+                "github": "https://github.com/abdul-haseeb5786",
+                "tech": [
+                    "n8n",
+                    "Shopify API",
+                    "ShipEngine API",
+                    "Twilio API",
+                    "WhatsApp API"
+                ],
+                "category": "E-commerce Automation",
+                "filter": "automation"
+            },
+            {
+                "id": "competitor-price-monitor",
+                "title": "n8n Competitor Price Monitoring Automation with AI Analysis",
+                "description": "Automated daily competitor price scraping and AI analysis workflow that delivers repricing insights and Slack alerts.",
+                "longDescription": "Built an automated competitor price monitoring and analysis system using n8n and AI. The workflow automatically scrapes competitor pricing data daily, uses GPT-4 to analyze price trends and position strategies, adjusts our own store pricing dynamically via API, and alerts the team on Slack with comprehensive daily repricing reports.",
+                "caseStudy": {
+                    "overview": "An automated market intelligence system that keeps an e-commerce brand competitive in real-time by scraping and analyzing competitor prices using n8n and AI.",
+                    "objective": "To maintain competitive pricing and prevent loss of profit margin by automating the tedious task of daily manual competitor checks.",
+                    "solution": "Designed an n8n workflow scheduled to run daily. Scrapes multiple competitor websites, uses OpenAI GPT-4 to analyze pricing models, suggests repricing adjustments, and delivers rich reports to Slack.",
+                    "challenges": "Scraping sites with varying HTML structures and dynamic content, and designing prompts that accurately recommend pricing shifts based on current profit margins.",
+                    "results": "Saved 10+ hours per week of manual competitor analysis, improved product margins by 8%, and guaranteed 100% price competitiveness on key products."
+                },
+                "metrics": [
+                    {
+                        "label": "Time Saved/Week",
+                        "value": "10+ Hours"
+                    },
+                    {
+                        "label": "Product Margins",
+                        "value": "+8%"
+                    },
+                    {
+                        "label": "Market Sync",
+                        "value": "Daily"
+                    }
+                ],
+                "image": "/projects/Competitor Price Monitor Automation/7.png",
+                "extraImages": [],
+                "link": "https://github.com/abdul-haseeb5786",
+                "github": "https://github.com/abdul-haseeb5786",
+                "tech": [
+                    "n8n",
+                    "OpenAI API",
+                    "Web Scraping",
+                    "Slack API"
+                ],
+                "category": "AI Automation",
+                "filter": "automation"
             },
             {
                 "id": "luxury-studio",
@@ -321,7 +441,8 @@
                     "Tailwind CSS",
                     "Framer Motion"
                 ],
-                "category": "E-commerce"
+                "category": "E-commerce",
+                "filter": "full-stack"
             },
             {
                 "id": "luxury-studio-admin",
@@ -359,7 +480,8 @@
                     "Node.js",
                     "Dashboard UI"
                 ],
-                "category": "Management System"
+                "category": "Management System",
+                "filter": "full-stack"
             },
             {
                 "id": "ads-management-system",
@@ -400,7 +522,8 @@
                     "MongoDB",
                     "Tailwind CSS"
                 ],
-                "category": "Marketing Tech"
+                "category": "Marketing Tech",
+                "filter": "full-stack"
             },
             {
                 "id": "adpulse",
@@ -447,7 +570,8 @@
                     "OpenRouter AI"
                 ],
                 "category": "Industry Project / Microservices",
-                "completionDate": "Apr 2, 2026"
+                "completionDate": "Apr 2, 2026",
+                "filter": "full-stack"
             },
             {
                 "id": "caresync",
@@ -488,7 +612,8 @@
                     "Node.js",
                     "Python"
                 ],
-                "category": "HealthTech"
+                "category": "HealthTech",
+                "filter": "full-stack"
             },
             {
                 "id": "collab-chat",
@@ -529,7 +654,8 @@
                     "WebRTC",
                     "OpenAI"
                 ],
-                "category": "Communication"
+                "category": "Communication",
+                "filter": "full-stack"
             },
             {
                 "id": "cryptopulse",
@@ -570,7 +696,8 @@
                     "TensorFlow.js",
                     "Tailwind"
                 ],
-                "category": "Crypto"
+                "category": "Crypto",
+                "filter": "full-stack"
             },
             {
                 "id": "finance-assistant",
@@ -611,7 +738,8 @@
                     "Prisma",
                     "Plaid"
                 ],
-                "category": "FinTech"
+                "category": "FinTech",
+                "filter": "full-stack"
             },
             {
                 "id": "helply",
@@ -652,7 +780,8 @@
                     "Firebase",
                     "TypeScript"
                 ],
-                "category": "AI Platform"
+                "category": "AI Platform",
+                "filter": "full-stack"
             },
             {
                 "id": "hireflow",
@@ -693,7 +822,8 @@
                     "Auth0",
                     "Tailwind"
                 ],
-                "category": "Job Portal"
+                "category": "Job Portal",
+                "filter": "full-stack"
             },
             {
                 "id": "meridian-commerce",
@@ -734,7 +864,8 @@
                     "Express",
                     "Chart.js"
                 ],
-                "category": "E-commerce"
+                "category": "E-commerce",
+                "filter": "full-stack"
             },
             {
                 "id": "software-agency-management",
@@ -774,7 +905,8 @@
                     "PostgreSQL",
                     "Tailwind"
                 ],
-                "category": "SaaS"
+                "category": "SaaS",
+                "filter": "full-stack"
             },
             {
                 "id": "startup-crm",
@@ -815,7 +947,8 @@
                     "MongoDB",
                     "Tailwind"
                 ],
-                "category": "SaaS"
+                "category": "SaaS",
+                "filter": "full-stack"
             },
             {
                 "id": "furniro",
@@ -852,7 +985,8 @@
                     "Firebase",
                     "Tailwind CSS"
                 ],
-                "category": "E-commerce"
+                "category": "E-commerce",
+                "filter": "full-stack"
             },
             {
                 "id": "shrinkly",
@@ -890,7 +1024,8 @@
                     "Express",
                     "React"
                 ],
-                "category": "Web App"
+                "category": "Web App",
+                "filter": "full-stack"
             },
             {
                 "id": "ems",
@@ -928,7 +1063,8 @@
                     "Express",
                     "React"
                 ],
-                "category": "Management System"
+                "category": "Management System",
+                "filter": "full-stack"
             },
             {
                 "id": "vscode-portfolio",
@@ -965,7 +1101,8 @@
                     "TypeScript",
                     "Tailwind CSS"
                 ],
-                "category": "Portfolio"
+                "category": "Portfolio",
+                "filter": "full-stack"
             },
             {
                 "id": "beneficiary-management",
@@ -1002,7 +1139,8 @@
                     "Firebase",
                     "Tailwind CSS"
                 ],
-                "category": "Management System"
+                "category": "Management System",
+                "filter": "full-stack"
             },
             {
                 "id": "project-tracker",
@@ -1040,9 +1178,15 @@
                     "MongoDB",
                     "Tailwind CSS"
                 ],
-                "category": "Productivity"
+                "category": "Productivity",
+                "filter": "full-stack"
             }
-        ]
+        ],
+        "filters": {
+            "all": "All Projects",
+            "fullStack": "Full Stack",
+            "automation": "Automation"
+        }
     },
     "reviews": {
         "title": "Client",
@@ -1100,7 +1244,11 @@
         "contact": "Contact"
     },
     "footer": {
-        "rights": "All rights reserved."
+        "rights": "All rights reserved.",
+        "description": "Crafting digital experiences with modern web technologies. Specialized in the MERN stack and AI automation.",
+        "navigation": "Navigation",
+        "connect": "Connect",
+        "builtWith": "Built with"
     },
     "common": {
         "loading": "Loading...",
