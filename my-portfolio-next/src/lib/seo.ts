@@ -8,26 +8,30 @@ interface MetadataProps {
     image?: string;
     icons?: Metadata["icons"];
     noIndex?: boolean;
+    canonical?: string;
 }
 
 export function constructMetadata({
     title,
-    description = "Hi, I'm Abdul Haseeb, an AI Engineer specialized in production-ready agentic architectures, custom voice agents, RAG applications, and low-latency systems. Check out my portfolio & projects!",
+    description = "Abdul Haseeb is an AI Engineer building agentic AI systems, LLM workflows, RAG applications, voice agents, and automation platforms for modern products.",
     image = "/Portofolio.png?v=3",
     icons = {
         icon: "/Adobe-Express-file.png?v=3",
         apple: "/Adobe-Express-file.png?v=3",
     },
     noIndex = false,
+    canonical,
 }: MetadataProps = {}): Metadata {
     const pageTitle = title
         ? `${title} | Abdul Haseeb`
-        : "Abdul Haseeb Portfolio - AI Engineer | Agentic Systems & Automation";
+        : "Abdul Haseeb | AI Engineer | Agentic AI & Automation";
+    const resolvedCanonical = canonical ? new URL(canonical, BASE_URL).toString() : BASE_URL;
 
     return {
         title: pageTitle,
         description,
         manifest: "/manifest.json",
+        applicationName: "Abdul Haseeb Portfolio",
         appleWebApp: {
             capable: true,
             statusBarStyle: "default",
@@ -39,24 +43,31 @@ export function constructMetadata({
         keywords: [
             "AI Engineer",
             "Agentic AI",
+            "LLM Engineer",
             "RAG Applications",
+            "Voice Agents",
             "AI Automation",
-            "MERN Stack",
+            "Automation Systems",
+            "Next.js",
+            "TypeScript",
+            "Python",
             "React",
             "Node.js",
             "MongoDB",
-            "Web Development",
             "Portfolio",
             "Abdul Haseeb",
-            "Software Engineer"
+            "Software Engineer",
         ],
         authors: [{ name: "Abdul Haseeb" }],
         creator: "Abdul Haseeb",
         metadataBase: new URL(BASE_URL),
+        alternates: {
+            canonical: resolvedCanonical,
+        },
         openGraph: {
             title: pageTitle,
             description,
-            url: "./",
+            url: resolvedCanonical,
             siteName: "Abdul Haseeb Portfolio",
             images: [
                 {
@@ -74,10 +85,11 @@ export function constructMetadata({
             title: pageTitle,
             description,
             images: [image],
-            creator: "@abdulhaseeb", // Placeholder if not known
         },
         icons: {
             ...(icons as object),
+            icon: "/favicon.png",
+            shortcut: "/favicon.png",
             apple: "/icon-192x192.png",
         },
         robots: {

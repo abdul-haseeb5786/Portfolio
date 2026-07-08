@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/about',
         '/projects',
         '/casestudy',
+        '/skills',
         '/contact',
     ].map((route) => ({
         url: `${BASE_URL}${route}`,

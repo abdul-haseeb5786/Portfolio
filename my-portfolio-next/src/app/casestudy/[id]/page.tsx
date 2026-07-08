@@ -20,8 +20,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     return constructMetadata({
         title: `${project.title} Case Study`,
-        description: project.description,
+        description: `${project.description} A case study by Abdul Haseeb, an AI Engineer building agentic systems and automation products.`,
         image: project.image,
+        canonical: `/casestudy/${project.id}`,
     });
 }
 

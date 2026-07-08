@@ -5,7 +5,8 @@ export const dynamic = "force-dynamic";
 
 export const metadata = constructMetadata({
     title: "Project Case Studies",
-    description: "Explore detailed case studies of my most impactful work, including furniture e-commerce, AI assistants, and management systems.",
+    description: "Explore detailed case studies of Abdul Haseeb's AI engineering work in automation, RAG, and product-focused software.",
+    canonical: "/casestudy",
 });
 
 export default function Page() {

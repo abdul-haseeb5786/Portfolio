@@ -3,7 +3,8 @@ import { constructMetadata } from "@/lib/seo";
 
 export const metadata = constructMetadata({
     title: "Projects",
-    description: "A showcase of my recent web development projects, ranging from e-commerce platforms to AI-powered SaaS solutions.",
+    description: "Explore Abdul Haseeb's AI engineering projects in agentic AI, automation, RAG, voice agents, and full-stack product delivery.",
+    canonical: "/projects",
 });
 
 export default function Page() {

@@ -3,7 +3,8 @@ import { constructMetadata } from "@/lib/seo";
 
 export const metadata = constructMetadata({
     title: "About Me",
-    description: "Learn more about Abdul Haseeb, an AI Engineer specialized in creating modern web experiences and AI-driven solutions.",
+    description: "Learn about Abdul Haseeb, an AI Engineer building agentic AI systems, LLM workflows, RAG applications, and production-grade automation.",
+    canonical: "/about",
 });
 
 export default function AboutPage() {

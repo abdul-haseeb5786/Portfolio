@@ -3,7 +3,8 @@ import { constructMetadata } from "@/lib/seo";
 
 export const metadata = constructMetadata({
     title: "Contact Me",
-    description: "Get in touch with Abdul Haseeb for projects, collaborations, or just to say hi.",
+    description: "Contact Abdul Haseeb for AI engineering, automation, voice agents, and product delivery opportunities.",
+    canonical: "/contact",
 });
 
 export default function ContactPage() {

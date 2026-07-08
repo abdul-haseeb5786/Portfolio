@@ -55,8 +55,19 @@ const personJsonLd = {
   "@type": "Person",
   name: "Abdul Haseeb",
   url: `${BASE_URL}/`,
-  image: `${BASE_URL}/my-profile-pic.jpg`,
-  jobTitle: "MERN Stack Developer",
+  image: `${BASE_URL}/Portofolio.png?v=3`,
+  jobTitle: "AI Engineer",
+  description: "AI Engineer building agentic AI systems, LLM workflows, RAG applications, voice agents, and automation platforms.",
+  knowsAbout: [
+    "Agentic AI",
+    "Large Language Models",
+    "RAG Applications",
+    "Voice Agents",
+    "Automation Systems",
+    "Next.js",
+    "TypeScript",
+    "Python",
+  ],
   sameAs: [
     "https://www.linkedin.com/in/abdul-haseeb200",
     "https://github.com/abdul-haseeb5786",
@@ -69,7 +80,7 @@ const websiteJsonLd = {
   name: "Abdul Haseeb Portfolio",
   url: `${BASE_URL}/`,
   author: "Abdul Haseeb",
-  description: "Portfolio of Abdul Haseeb, a MERN Stack Developer focusing on React, Node.js, and MongoDB.",
+  description: "Portfolio of Abdul Haseeb, an AI Engineer building agentic systems, RAG applications, voice agents, and automation products.",
 };
 
 export default function RootLayout({
