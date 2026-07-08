@@ -1,7 +1,7 @@
 {
     "siteConfig": {
         "name": "Abdul Haseeb",
-        "role": "Desarrollador MERN Stack e Ingeniero de Automatización IA",
+        "role": "Ingeniero de IA (AI Engineer)",
         "email": "abdulhaseebsohail115@gmail.com",
         "phone": "+92 322 8606129",
         "location": "Karachi, Pakistán",
@@ -17,14 +17,14 @@
         "welcome": "Bienvenido a mi mundo",
         "name": "Abdul Haseeb",
         "typewriterStrings": [
-            "Desarrollador Full Stack Web y Móvil",
-            "Ingeniero de Automatización con IA",
-            "Entusiasta de IA y Machine Learning",
-            "Especialista en MERN Stack",
-            "Especialista en Flutter y React Native",
+            "Ingeniero de IA",
+            "Arquitecto de IA Agéntica",
+            "Especialista en Automatización con IA",
+            "Desarrollador de Aplicaciones RAG",
+            "Desarrollador de IA Full-Stack",
             "Solucionador de Problemas"
         ],
-        "description": "Creo aplicaciones web dinámicas, responsivas e inteligentes utilizando tecnologías modernas y automatización impulsada por IA.",
+        "description": "Creo sistemas de IA agéntica listos para producción, agentes de voz personalizados y aplicaciones de generación aumentada por recuperación (RAG) con backends robustos y de baja latencia.",
         "primaryAction": "Ver Proyectos",
         "secondaryAction": "Contáctame"
     },
@@ -32,8 +32,8 @@
         "title": "Sobre",
         "subtitle": "Mí",
         "paragraphs": [
-            "Hola, soy **Abdul Haseeb**, un desarrollador Full Stack web y móvil y un ingeniero en automatización con IA, con una gran pasión por crear aplicaciones web y móviles dinámicas, responsivas e inteligentes.",
-            "Mi trayectoria comenzó con la curiosidad por crear sitios web interactivos y evolucionó hacia una pasión por el desarrollo impulsado por IA, la automatización de flujos de trabajo y los sistemas de agentes de voz.",
+            "Hola, soy **Abdul Haseeb**, un ingeniero de IA dedicado y especializado en diseñar arquitecturas agénticas listas para producción, sistemas RAG e integraciones de IA de baja latencia.",
+            "Mi trayectoria comenzó con el desarrollo web full-stack y ha evolucionado hacia la ingeniería de *flujos de trabajo agénticos, agentes de voz de IA y canales de recuperación de contexto semántico.*",
             "Ya sea una interfaz de usuario elegante o un backend robusto, disfruto cada paso de convertir ideas en productos reales e impactantes mediante código limpio y eficiente."
         ],
         "education": {
@@ -47,11 +47,11 @@
                     "points": [
                         {
                             "icon": "📖",
-                            "text": "Memorización completa del Corán"
+                            "text": "Complete Quran Memorization"
                         },
                         {
                             "icon": "🕌",
-                            "text": "Jurisprudencia Islámica"
+                            "text": "Islamic Jurisprudence"
                         }
                     ]
                 },
@@ -63,7 +63,7 @@
                     "points": [
                         {
                             "icon": "📘",
-                            "text": "Materias principales de Ciencias de la Computación"
+                            "text": "Core CS Subjects"
                         }
                     ]
                 },
@@ -75,7 +75,23 @@
                     "points": [
                         {
                             "icon": "🏆",
-                            "text": "3 Victorias en Hackathon"
+                            "text": "3 Hackathon Wins"
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "title": "Virtual University of Pakistan",
+                    "date": "Ago 2025 - Mar 2029",
+                    "description": "Licenciatura en Ciencias de la Computación, enfocada en principios básicos de ingeniería de software, algoritmos y computación avanzada.",
+                    "points": [
+                        {
+                            "icon": "🎓",
+                            "text": "Grado BSCS"
+                        },
+                        {
+                            "icon": "💻",
+                            "text": "Ciencias de la Computación"
                         }
                     ]
                 }
@@ -86,39 +102,39 @@
             "history": [
                 {
                     "id": 1,
-                    "title": "Ingeniero Full Stack",
+                    "title": "Ingeniero de IA (AI Engineer)",
                     "company": "Nosh Solutions",
                     "type": "Tiempo completo",
-                    "date": "Sep 2025 - Presente",
-                    "location": "Karachi, Pakistán",
-                    "description": "Me uní como ingeniero y terminé liderando productos completos de principio a fin. Construí sistemas de automatización full-stack: diseñé la arquitectura, desarrollé la lógica del backend, integré APIs de terceros y entregué productos funcionales. Desde el sistema de reserva de citas de CareSync hasta agentes de voz impulsados por IA, cada proyecto pasó de problema a producción bajo mi responsabilidad.",
+                    "date": "Sep 2025 - Presente (11 meses)",
+                    "location": "Karāchi, Sindh, Pakistán · Presencial",
+                    "description": "Diseñé e implementé agentes de voz de IA listos para producción para casos de uso empresarial, automatizando el análisis de la intención del usuario en tiempo real, el enrutamiento lógico condicional y la sincronización de datos en vivo. Diseñé el backend completo y la capa de recuperación de contexto semántico para una aplicación de salud, lo que permite actualizaciones dinámicas de la base de conocimientos a través de canales de datos seguros. Diseñé sistemas de procesamiento asíncrono de baja latencia que manejan entre 75 y 90 interacciones complejas por semana, reduciendo los tiempos de respuesta de la API a menos de 2 minutos. Lideré el ciclo de vida de desarrollo de extremo a extremo: desde la estructuración de datos y el diseño de prompts del sistema hasta la implementación segura de la API y la integración del frontend multidispositivo.",
                     "points": [
                         {
-                            "icon": "💻",
-                            "text": "Desarrollo Full Stack"
-                        },
-                        {
                             "icon": "🤖",
-                            "text": "Sistemas de IA y Automatización"
+                            "text": "Arquitecturas de IA Agéntica"
                         },
                         {
-                            "icon": "⚙️",
-                            "text": "Arquitectura Backend"
+                            "icon": "🔍",
+                            "text": "Aplicaciones RAG"
                         },
                         {
-                            "icon": "🏗️",
-                            "text": "Ingeniería de Productos"
+                            "icon": "⚡",
+                            "text": "Optimización del Sistema"
+                        },
+                        {
+                            "icon": "🚀",
+                            "text": "Entrega de IA Full-Stack"
                         }
                     ]
                 },
                 {
                     "id": 2,
-                    "title": "Desarrollador Frontend",
+                    "title": "Ingeniero de Producto (Product Engineer)",
                     "company": "Ship+Tag",
-                    "type": "Contrato",
-                    "date": "Abr 2025 - Sep 2025",
-                    "location": "Arabia Saudita",
-                    "description": "Diseñé y desarrollé toda la interfaz de usuario del portal para ShipTag, una empresa de logística saudí. Traduje diseños detallados de Figma en componentes reutilizables y receptivos utilizando React.js, Tailwind CSS y HeroUI. Optimicé el rendimiento del diseño, asegurando la capacidad de respuesta en todos los dispositivos y una experiencia de usuario fluida.",
+                    "type": "Tiempo completo",
+                    "date": "Abr 2024 - Sep 2025 (1 año y 6 meses)",
+                    "location": "Arabia Saudita · Remoto",
+                    "description": "Lideré la entrega del frontend de extremo a extremo para ShipTag, una empresa de logística saudí; creé más de 40 pantallas desde Figma hasta producción utilizando React.js, Tailwind CSS y HeroUI. Entregué una interfaz de usuario totalmente receptiva y multidispositivo dentro del plazo establecido; el cliente la aprobó sin solicitudes de revisión.",
                     "points": [
                         {
                             "icon": "⚛️",
@@ -1184,8 +1200,8 @@
         ],
         "filters": {
             "all": "Todos los Proyectos",
-            "fullStack": "Full Stack",
-            "automation": "Automatización"
+            "fullStack": "IA y Full-Stack",
+            "automation": "Agentes de IA y Automatización"
         }
     },
     "reviews": {
@@ -1196,22 +1212,28 @@
             {
                 "id": 1,
                 "name": "James Anderson",
-                "role": "Startup Founder, UK",
+                "role": "Startup Founder",
+                "company": "UK",
                 "image": "https://randomuser.me/api/portraits/men/32.jpg",
+                "rating": 5,
                 "review": "Working with Haseeb was a fantastic experience. He delivered exactly what we needed, on time and with clean code."
             },
             {
                 "id": 2,
                 "name": "Emily Stone",
-                "role": "Project Manager, US",
+                "role": "Project Manager",
+                "company": "US",
                 "image": "https://randomuser.me/api/portraits/women/65.jpg",
+                "rating": 5,
                 "review": "Very reliable and professional. Haseeb understood our requirements clearly and exceeded expectations."
             },
             {
                 "id": 3,
                 "name": "Ahmed Khalid",
-                "role": "Freelance Client, Saudi Arabia",
+                "role": "Freelance Client",
+                "company": "Saudi Arabia",
                 "image": "https://randomuser.me/api/portraits/men/50.jpg",
+                "rating": 4.5,
                 "review": "Great communication and impressive React skills. He built a secure and fast web app for us. Highly recommended!"
             }
         ]
@@ -1232,7 +1254,9 @@
             "subjectPlaceholder": "Consulta de Proyecto",
             "message": "Mensaje",
             "messagePlaceholder": "Cuéntame sobre tu proyecto...",
-            "send": "Enviar Mensaje"
+            "send": "Enviar Mensaje",
+            "successMsg": "Gracias — te responderé en un par de días.",
+            "errorMsg": "Algunos campos necesitan atención antes de enviar."
         }
     },
     "nav": {
@@ -1245,10 +1269,32 @@
     },
     "footer": {
         "rights": "Todos los derechos reservados.",
-        "description": "Creando experiencias digitales con tecnologías web modernas. Especializado en el stack MERN y la automatización de IA.",
+        "description": "Ingeniería de soluciones de IA inteligentes listas para producción, flujos de trabajo agénticos y sistemas de baja latencia.",
         "navigation": "Navegación",
         "connect": "Conectar",
         "builtWith": "Creado con"
+    },
+    "editorial": {
+        "allCaseStudies": "Todos los casos de estudio",
+        "archive": "Archivo",
+        "projectInfo": "Información del proyecto",
+        "projectVisual": "Visual del proyecto",
+        "codebase": "Código fuente",
+        "selectedImpact": "Impacto seleccionado",
+        "theNumbers": "Los números",
+        "sayHello": "Saluda",
+        "onPaper": "En papel",
+        "coreStackMap": "Mapa del stack principal",
+        "focus": "Enfoque",
+        "base": "Base",
+        "socialProfiles": "Perfiles sociales",
+        "languages": "Idiomas",
+        "creativeExecution": "Ejecución creativa",
+        "deliveryFocus": "Enfoque de entrega",
+        "selectedWork": "Trabajo seleccionado",
+        "deepDives": "Análisis profundos",
+        "shipped": "Entregado",
+        "nextCaseStudy": "Siguiente caso de estudio"
     },
     "common": {
         "loading": "Cargando...",

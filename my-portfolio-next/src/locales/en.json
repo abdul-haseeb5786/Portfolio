@@ -1,7 +1,7 @@
 {
     "siteConfig": {
         "name": "Abdul Haseeb",
-        "role": "MERN Stack Developer & AI Automation Engineer",
+        "role": "AI Engineer",
         "email": "abdulhaseebsohail115@gmail.com",
         "phone": "+92 322 8606129",
         "location": "Karachi, Pakistan",
@@ -17,14 +17,14 @@
         "welcome": "Welcome to my world",
         "name": "Abdul Haseeb",
         "typewriterStrings": [
-            "Full Stack Web & App Developer",
-            "AI Automation Engineer",
-            "AI & ML Enthusiast",
-            "MERN Stack Specialist",
-            "Flutter & React Native Specialist",
+            "AI Engineer",
+            "Agentic AI Architect",
+            "AI Automation Specialist",
+            "RAG Applications Developer",
+            "Full Stack AI Developer",
             "Problem Solver"
         ],
-        "description": "I craft dynamic, responsive, and intelligent web & app applications using modern technologies and AI-driven automation.",
+        "description": "I craft production-ready agentic AI systems, custom voice agents, and retrieval-augmented generation (RAG) applications with robust, low-latency backends.",
         "primaryAction": "View Projects",
         "secondaryAction": "Contact Me"
     },
@@ -32,8 +32,8 @@
         "title": "About",
         "subtitle": "Me",
         "paragraphs": [
-            "Hi, I'm **Abdul Haseeb** — a dedicated Full Stack Web & App Developer & AI Automation Engineer with a strong passion for crafting dynamic, responsive, and intelligent web & app applications.",
-            "My journey started with a curiosity to create interactive websites and has evolved into a passion for *AI-driven development, automation workflows, and voice agent systems.*",
+            "Hi, I'm **Abdul Haseeb** — a dedicated AI Engineer specialized in designing production-ready agentic architectures, RAG systems, and low-latency AI integrations.",
+            "My journey started with full-stack web development and has evolved into engineering *agentic workflows, AI voice agents, and semantic context-retrieval pipelines.*",
             "Whether it's a sleek UI or a robust backend, I enjoy every step of turning ideas into real, impactful products through clean and efficient code."
         ],
         "education": {
@@ -78,6 +78,22 @@
                             "text": "3 Hackathon Wins"
                         }
                     ]
+                },
+                {
+                    "id": 4,
+                    "title": "Bachelor of Computer Science (BSCS)",
+                    "date": "Aug 2025 - Mar 2029",
+                    "description": "Bachelor's Degree in Computer Science, focusing on core software engineering principles, algorithms, and advanced computing.",
+                    "points": [
+                        {
+                            "icon": "🎓",
+                            "text": "BSCS Degree"
+                        },
+                        {
+                            "icon": "💻",
+                            "text": "Computer Science"
+                        }
+                    ]
                 }
             ]
         },
@@ -86,39 +102,39 @@
             "history": [
                 {
                     "id": 1,
-                    "title": "Full Stack Engineer",
+                    "title": "AI Engineer",
                     "company": "Nosh Solutions",
                     "type": "Full-time",
-                    "date": "Sep 2025 - Present",
-                    "location": "Karachi, Pakistan",
-                    "description": "Joined as an engineer, ended up owning entire products end to end. Built full-stack automation systems — designed the architecture, developed the backend logic, integrated third-party APIs, and shipped working products. From CareSync's appointment booking system to AI-powered voice agents, every project went from problem to production under my ownership.",
+                    "date": "Sep 2025 - Present (11 mos)",
+                    "location": "Karāchi, Sindh, Pakistan · On-site",
+                    "description": "Designed and deployed production-ready AI voice agents for enterprise use cases, automating real-time user intent analysis, conditional logic routing, and live data synchronization. Architected the complete backend and semantic context-retrieval layer for a healthcare application, enabling dynamic knowledge base updates via secure data pipelines. Engineered low-latency asynchronous processing systems that handle 75–90 complex interactions per week, reducing API response times to under 2 minutes. Managed the end-to-end product lifecycle—from data structuring and system prompt design to secure API deployment and cross-platform frontend integration.",
                     "points": [
                         {
-                            "icon": "💻",
-                            "text": "Full Stack Development"
-                        },
-                        {
                             "icon": "🤖",
-                            "text": "AI & Automation Systems"
+                            "text": "Agentic AI Architectures"
                         },
                         {
-                            "icon": "⚙️",
-                            "text": "Backend Architecture"
+                            "icon": "🔍",
+                            "text": "RAG Applications"
                         },
                         {
-                            "icon": "🏗️",
-                            "text": "Product Engineering"
+                            "icon": "⚡",
+                            "text": "System Optimization"
+                        },
+                        {
+                            "icon": "🚀",
+                            "text": "Full-Stack AI Delivery"
                         }
                     ]
                 },
                 {
                     "id": 2,
-                    "title": "Frontend Developer",
+                    "title": "Product Engineer",
                     "company": "Ship+Tag",
-                    "type": "Contract",
-                    "date": "Apr 2025 - Sep 2025",
-                    "location": "Saudi Arabia",
-                    "description": "Designed and developed the entire portal UI for ShipTag, a Saudi logistics company. Translated detailed Figma designs into responsive, reusable components using React.js, Tailwind CSS, and HeroUI. Optimized layout performance, ensuring cross-device responsiveness and smooth user experience.",
+                    "type": "Full-time",
+                    "date": "Apr 2024 - Sep 2025 (1 yr 6 mos)",
+                    "location": "Saudi Arabia · Remote",
+                    "description": "Owned end-to-end frontend delivery for ShipTag, a Saudi logistics company — built 40+ screens from Figma to production using React.js, Tailwind CSS, and HeroUI. Delivered full cross-device responsive UI within deadline — client approved without revision requests.",
                     "points": [
                         {
                             "icon": "⚛️",
@@ -1184,8 +1200,8 @@
         ],
         "filters": {
             "all": "All Projects",
-            "fullStack": "Full Stack",
-            "automation": "Automation"
+            "fullStack": "AI & Full Stack",
+            "automation": "AI Agents & Automation"
         }
     },
     "reviews": {
@@ -1196,22 +1212,28 @@
             {
                 "id": 1,
                 "name": "James Anderson",
-                "role": "Startup Founder, UK",
+                "role": "Startup Founder",
+                "company": "UK",
                 "image": "https://randomuser.me/api/portraits/men/32.jpg",
+                "rating": 5,
                 "review": "Working with Haseeb was a fantastic experience. He delivered exactly what we needed, on time and with clean code."
             },
             {
                 "id": 2,
                 "name": "Emily Stone",
-                "role": "Project Manager, US",
+                "role": "Project Manager",
+                "company": "US",
                 "image": "https://randomuser.me/api/portraits/women/65.jpg",
+                "rating": 5,
                 "review": "Very reliable and professional. Haseeb understood our requirements clearly and exceeded expectations."
             },
             {
                 "id": 3,
                 "name": "Ahmed Khalid",
-                "role": "Freelance Client, Saudi Arabia",
+                "role": "Freelance Client",
+                "company": "Saudi Arabia",
                 "image": "https://randomuser.me/api/portraits/men/50.jpg",
+                "rating": 4.5,
                 "review": "Great communication and impressive React skills. He built a secure and fast web app for us. Highly recommended!"
             }
         ]
@@ -1232,7 +1254,9 @@
             "subjectPlaceholder": "Project Inquiry",
             "message": "Message",
             "messagePlaceholder": "Tell me about your project...",
-            "send": "Send Message"
+            "send": "Send Message",
+            "successMsg": "Thanks — I'll get back to you within a couple of days.",
+            "errorMsg": "A few fields need attention before this can send."
         }
     },
     "nav": {
@@ -1245,10 +1269,32 @@
     },
     "footer": {
         "rights": "All rights reserved.",
-        "description": "Crafting digital experiences with modern web technologies. Specialized in the MERN stack and AI automation.",
+        "description": "Engineering intelligent, production-ready AI solutions, agentic workflows, and low-latency systems.",
         "navigation": "Navigation",
         "connect": "Connect",
         "builtWith": "Built with"
+    },
+    "editorial": {
+        "allCaseStudies": "All case studies",
+        "archive": "Archive",
+        "projectInfo": "Project Info",
+        "projectVisual": "Project visual",
+        "codebase": "Codebase",
+        "selectedImpact": "Selected Impact",
+        "theNumbers": "The Numbers",
+        "sayHello": "Say Hello",
+        "onPaper": "On Paper",
+        "coreStackMap": "Core stack map",
+        "focus": "Focus",
+        "base": "Base",
+        "socialProfiles": "Social Profiles",
+        "languages": "Languages",
+        "creativeExecution": "Creative execution",
+        "deliveryFocus": "Delivery focus",
+        "selectedWork": "Selected Work",
+        "deepDives": "Deep Dives",
+        "shipped": "Shipped",
+        "nextCaseStudy": "Next Case Study"
     },
     "common": {
         "loading": "Loading...",

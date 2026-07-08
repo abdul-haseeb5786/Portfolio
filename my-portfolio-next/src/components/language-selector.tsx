@@ -21,11 +21,11 @@ export default function LanguageSelector() {
         <div className="relative">
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="flex items-center gap-2 px-3 py-2 rounded-full bg-secondary hover:bg-muted/20 transition-colors"
+                className="editorial-button px-3 py-2"
                 aria-label="Select language"
             >
-                <Globe size={18} />
-                <span className="text-sm font-medium">{currentLanguage?.flag}</span>
+                <Globe size={16} />
+                <span>{currentLanguage?.code.toUpperCase()}</span>
             </button>
 
             <AnimatePresence>
@@ -42,7 +42,7 @@ export default function LanguageSelector() {
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -10 }}
-                            className="absolute top-full mt-2 right-0 bg-card rounded-2xl shadow-xl border border-border overflow-hidden z-50 min-w-[160px]"
+                            className="absolute top-full right-0 z-50 mt-2 min-w-[180px] overflow-hidden border-2 border-border bg-background shadow-[6px_6px_0_var(--accent)]"
                         >
                             {languages.map((lang) => (
                                 <button
@@ -51,11 +51,13 @@ export default function LanguageSelector() {
                                         setLanguage(lang.code);
                                         setIsOpen(false);
                                     }}
-                                    className={`w-full px-4 py-3 flex items-center gap-3 hover:bg-secondary transition-colors ${language === lang.code ? "bg-secondary" : ""
+                                    className={`flex w-full items-center gap-3 px-4 py-3 text-left transition-colors hover:bg-secondary ${language === lang.code ? "bg-secondary" : ""
                                         }`}
                                 >
-                                    <span className="text-xl">{lang.flag}</span>
-                                    <span className="text-sm font-medium">{lang.name}</span>
+                                    <span className="text-lg">{lang.flag}</span>
+                                    <span className="editorial-mono text-xs uppercase tracking-[0.1em]">
+                                        {lang.name}
+                                    </span>
                                     {language === lang.code && (
                                         <span className="ml-auto text-primary">✓</span>
                                     )}

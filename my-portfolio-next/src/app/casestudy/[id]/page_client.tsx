@@ -1,224 +1,258 @@
 "use client";
 
 import { useParams, useRouter } from "next/navigation";
-import Navbar from "@/components/navbar";
-import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ExternalLink, Github, CheckCircle2, TrendingUp, Target, Lightbulb, AlertCircle } from "lucide-react";
+import { ArrowLeft, Github } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import EditorialShell from "@/components/editorial/EditorialShell";
+import Eyebrow from "@/components/editorial/Eyebrow";
+import CaseBlock from "@/components/editorial/CaseBlock";
+import SectionHeader from "@/components/editorial/SectionHeader";
+import EditorialButton from "@/components/editorial/EditorialButton";
+import { DIAGRAMS } from "@/components/diagrams";
+
+// Quantitative metrics grid matching design
+function MetricsGrid({ metrics = [] }: { metrics: { label: string; value: string }[] }) {
+  const split = (v: string) => {
+    const m = String(v).match(/^([\d.,–\-+<>]+)(.*)$/);
+    return m ? [m[1], m[2]] : [v, ""];
+  };
+  return (
+    <div className="metrics-grid">
+      {metrics.map((m, i) => {
+        const [num, unit] = split(m.value);
+        return (
+          <div className="metric" key={i}>
+            <span className="metric-idx">{String(i + 1).padStart(2, "0")}</span>
+            <div className="metric-value">
+              {num}
+              <span className="u">{unit}</span>
+            </div>
+            <div className="metric-label">{m.label}</div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
 
 export default function CaseStudyDetails() {
-    const { id } = useParams();
-    const router = useRouter();
-    const { t } = useLanguage();
-    const projects = t.projects.items;
+  const { id } = useParams();
+  const router = useRouter();
+  const { t, language } = useLanguage();
+  const projects = t.projects.items;
 
-    const project = projects?.find((p: any) => p.id === id);
+  const project = projects?.find((p: any) => p.id === id);
+  const currentIdx = projects?.findIndex((p: any) => p.id === id) ?? -1;
+  const nextProject = projects && currentIdx !== -1 ? projects[(currentIdx + 1) % projects.length] : null;
 
-    if (!project) {
-        return (
-            <div className="min-h-screen flex items-center justify-center">
-                <div className="text-center">
-                    <h1 className="text-4xl font-bold mb-4">Case Study Not Found</h1>
-                    <button
-                        onClick={() => router.push("/casestudy")}
-                        className="text-primary hover:underline"
-                    >
-                        Back to Case Studies
-                    </button>
-                </div>
-            </div>
-        );
-    }
-
+  if (!project) {
     return (
-        <main className="min-h-screen pb-24 bg-background">
-            <Navbar />
-
-            {/* Hero Section */}
-            <section className="relative h-[70vh] min-h-[500px] w-full overflow-hidden">
-                <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover brightness-[0.3] scale-105"
-                    priority
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="max-w-5xl mx-auto px-6 text-center text-white">
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8 }}
-                        >
-                            <span className="inline-block px-4 py-1.5 bg-primary/20 backdrop-blur-md rounded-full text-xs font-bold tracking-widest uppercase border border-primary/30 mb-6">
-                                Case Study
-                            </span>
-                            <h1 className="text-5xl md:text-8xl font-bold tracking-tighter mb-8 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">
-                                {project.title}
-                            </h1>
-                            <div className="flex flex-wrap justify-center gap-4">
-                                {project.tech.map((tech: string) => (
-                                    <span
-                                        key={tech}
-                                        className="px-5 py-2 bg-white/5 backdrop-blur-xl rounded-full text-sm font-medium border border-white/10 hover:bg-white/10 transition-colors"
-                                    >
-                                        {tech}
-                                    </span>
-                                ))}
-                            </div>
-                        </motion.div>
-                    </div>
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
-            </section>
-
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 mt-12">
-                <Link
-                    href="/casestudy"
-                    className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary mb-16 transition-colors font-medium group"
-                >
-                    <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" /> Back to All Case Studies
-                </Link>
-
-                <div className="grid lg:grid-cols-12 gap-20">
-                    <div className="lg:col-span-8 space-y-24">
-                        {/* Summary / Overview */}
-                        <section className="relative">
-                            <div className="absolute -left-8 top-0 bottom-0 w-1 bg-primary/20 rounded-full hidden md:block" />
-                            <h2 className="text-4xl font-bold mb-8 tracking-tight flex items-center gap-4">
-                                <AlertCircle className="text-primary" size={32} />
-                                {t.projects.overview}
-                            </h2>
-                            <p className="text-2xl text-muted-foreground leading-relaxed font-light">
-                                {project.caseStudy?.overview || project.longDescription}
-                            </p>
-                        </section>
-
-                        {project.caseStudy && (
-                            <>
-                                {/* Objective */}
-                                <section>
-                                    <h2 className="text-3xl font-bold mb-8 tracking-tight flex items-center gap-4">
-                                        <Target className="text-primary" size={28} />
-                                        {t.projects.objective}
-                                    </h2>
-                                    <div className="bg-secondary/20 p-8 md:p-12 rounded-[2.5rem] border border-border">
-                                        <p className="text-xl text-muted-foreground leading-relaxed">
-                                            {project.caseStudy.objective}
-                                        </p>
-                                    </div>
-                                </section>
-
-                                {/* Metrics */}
-                                {project.metrics && project.metrics.length > 0 && (
-                                    <section className="grid sm:grid-cols-3 gap-6 md:gap-8">
-                                        {project.metrics.map((metric: any, idx: number) => (
-                                            <motion.div
-                                                key={idx}
-                                                whileHover={{ y: -5 }}
-                                                className="p-6 md:p-10 bg-gradient-to-br from-primary/10 to-transparent rounded-[2rem] border border-primary/20 text-center flex flex-col justify-center min-h-[160px]"
-                                            >
-                                                <div className={`${metric.value.toString().length > 7 ? 'text-2xl md:text-3xl lg:text-4xl' : 'text-4xl md:text-5xl'} font-extrabold text-primary mb-3 break-words`}>
-                                                    {metric.value}
-                                                </div>
-                                                <div className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-[0.2em] font-bold">
-                                                    {metric.label}
-                                                </div>
-                                            </motion.div>
-                                        ))}
-                                    </section>
-                                )}
-
-                                {/* Solution */}
-                                <section>
-                                    <h2 className="text-3xl font-bold mb-8 tracking-tight flex items-center gap-4">
-                                        <Lightbulb className="text-primary" size={28} />
-                                        {t.projects.solution}
-                                    </h2>
-                                    <p className="text-xl text-muted-foreground leading-relaxed">
-                                        {project.caseStudy.solution}
-                                    </p>
-                                </section>
-
-                                {/* Challenges */}
-                                <section>
-                                    <h2 className="text-3xl font-bold mb-8 tracking-tight flex items-center gap-4">
-                                        <AlertCircle className="text-primary" size={28} />
-                                        {t.projects.challenges}
-                                    </h2>
-                                    <div className="border-l-4 border-primary pl-8 py-2">
-                                        <p className="text-xl text-muted-foreground leading-relaxed italic">
-                                            {project.caseStudy.challenges}
-                                        </p>
-                                    </div>
-                                </section>
-
-                                {/* Results */}
-                                <section>
-                                    <h2 className="text-3xl font-bold mb-8 tracking-tight flex items-center gap-4">
-                                        <TrendingUp className="text-primary" size={28} />
-                                        {t.projects.results}
-                                    </h2>
-                                    <p className="text-xl text-muted-foreground leading-relaxed mb-12">
-                                        {project.caseStudy.results}
-                                    </p>
-
-                                    {project.extraImages && project.extraImages.length > 0 && (
-                                        <div className="grid sm:grid-cols-2 gap-8">
-                                            {project.extraImages.map((img: string, index: number) => (
-                                                <motion.div
-                                                    key={index}
-                                                    whileHover={{ scale: 1.02 }}
-                                                    className="relative aspect-video rounded-[2rem] overflow-hidden border border-border shadow-2xl"
-                                                >
-                                                    <Image
-                                                        src={img}
-                                                        alt={`${project.title} screenshot ${index + 2}`}
-                                                        fill
-                                                        className="object-contain bg-secondary/10"
-                                                    />
-                                                </motion.div>
-                                            ))}
-                                        </div>
-                                    )}
-                                </section>
-                            </>
-                        )}
-                    </div>
-
-                    <aside className="lg:col-span-4 space-y-8">
-                        <div className="p-10 bg-card rounded-[2.5rem] border border-border sticky top-32 shadow-xl">
-                            <h3 className="text-2xl font-bold mb-8">Project Info</h3>
-                            <div className="space-y-6 mb-12">
-                                <div className="space-y-1">
-                                    <span className="text-xs uppercase tracking-widest text-muted-foreground font-bold">Category</span>
-                                    <div className="text-lg font-medium">{project.category}</div>
-                                </div>
-                                <div className="space-y-1">
-                                    <span className="text-xs uppercase tracking-widest text-muted-foreground font-bold">Client</span>
-                                    <div className="text-lg font-medium">Internal Project</div>
-                                </div>
-                                <div className="space-y-1">
-                                    <span className="text-xs uppercase tracking-widest text-muted-foreground font-bold">Year</span>
-                                    <div className="text-lg font-medium">2024</div>
-                                </div>
-                            </div>
-
-                            <div className="space-y-4">
-                                <a
-                                    href={project.github}
-                                    target="_blank"
-                                    className="w-full py-5 border-2 border-border rounded-2xl font-bold tracking-widest uppercase flex items-center justify-center gap-3 hover:bg-secondary transition-all"
-                                >
-                                    Codebase <Github size={20} />
-                                </a>
-                            </div>
-                        </div>
-                    </aside>
-                </div>
-            </div>
-        </main>
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Case Study Not Found</h1>
+          <button
+            onClick={() => router.push("/casestudy")}
+            className="text-primary hover:underline"
+          >
+            Back to Case Studies
+          </button>
+        </div>
+      </div>
     );
+  }
+
+  const formatDisplay = (value: string) => (language === "ar" ? value : value.toUpperCase());
+  const cs = project.caseStudy || {};
+  const metrics = project.metrics || [];
+  const Diagram = DIAGRAMS[project.id];
+
+  // Default timeline data structure based on the project information
+  const timelineData = [
+    ["START", "Onboarding & architecture design"],
+    ["BUILD", "UI component library & layout styling"],
+    ["INTEGRATE", "Core API / flow automation setup"],
+    ["OPTIMIZE", "Testing, performance, & responsive pass"],
+    ["RELEASE", "Shipped to production environments"],
+  ];
+
+  return (
+    <div className="editorial-page pb-24">
+      {/* HEADER SECTION */}
+      <EditorialShell className="py-12 md:py-16">
+        <div className="grid gap-5 grid-cols-[auto_1fr] items-baseline mb-6">
+          <Eyebrow num={currentIdx + 1}>Case Study № {String(currentIdx + 1).padStart(2, "0")}</Eyebrow>
+          <Link
+            href="/casestudy"
+            className="editorial-mono justify-self-end text-[11px] uppercase tracking-[0.1em] text-muted hover:text-primary decoration-none"
+            style={{ textDecoration: "none" }}
+          >
+            <span className="inline-flex items-center gap-2">
+              <ArrowLeft size={16} /> {t.editorial.allCaseStudies || "All Work"}
+            </span>
+          </Link>
+        </div>
+
+        <h1 className="editorial-display editorial-title-xl mt-4">
+          {formatDisplay(project.title)}
+          <span className="text-primary">.</span>
+        </h1>
+
+        {/* META ROW */}
+        <div className="mt-6 grid gap-4 border-y-2 border-border py-4 grid-cols-2 md:grid-cols-5 editorial-mono text-[11px] uppercase tracking-[0.08em]">
+          <div>
+            <div className="text-[9px] uppercase tracking-[0.1em] text-muted">Category</div>
+            <div className="mt-1 font-bold">{project.category}</div>
+          </div>
+          <div>
+            <div className="text-[9px] uppercase tracking-[0.1em] text-muted">Stack</div>
+            <div className="mt-1 font-bold">{project.tech.slice(0, 3).join(", ")}</div>
+          </div>
+          <div>
+            <div className="text-[9px] uppercase tracking-[0.1em] text-muted">Type</div>
+            <div className="mt-1 font-bold">{project.filter === "automation" ? "Automation" : "Full Stack"}</div>
+          </div>
+          <div>
+            <div className="text-[9px] uppercase tracking-[0.1em] text-muted">Status</div>
+            <div className="mt-1 font-bold">{t.editorial.shipped || "SHIPPED"}</div>
+          </div>
+          <div>
+            <div className="text-[9px] uppercase tracking-[0.1em] text-muted">Focus</div>
+            <div className="mt-1 font-bold">{t.siteConfig.role || "DEVELOPER"}</div>
+          </div>
+        </div>
+      </EditorialShell>
+
+      {/* HERO DIAGRAM */}
+      <EditorialShell>
+        <div className="editorial-frame relative h-[320px] overflow-hidden md:h-[420px] bg-paper">
+          {Diagram ? (
+            <div className="w-full h-full flex items-center justify-center p-4">
+              <Diagram />
+            </div>
+          ) : (
+            <div className="w-full h-full flex items-center justify-center">
+              <span className="editorial-mono text-[11px] uppercase tracking-[0.14em] text-muted">
+                Architecture Diagram Not Found for {project.id}
+              </span>
+            </div>
+          )}
+        </div>
+        <div className="editorial-mono mt-2 flex justify-between text-[10px] uppercase tracking-[0.12em] text-muted">
+          <span>Fig. 01 — {project.title} · Unified flow / architecture diagram</span>
+          <span>Animated</span>
+        </div>
+      </EditorialShell>
+
+      {/* OVERVIEW CALLOUT */}
+      <EditorialShell className="mt-14 grid gap-10 md:grid-cols-[1fr_2fr]">
+        <Eyebrow num="01">Overview</Eyebrow>
+        <p className="editorial-serif text-[clamp(22px,3.4vw,42px)] leading-[1.25] italic text-foreground">
+          {cs.overview || project.description}
+        </p>
+      </EditorialShell>
+
+      {/* CORE CAPABILITIES GRID */}
+      {project.tech && project.tech.length > 0 && (
+        <EditorialShell className="mt-10">
+          <div className="grid gap-4 grid-cols-1 sm:grid-cols-3">
+            {project.tech.slice(0, 3).map((techName: string, idx: number) => (
+              <div className="editorial-frame editorial-frame-thick p-5" key={idx}>
+                <div className="editorial-display text-2xl tracking-tight">{techName}</div>
+                <div className="editorial-mono text-[10px] text-muted uppercase tracking-[0.1em] mt-2">
+                  {idx === 0 ? "Primary Driver" : idx === 1 ? "Integration Layer" : "Infrastructure"}
+                </div>
+              </div>
+            ))}
+          </div>
+        </EditorialShell>
+      )}
+
+      {/* CASE STUDY BLOCKS */}
+      <EditorialShell className="mt-14 grid gap-12 md:grid-cols-2">
+        <CaseBlock num="02" kicker={t.projects.objective || "Objective"}>
+          <p>{cs.objective || project.longDescription || project.description}</p>
+        </CaseBlock>
+
+        <CaseBlock num="03" kicker={t.projects.solution || "Solution"}>
+          <p>{cs.solution || project.longDescription || project.description}</p>
+        </CaseBlock>
+
+        <CaseBlock num="04" kicker={t.projects.challenges || "Challenges"}>
+          <p>{cs.challenges || project.description}</p>
+        </CaseBlock>
+
+        <CaseBlock num="05" kicker={t.projects.results || "Results"}>
+          <p>{cs.results || project.longDescription || project.description}</p>
+        </CaseBlock>
+      </EditorialShell>
+
+      {/* METRICS SECTION */}
+      {metrics.length > 0 && (
+        <EditorialShell className="mt-20">
+          <SectionHeader num="06" kicker="Impact" title="By the numbers." />
+          <MetricsGrid metrics={metrics} />
+        </EditorialShell>
+      )}
+
+      {/* TIMELINE */}
+      <EditorialShell className="mt-20">
+        <Eyebrow num="07">Timeline</Eyebrow>
+        <div className="border-t-2 border-b-2 border-border mt-4 py-6">
+          <div className="grid gap-6 grid-cols-2 md:grid-cols-5">
+            {timelineData.map(([phase, desc], i) => (
+              <div key={i} className="relative">
+                <div className={`editorial-display text-2xl leading-none ${i === timelineData.length - 1 ? "text-primary" : "text-foreground"}`}>
+                  {phase}
+                </div>
+                <div className="editorial-mono text-[11px] mt-2 text-muted tracking-[0.04em]">
+                  {desc}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </EditorialShell>
+
+      {/* LINKS SECTION */}
+      <EditorialShell className="mt-16">
+        <div className="flex flex-wrap gap-4 items-center">
+          {project.github && (
+            <EditorialButton href={project.github}>
+              <span>{t.editorial.codebase || "CODEBASE"}</span>
+              <Github size={16} />
+            </EditorialButton>
+          )}
+          {project.link && (
+            <EditorialButton invert href={project.link}>
+              <span>{t.projects.liveDemo || "LIVE DEMO"}</span>
+              <span className="editorial-display text-lg">↗</span>
+            </EditorialButton>
+          )}
+        </div>
+      </EditorialShell>
+
+      {/* NEXT PROJECT LINK */}
+      {nextProject && (
+        <EditorialShell className="mt-20">
+          <div className="editorial-frame editorial-frame-thick grid gap-6 p-8 md:grid-cols-[1fr_auto] md:items-center">
+            <div>
+              <Eyebrow>Next Case Study</Eyebrow>
+              <div className="editorial-display mt-3 text-[clamp(32px,5vw,64px)]">
+                {formatDisplay(nextProject.title)}
+                <span className="text-primary">.</span>
+              </div>
+              <div className="editorial-mono mt-2 text-[11px] uppercase tracking-[0.1em] text-muted">
+                {nextProject.category} — {nextProject.tech?.[0] || "Stack"}
+              </div>
+            </div>
+            <EditorialButton invert href={`/casestudy/${nextProject.id}`}>
+              <span>Read Case Study</span>
+              <span className="editorial-display text-lg">→</span>
+            </EditorialButton>
+          </div>
+        </EditorialShell>
+      )}
+    </div>
+  );
 }

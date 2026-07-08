@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/new
 /.pnp
 .pnp.*
 .yarn/*
@@ -32,6 +33,20 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+Plan.md
+
+# local editor / tooling
+.vscode/
+.idea/
+*.code-workspace
+
+# local artifacts and reports
+*.log
+*.zip
+*.tar.gz
+tsc.txt
+typescript-errors.txt
 
 # vercel
 .vercel

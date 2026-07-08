@@ -1,51 +1,51 @@
 @import "tailwindcss";
 
 :root {
-  /* Base */
-  --background: #ffffff;
-  --foreground: #1f2937;
-  /* gray-800, softer than slate-700 */
+  --ink: #0e0e0c;
+  --ink-2: #1d1c1a;
+  --paper: #f4f1ea;
+  --paper-2: #ebe6da;
+  --paper-3: #ddd6c5;
+  --accent: #e63a1f;
+  --muted: #6b6863;
+  --muted-foreground: #8c877f;
+  --rule: #0e0e0c;
+  --rule-thin: 1px solid var(--rule);
+  --rule-med: 2px solid var(--rule);
+  --rule-thick: 4px solid var(--rule);
 
-  /* Semantic Colors */
-  --primary: #599692;
-  --primary-foreground: #ffffff;
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --primary: var(--accent);
+  --primary-foreground: var(--paper);
+  --secondary: var(--paper-2);
+  --secondary-foreground: var(--ink);
+  --border: var(--rule);
 
-  --secondary: #ffffff;
-  /* keep cards pure white */
-  --secondary-foreground: #000000;
-  /* pure black */
-
-  --muted: #6b7280;
-  /* gray-500 for secondary text */
-  --muted-foreground: #9ca3af;
-  /* gray-400 */
-
-  --border: #e5e7eb;
-  /* gray-200, very subtle */
+  --display: var(--font-display), system-ui, sans-serif;
+  --grotesk: var(--font-grotesk), system-ui, sans-serif;
+  --serif: var(--font-serif), serif;
+  --mono: var(--font-mono-editorial), ui-monospace, monospace;
 }
 
 
 .dark {
-  /* Base */
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --ink: #f0ece2;
+  --ink-2: #d8d3c5;
+  --paper: #0f0e0c;
+  --paper-2: #1a1815;
+  --paper-3: #25221d;
+  --muted: #8b867d;
+  --muted-foreground: #70695f;
+  --rule: #f0ece2;
 
-  /* Semantic Colors */
-  --primary: #599692;
-  --primary-foreground: #ffffff;
-
-  --secondary: #18181b;
-  /* zinc-900 */
-  --secondary-foreground: #fafafa;
-  /* zinc-50 */
-
-  --muted: #a1a1aa;
-  /* zinc-400 */
-  --muted-foreground: #52525b;
-  /* zinc-600 */
-
-  --border: #27272a;
-  /* zinc-800 */
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --primary: var(--accent);
+  --primary-foreground: var(--paper);
+  --secondary: var(--paper-2);
+  --secondary-foreground: var(--ink);
+  --border: var(--rule);
 }
 
 @theme inline {
@@ -74,10 +74,23 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
+  font-family: var(--grotesk);
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 * {
   border-color: var(--border);
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: var(--accent);
+  color: var(--paper);
+}
+
+a {
+  color: inherit;
 }
 @keyframes shimmer {
   0% { transform: translateX(-100%); }

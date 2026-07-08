@@ -1,111 +1,139 @@
 "use client";
 
-import { motion } from "framer-motion";
-import Typewriter from "typewriter-effect";
-import Link from "next/link";
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import About from "@/components/about";
-import Projects from "@/components/projects-grid";
 import Reviews from "@/components/reviews";
+import EditorialShell from "@/components/editorial/EditorialShell";
+import Eyebrow from "@/components/editorial/Eyebrow";
+import Magnetic from "@/components/editorial/Magnetic";
+import EditorialButton from "@/components/editorial/EditorialButton";
+import SectionHeader from "@/components/editorial/SectionHeader";
+import FeatureTile from "@/components/editorial/FeatureTile";
+import StatBlock from "@/components/editorial/StatBlock";
 
 export default function HomeContent() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const featuredProjects = t.projects.items.slice(0, 5);
+  const experienceYears = "2+";
+  const projectCount = `${t.projects.items.length}+`;
+  const formatDisplay = (value: string) => (language === "ar" ? value : value.toUpperCase());
+  const marqueeItems = [
+    ...t.hero.typewriterStrings.slice(0, 5),
+    t.siteConfig.location,
+    t.siteConfig.role,
+  ];
 
   return (
-    <main className="flex min-h-screen flex-col overflow-hidden relative bg-background text-foreground">
-      <section className="flex flex-col items-center justify-center p-6 md:p-24 min-h-screen relative">
-        {/* Background Gradients */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="z-10 text-center max-w-4xl space-y-8"
-        >
-          <div className="space-y-4">
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-              className="text-primary font-semibold text-lg md:text-xl tracking-wide"
-            >
-              {t.hero.greeting}
-            </motion.p>
-
-            <h1 className="text-4xl md:text-7xl font-bold tracking-tight">
-              {t.hero.name}
-              <span className="block text-2xl md:text-4xl mt-4 text-muted font-normal">
-                <Typewriter
-                  options={{
-                    strings: t.hero.typewriterStrings,
-                    autoStart: true,
-                    loop: true,
-                    deleteSpeed: 50,
-                    delay: 80,
-                  }}
-                />
-              </span>
-            </h1>
+    <div className="editorial-page pb-20">
+      <EditorialShell className="py-12 md:py-16">
+        <div className="mb-8 grid gap-6 md:grid-cols-[1fr_220px]">
+          <Eyebrow num={1}>
+            Index - {t.siteConfig.role} - {t.siteConfig.location}
+          </Eyebrow>
+          <div className="editorial-mono text-right text-[11px] uppercase tracking-[0.12em] text-muted">
+            <span className="editorial-serif">{t.hero.welcome}</span>
           </div>
+        </div>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="text-lg md:text-xl text-muted max-w-2xl mx-auto leading-relaxed"
-          >
+        <h1 className="editorial-display editorial-title-xl mb-8">
+          <Magnetic text={formatDisplay(t.hero.name)} />
+          <span className="text-primary">.</span>
+          <br />
+          <span className="border-b-[8px] border-foreground pb-0">
+            <Magnetic text={formatDisplay(t.hero.typewriterStrings[0] || t.siteConfig.role)} />
+          </span>
+        </h1>
+
+        <div className="grid gap-8 border-t-4 border-border pt-8 md:grid-cols-[1.4fr_1fr] md:items-start">
+          <p className="editorial-serif text-[clamp(22px,2.7vw,34px)] leading-[1.25]">
             {t.hero.description}
-          </motion.p>
+          </p>
+          <div className="flex flex-col gap-3">
+            <EditorialButton invert href="/projects">
+              <span>{t.hero.primaryAction}</span>
+              <ArrowRight size={16} />
+            </EditorialButton>
+            <EditorialButton href="/contact">
+              <span>{t.hero.secondaryAction}</span>
+              <span className="editorial-display text-lg">↗</span>
+            </EditorialButton>
+          </div>
+        </div>
+      </EditorialShell>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="flex flex-col md:flex-row gap-4 justify-center items-center pt-8"
-          >
-            <Link
-              href="/contact"
-              className="group relative px-8 py-4 bg-primary text-primary-foreground rounded-full font-semibold overflow-hidden transition-all hover:scale-105 active:scale-95"
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                {t.hero.contactMe} <Mail size={18} />
-              </span>
-              <div className="absolute inset-0 h-full w-full scale-0 rounded-full transition-all duration-300 group-hover:scale-100 group-hover:brightness-90 opacity-20 bg-black" />
-            </Link>
+      <div className="editorial-marquee">
+        <div className="editorial-marquee-track" aria-hidden="true">
+          {Array.from({ length: 2 }).map((_, groupIndex) => (
+            <span key={groupIndex}>
+              {marqueeItems.map((item, index) => (
+                <span key={`${item}-${index}`}>
+                  {item}
+                  <span className="editorial-marquee-sep">✦</span>
+                </span>
+              ))}
+            </span>
+          ))}
+        </div>
+      </div>
 
-            <Link
-              href="/projects"
-              className="group px-8 py-4 bg-secondary text-secondary-foreground rounded-full font-semibold transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
-            >
-              {t.hero.viewProjects} <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
-            </Link>
-          </motion.div>
-        </motion.div>
-      </section>
+      <EditorialShell className="pt-16">
+        <SectionHeader
+          num={2}
+          kicker={t.projects.title}
+          title={`${t.projects.subtitle}.`}
+          right={
+            <EditorialButton href="/projects">
+              <span>{t.projects.allProjects}</span>
+              <ArrowRight size={16} />
+            </EditorialButton>
+          }
+        />
 
-      <About summary={true} />
-      <Projects limit={3} />
+        <div className="mt-6 grid gap-4 md:grid-cols-12">
+          {featuredProjects.map((project: any, index: number) => (
+            <FeatureTile
+              key={project.id}
+              href={`/casestudy/${project.id}`}
+              num={String(index + 1).padStart(2, "0")}
+              category={project.category}
+              title={project.title.toUpperCase()}
+              description={project.description}
+              big={index === 0}
+              accent={index === 0}
+            />
+          ))}
+        </div>
+      </EditorialShell>
+
+      <EditorialShell className="pt-16">
+        <div className="grid gap-6 border-y-4 border-border py-8 md:grid-cols-4">
+          <StatBlock value={experienceYears} label={t.about.stats.experience} />
+          <StatBlock value={projectCount} label={t.about.stats.projects} />
+          <StatBlock value="3" label={t.editorial.languages} />
+          <StatBlock value="24/7" label={t.editorial.creativeExecution} />
+        </div>
+      </EditorialShell>
+
       <Reviews />
 
-      {/* CTA Section */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-primary/5 -z-10" />
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">{t.contact?.title || "Ready to Start a Project?"}</h2>
-          <p className="text-xl text-muted mb-8 max-w-2xl mx-auto">
-            {t.contact?.subtitle || "Let's collaborate to bring your ideas to life with high-quality web solutions."}
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-full font-bold text-lg hover:scale-105 transition-transform"
-          >
-            {t.hero.contactMe} <ArrowRight />
-          </Link>
+      <EditorialShell className="pt-16">
+        <div className="editorial-frame editorial-frame-thick grid gap-6 p-8 md:grid-cols-[1fr_auto] md:items-center">
+          <div>
+            <Eyebrow>{t.contact.title}</Eyebrow>
+            <h2 className="editorial-display mt-3 text-[clamp(38px,6vw,76px)]">
+              {t.contact.subtitle}
+              <span className="text-primary">.</span>
+            </h2>
+            <p className="mt-4 max-w-2xl text-base leading-7 text-muted">
+              {t.contact.description}
+            </p>
+          </div>
+          <EditorialButton invert href="/contact">
+            <span>{t.contact.form.send}</span>
+            <ArrowRight size={16} />
+          </EditorialButton>
         </div>
-      </section>
-    </main>
+      </EditorialShell>
+    </div>
   );
 }

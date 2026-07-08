@@ -12,7 +12,7 @@ interface MetadataProps {
 
 export function constructMetadata({
     title,
-    description = "Hi, I'm Abdul Haseeb, a MERN Stack Developer skilled in React, Node.js, MongoDB & Express. Check out my portfolio & projects!",
+    description = "Hi, I'm Abdul Haseeb, an AI Engineer specialized in production-ready agentic architectures, custom voice agents, RAG applications, and low-latency systems. Check out my portfolio & projects!",
     image = "/Portofolio.png?v=3",
     icons = {
         icon: "/Adobe-Express-file.png?v=3",
@@ -22,7 +22,7 @@ export function constructMetadata({
 }: MetadataProps = {}): Metadata {
     const pageTitle = title
         ? `${title} | Abdul Haseeb`
-        : "Abdul Haseeb Portfolio - MERN Stack Developer | React, Node.js, MongoDB";
+        : "Abdul Haseeb Portfolio - AI Engineer | Agentic Systems & Automation";
 
     return {
         title: pageTitle,
@@ -37,17 +37,18 @@ export function constructMetadata({
             telephone: false,
         },
         keywords: [
+            "AI Engineer",
+            "Agentic AI",
+            "RAG Applications",
+            "AI Automation",
             "MERN Stack",
             "React",
             "Node.js",
             "MongoDB",
-            "Express",
             "Web Development",
             "Portfolio",
-            "Freelancer",
             "Abdul Haseeb",
-            "Software Engineer",
-            "Full Stack Developer"
+            "Software Engineer"
         ],
         authors: [{ name: "Abdul Haseeb" }],
         creator: "Abdul Haseeb",

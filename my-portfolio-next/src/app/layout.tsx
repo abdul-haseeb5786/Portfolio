@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import {
+  Archivo_Black,
+  Fraunces,
+  Geist,
+  Geist_Mono,
+  Space_Grotesk,
+  JetBrains_Mono,
+} from "next/font/google";
 import "./globals.css";
+import "@/styles/editorial.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { Analytics } from '@vercel/analytics/next';
@@ -9,7 +17,6 @@ import Footer from "@/components/footer";
 import { constructMetadata, BASE_URL } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
 
-const inter = Inter({ subsets: ["latin"] });
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -17,6 +24,27 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const displayFont = Archivo_Black({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const groteskFont = Space_Grotesk({
+  variable: "--font-grotesk",
+  subsets: ["latin"],
+});
+
+const serifFont = Fraunces({
+  variable: "--font-serif",
+  subsets: ["latin"],
+});
+
+const editorialMono = JetBrains_Mono({
+  variable: "--font-mono-editorial",
   subsets: ["latin"],
 });
 
@@ -52,7 +80,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} ${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground transition-colors duration-300`}
+        className={`${geistSans.variable} ${geistMono.variable} ${displayFont.variable} ${groteskFont.variable} ${serifFont.variable} ${editorialMono.variable} antialiased bg-background text-foreground transition-colors duration-300`}
       >
         <LanguageProvider>
           <ThemeProvider
@@ -62,7 +90,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Navbar />
-            <main id="main-content">
+            <main id="main-content" className="pt-[88px] md:pt-[92px]">
               {children}
             </main>
             <Analytics />

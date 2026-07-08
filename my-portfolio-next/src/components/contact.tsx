@@ -1,202 +1,359 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, Github, Linkedin } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import EditorialShell from "@/components/editorial/EditorialShell";
+import Eyebrow from "@/components/editorial/Eyebrow";
+import SectionHeader from "@/components/editorial/SectionHeader";
+import StatBlock from "@/components/editorial/StatBlock";
 
-const iconMap: Record<string, any> = {
-    Email: <Mail size={24} />,
-    Phone: <Phone size={24} />,
-    Location: <MapPin size={24} />,
-};
-
-export default function Contact() {
+// ── ContactSlip: editorial submission form ──────────────────────────────────
+function ContactSlip() {
     const { t } = useLanguage();
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-    });
-    const [loading, setLoading] = useState(false);
-    const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+    const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+    const [errors, setErrors] = useState<Record<string, string>>({});
+    const [status, setStatus] = useState<"idle" | "sending" | "ok" | "bad">("idle");
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+    const set = (k: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setForm((f) => ({ ...f, [k]: e.target.value }));
+        if (errors[k]) setErrors((er) => ({ ...er, [k]: "" }));
     };
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const validate = () => {
+        const er: Record<string, string> = {};
+        if (!form.name.trim()) er.name = "Name is required";
+        if (!form.email.trim()) er.email = "Email is required";
+        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) er.email = "Not a valid email";
+        if (!form.subject.trim()) er.subject = "Subject is required";
+        if (!form.message.trim()) er.message = "Message cannot be empty";
+        else if (form.message.trim().length < 10) er.message = "A little more detail, please";
+        return er;
+    };
+
+    const submit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setLoading(true);
-        setStatus("idle");
+        const er = validate();
+        setErrors(er);
+        if (Object.keys(er).length) { setStatus("bad"); return; }
+        setStatus("sending");
 
         try {
             const res = await fetch("https://email-sender-one-dun.vercel.app/send", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    ...formData,
+                    ...form,
                     receiver_email: "abdulhaseebsohail115@gmail.com",
                 }),
             });
-
             if (res.ok) {
-                setStatus("success");
-                setFormData({ name: "", email: "", subject: "", message: "" });
+                setStatus("ok");
+                setForm({ name: "", email: "", subject: "", message: "" });
             } else {
-                setStatus("error");
+                setStatus("bad");
             }
-        } catch (error) {
-            setStatus("error");
-        } finally {
-            setLoading(false);
+        } catch {
+            setStatus("bad");
         }
     };
 
-    const contactItems = [
-        { label: t.contact.email, value: t.siteConfig.email },
-        { label: t.contact.phone, value: t.siteConfig.phone },
-        { label: t.contact.location, value: t.siteConfig.location },
+    return (
+        <form className="slip" onSubmit={submit} noValidate>
+            <div className="slip-head">
+                <span>Submission Slip</span>
+                <span className="slip-doc-no">
+                    {t.contact.form.subject} · No. {new Date().getFullYear()}
+                </span>
+            </div>
+            <div className="slip-body">
+                {status === "ok" && (
+                    <div className="notice notice-ok" role="status">
+                        <span className="n-badge">✓</span>
+                        <span>
+                            <span className="n-title">{t.common?.success || "Message sent"} </span>
+                            {t.contact.form.successMsg || "Thanks — I'll get back to you within a couple of days."}
+                        </span>
+                    </div>
+                )}
+                {status === "bad" && (
+                    <div className="notice notice-bad" role="alert">
+                        <span className="n-badge">!</span>
+                        <span>
+                            <span className="n-title">{t.common?.error || "Check the form"} </span>
+                            {t.contact.form.errorMsg || "A few fields need attention before this can send."}
+                        </span>
+                    </div>
+                )}
+
+                <div className="field-lg">
+                    <label htmlFor="cf-name">
+                        {t.contact.form.name} <span className="req">* required</span>
+                    </label>
+                    <input
+                        id="cf-name"
+                        type="text"
+                        name="name"
+                        value={form.name}
+                        onChange={set("name")}
+                        className={errors.name ? "err" : ""}
+                        autoComplete="name"
+                    />
+                    {errors.name && <div className="err-msg">↳ {errors.name}</div>}
+                </div>
+
+                <div className="slip-two-col">
+                    <div className="field-lg">
+                        <label htmlFor="cf-email">
+                            {t.contact.form.email} <span className="req">* required</span>
+                        </label>
+                        <input
+                            id="cf-email"
+                            type="email"
+                            name="email"
+                            value={form.email}
+                            onChange={set("email")}
+                            className={errors.email ? "err" : ""}
+                            autoComplete="email"
+                        />
+                        {errors.email && <div className="err-msg">↳ {errors.email}</div>}
+                    </div>
+                    <div className="field-lg">
+                        <label htmlFor="cf-subject">
+                            {t.contact.form.subject} <span className="req">* required</span>
+                        </label>
+                        <input
+                            id="cf-subject"
+                            type="text"
+                            name="subject"
+                            value={form.subject}
+                            onChange={set("subject")}
+                            className={errors.subject ? "err" : ""}
+                        />
+                        {errors.subject && <div className="err-msg">↳ {errors.subject}</div>}
+                    </div>
+                </div>
+
+                <hr className="slip-perf" />
+
+                <div className="field-lg">
+                    <label htmlFor="cf-message">
+                        {t.contact.form.message} <span className="req">* required</span>
+                    </label>
+                    <textarea
+                        id="cf-message"
+                        name="message"
+                        rows={4}
+                        value={form.message}
+                        onChange={set("message")}
+                        className={errors.message ? "err" : ""}
+                    />
+                    {errors.message && <div className="err-msg">↳ {errors.message}</div>}
+                </div>
+
+                <button
+                    type="submit"
+                    className="btn-submit"
+                    disabled={status === "sending"}
+                >
+                    {status === "sending"
+                        ? <>{t.common?.loading || "Sending"}<span className="arr">…</span></>
+                        : <>{t.contact.form.send} <span className="arr">→</span></>}
+                </button>
+            </div>
+        </form>
+    );
+}
+
+// ── Main Contact component ──────────────────────────────────────────────────
+export default function Contact() {
+    const { t } = useLanguage();
+
+    const downloadCV = () => {
+        const url = `https://drive.google.com/uc?export=download&id=1FjJxMQu_gHo1MurLQnyjD2TZ0o5z_re1`;
+        const link = document.createElement("a");
+        link.href = url;
+        link.setAttribute("download", `${t.siteConfig.name.replace(" ", "_")}_CV.pdf`);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
+    const contactRows = [
+        { key: "Email", value: t.siteConfig.email },
+        { key: "Phone", value: t.siteConfig.phone },
+        { key: "Location", value: t.siteConfig.location },
+        { key: "GitHub", value: t.siteConfig.socials?.github?.replace("https://", "") || "" },
+        { key: "LinkedIn", value: t.siteConfig.socials?.linkedin?.replace("https://", "") || "" },
     ];
 
     return (
-        <section id="contact" className="py-24 bg-secondary/30">
-            <div className="max-w-7xl mx-auto px-6">
-                <div className="grid lg:grid-cols-2 gap-16">
+        <div className="editorial-page pb-24" id="contact">
+            {/* ── HEADER ── */}
+            <EditorialShell className="py-12 md:py-16">
+                <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
                     <div>
-                        <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-8 text-foreground">
-                            {t.contact.title} <span className="text-primary">{t.contact.subtitle}</span>
-                        </h2>
-                        <p className="text-lg text-muted mb-12 max-w-md">
-                            {t.contact.description}
-                        </p>
+                        <Eyebrow num={5}>Resume — Contact</Eyebrow>
+                        <h1 className="editorial-display editorial-title-lg mt-3">
+                            EXP<span className="text-primary">·</span>ER
+                            <br />
+                            <span className="border-b-[10px] border-foreground">IENCE</span>.
+                        </h1>
+                    </div>
+                    <div className="flex flex-col gap-2">
+                        <button
+                            onClick={downloadCV}
+                            className="editorial-button editorial-button-invert"
+                        >
+                            ↓ {t.about.downloadCV} <span className="text-primary">·</span> pdf
+                        </button>
+                    </div>
+                </div>
+            </EditorialShell>
 
-                        <div className="space-y-8">
-                            {contactItems.map((item, idx) => (
-                                <div key={idx} className="flex gap-6 items-start group">
-                                    <div className="w-14 h-14 rounded-2xl bg-secondary border border-border flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all shadow-sm text-muted">
-                                        {Object.values(iconMap)[idx] || <Mail size={24} />}
-                                    </div>
-                                    <div>
-                                        <h4 className="text-sm uppercase tracking-widest text-primary font-bold mb-1">{item.label}</h4>
-                                        <p className="text-xl font-medium text-foreground">{item.value}</p>
-                                    </div>
+            {/* ── EXPERIENCE LIST ── */}
+            <EditorialShell>
+                <div className="border-t-4 border-border">
+                    {t.about.experience.history.map((exp: any) => (
+                        <article
+                            key={exp.id}
+                            className="grid gap-6 border-b border-border py-8 md:grid-cols-[160px_1.2fr_2fr]"
+                        >
+                            <div>
+                                <div className="editorial-mono text-[11px] tracking-[0.1em] text-primary">
+                                    {exp.date}
                                 </div>
-                            ))}
+                                <div className="editorial-mono mt-1 text-[10px] uppercase tracking-[0.1em] text-muted">
+                                    {exp.location}
+                                </div>
+                            </div>
+                            <div>
+                                <div className="editorial-display text-[clamp(26px,3vw,48px)] leading-none">
+                                    {exp.title.toUpperCase()}
+                                </div>
+                                <div className="editorial-mono mt-2 text-[13px]">
+                                    {exp.company}{" "}
+                                    <span className="text-muted">· {exp.type}</span>
+                                </div>
+                            </div>
+                            <ul className="space-y-2 text-[15px] leading-[1.55]">
+                                <li className="flex gap-2">
+                                    <span className="text-primary editorial-display">·</span>
+                                    <span className="text-muted">{exp.description}</span>
+                                </li>
+                                {exp.points.map((point: any, idx: number) => (
+                                    <li key={idx} className="flex gap-2">
+                                        <span className="text-primary editorial-display">·</span>
+                                        <span>{point.text || point}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </article>
+                    ))}
+                </div>
+            </EditorialShell>
 
-                            {/* Social Links */}
-                            <div className="pt-8 border-t border-border">
-                                <h4 className="text-sm uppercase tracking-widest text-primary font-bold mb-6">Social Profiles</h4>
-                                <div className="flex gap-4">
-                                    {t.siteConfig.socials?.github && (
-                                        <a
-                                            href={t.siteConfig.socials.github}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="w-14 h-14 rounded-2xl bg-secondary border border-border flex items-center justify-center text-muted hover:bg-primary hover:text-primary-foreground transition-all shadow-sm"
-                                            title="GitHub"
-                                        >
-                                            <Github size={24} />
-                                        </a>
-                                    )}
-                                    {t.siteConfig.socials?.linkedin && (
-                                        <a
-                                            href={t.siteConfig.socials.linkedin}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="w-14 h-14 rounded-2xl bg-secondary border border-border flex items-center justify-center text-muted hover:bg-primary hover:text-primary-foreground transition-all shadow-sm"
-                                            title="LinkedIn"
-                                        >
-                                            <Linkedin size={24} />
-                                        </a>
-                                    )}
-                                </div>
+            {/* ── SELECTED IMPACT ── */}
+            <EditorialShell className="pt-20">
+                <SectionHeader num="·" kicker="Selected Impact" title="The Numbers." />
+                <div className="mt-8 grid gap-6 border-y-4 border-border py-8 md:grid-cols-4">
+                    <StatBlock value="2+" label={t.about.stats.experience} />
+                    <StatBlock value={`${t.projects.items.length}+`} label={t.about.stats.projects} />
+                    <StatBlock value="3" label="Languages" />
+                    <StatBlock value="AI" label="Delivery focus" />
+                </div>
+            </EditorialShell>
+
+            {/* ── CONTACT ── */}
+            <EditorialShell className="pt-20">
+                <SectionHeader num="·" kicker="Contact" title="Say Hello." />
+                <div className="mt-8 grid gap-12 lg:grid-cols-[1fr_1.15fr] lg:items-start">
+                    {/* Left: contact info + availability box */}
+                    <div>
+                        <div className="contact-info-grid">
+                            {contactRows.map(({ key, value }) =>
+                                value ? (
+                                    <React.Fragment key={key}>
+                                        <div className="editorial-mono text-[11px] uppercase tracking-[0.12em] text-muted pt-1">
+                                            {key}
+                                        </div>
+                                        <div className="border-b border-border pb-3 text-[17px]">
+                                            {key === "Email" || key === "GitHub" || key === "LinkedIn" ? (
+                                                <a
+                                                    href={
+                                                        key === "Email"
+                                                            ? `mailto:${value}`
+                                                            : key === "GitHub"
+                                                            ? t.siteConfig.socials?.github
+                                                            : t.siteConfig.socials?.linkedin
+                                                    }
+                                                    target={key !== "Email" ? "_blank" : undefined}
+                                                    rel="noopener noreferrer"
+                                                    className="contact-link"
+                                                >
+                                                    {value}
+                                                </a>
+                                            ) : (
+                                                value
+                                            )}
+                                        </div>
+                                    </React.Fragment>
+                                ) : null
+                            )}
+                        </div>
+
+                        {/* Availability box */}
+                        <div className="editorial-frame editorial-frame-thick availability-box">
+                            <div className="editorial-mono text-[11px] uppercase tracking-[0.12em] text-primary font-bold">
+                                Currently open to
+                            </div>
+                            <ul className="mt-3 space-y-1 text-[17px] leading-[1.6]">
+                                <li>· Full-stack & AI Engineering roles</li>
+                                <li>· Freelance / Contract projects</li>
+                                <li>· Open Source collaboration</li>
+                                <li>
+                                    ·{" "}
+                                    <span className="text-muted">
+                                        Available {t.siteConfig.availability || "immediately"}
+                                    </span>
+                                </li>
+                            </ul>
+                            <div className="availability-tag">
+                                {t.siteConfig.availability || "Available"} →
+                            </div>
+
+                            {/* Social links */}
+                            <div className="mt-6 flex gap-3">
+                                {t.siteConfig.socials?.github && (
+                                    <a
+                                        href={t.siteConfig.socials.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="editorial-button"
+                                        title="GitHub"
+                                    >
+                                        <Github size={18} />
+                                    </a>
+                                )}
+                                {t.siteConfig.socials?.linkedin && (
+                                    <a
+                                        href={t.siteConfig.socials.linkedin}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="editorial-button"
+                                        title="LinkedIn"
+                                    >
+                                        <Linkedin size={18} />
+                                    </a>
+                                )}
                             </div>
                         </div>
                     </div>
 
-                    <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6 }}
-                        viewport={{ once: true }}
-                        className="bg-card p-8 md:p-12 rounded-3xl border border-border shadow-xl"
-                    >
-                        <form onSubmit={handleSubmit} className="space-y-6">
-                            <div className="grid md:grid-cols-2 gap-6">
-                                <div className="space-y-2">
-                                    <label className="text-sm font-bold uppercase tracking-widest text-muted-foreground">{t.contact.form.name}</label>
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        placeholder={t.contact.form.namePlaceholder}
-                                        required
-                                        className="w-full px-6 py-4 bg-secondary rounded-xl border-none focus:ring-2 focus:ring-primary transition-all text-foreground placeholder:text-muted"
-                                    />
-                                </div>
-                                <div className="space-y-2">
-                                    <label className="text-sm font-bold uppercase tracking-widest text-muted-foreground">{t.contact.form.email}</label>
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                        placeholder={t.contact.form.emailPlaceholder}
-                                        required
-                                        className="w-full px-6 py-4 bg-secondary rounded-xl border-none focus:ring-2 focus:ring-primary transition-all text-foreground placeholder:text-muted"
-                                    />
-                                </div>
-                            </div>
-                            <div className="space-y-2">
-                                <label className="text-sm font-bold uppercase tracking-widest text-muted-foreground">{t.contact.form.subject}</label>
-                                <input
-                                    type="text"
-                                    name="subject"
-                                    value={formData.subject}
-                                    onChange={handleChange}
-                                    placeholder={t.contact.form.subjectPlaceholder}
-                                    required
-                                    className="w-full px-6 py-4 bg-secondary rounded-xl border-none focus:ring-2 focus:ring-primary transition-all text-foreground placeholder:text-muted"
-                                />
-                            </div>
-                            <div className="space-y-2">
-                                <label className="text-sm font-bold uppercase tracking-widest text-muted-foreground">{t.contact.form.message}</label>
-                                <textarea
-                                    name="message"
-                                    rows={5}
-                                    value={formData.message}
-                                    onChange={handleChange}
-                                    placeholder={t.contact.form.messagePlaceholder}
-                                    required
-                                    className="w-full px-6 py-4 bg-secondary rounded-xl border-none focus:ring-2 focus:ring-primary transition-all resize-none text-foreground placeholder:text-muted"
-                                />
-                            </div>
-
-                            {status === "success" && (
-                                <p className="text-green-500 text-sm font-medium bg-green-500/10 p-3 rounded-lg">
-                                    {t.common?.success || "Message sent successfully!"}
-                                </p>
-                            )}
-                            {status === "error" && (
-                                <p className="text-red-500 text-sm font-medium bg-red-500/10 p-3 rounded-lg">
-                                    {t.common?.error || "Failed to send message. Please try again."}
-                                </p>
-                            )}
-
-                            <button
-                                type="submit"
-                                disabled={loading}
-                                className="w-full py-4 bg-primary text-primary-foreground rounded-xl font-bold tracking-widest uppercase flex items-center justify-center gap-2 hover:brightness-90 transition-all shadow-lg shadow-primary/20 disabled:opacity-70 disabled:cursor-not-allowed"
-                            >
-                                {loading ? (t.common?.loading || "Sending...") : t.contact.form.send} <Send size={18} />
-                            </button>
-                        </form>
-                    </motion.div>
+                    {/* Right: ContactSlip form */}
+                    <ContactSlip />
                 </div>
-            </div>
-        </section>
+            </EditorialShell>
+        </div>
     );
 }

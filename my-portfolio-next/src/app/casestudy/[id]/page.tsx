@@ -25,6 +25,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     });
 }
 
-export default async function Page({ params }: Props) {
+export default async function Page() {
     return <CaseStudyDetails />;
 }
