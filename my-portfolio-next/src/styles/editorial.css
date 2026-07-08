@@ -48,6 +48,8 @@
   letter-spacing: -0.035em;
   line-height: 0.86;
   text-transform: uppercase;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 .serif-it, .editorial-serif {
   font-family: var(--serif);
@@ -936,8 +938,18 @@
   .nav-items { display: none; }
   .nav-inner { grid-template-columns: 1fr auto; }
   .row { grid-template-columns: 40px 1fr 40px; }
+  .slip-head { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .slip-head p { max-width: 100%; }
+  .slip-doc-no { margin-left: 0; text-align: left; }
+  .editorial-title-xl { font-size: clamp(56px, 11vw, 110px) !important; }
+  .editorial-title-lg { font-size: clamp(56px, 9vw, 132px) !important; }
   .row .row-tag, .row .row-meta { display: none; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .slip-head { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .slip-head p { max-width: 100%; }
+  .slip-doc-no { margin-left: 0; text-align: left; }
+  .editorial-title-xl { font-size: clamp(56px, 11vw, 110px) !important; }
+  .editorial-title-lg { font-size: clamp(56px, 9vw, 132px) !important; }
   .editorial-reviews-grid { grid-template-columns: 1fr; }
   .reviews-grid { grid-template-columns: 1fr; }
   .metrics-grid { grid-template-columns: 1fr 1fr; }
@@ -947,6 +959,51 @@
   .gallery .g-wide { grid-column: auto; grid-row: auto; }
   .slip-two-col { grid-template-columns: 1fr; }
   .contact-info-grid { grid-template-columns: 110px 1fr; }
+}
+
+@media (max-width: 640px) {
+  .editorial-shell {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .editorial-page {
+    overflow-x: clip;
+  }
+  .editorial-title-xl {
+    font-size: clamp(44px, 11vw, 72px) !important;
+    line-height: 0.8 !important;
+  }
+  .editorial-title-lg {
+    font-size: clamp(42px, 9vw, 70px) !important;
+    line-height: 0.82 !important;
+  }
+  .editorial-title-md {
+    font-size: clamp(28px, 7vw, 44px) !important;
+  }
+  .slip-body {
+    padding: 16px 14px;
+  }
+  .slip-head {
+    padding: 12px 14px;
+  }
+  .slip-two-col {
+    gap: 12px;
+  }
+  .field-lg input,
+  .field-lg textarea {
+    font-size: 15px;
+  }
+  .btn-submit {
+    padding: 12px 14px;
+  }
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+    gap: 6px 0;
+  }
+  .editorial-button.editorial-button-invert {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* ===================================================================

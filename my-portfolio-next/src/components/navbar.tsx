@@ -19,8 +19,17 @@ export default function Navbar() {
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
         };
+        const handleResize = () => {
+            if (window.innerWidth >= 768) {
+                setIsOpen(false);
+            }
+        };
         window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("resize", handleResize);
+        };
     }, []);
 
     const navLinks = [
@@ -38,9 +47,10 @@ export default function Navbar() {
                 }`}
             aria-label="Main Navigation"
         >
-            <div className="editorial-shell flex items-center justify-between gap-4">
-                <Link href="/" className="editorial-display text-3xl leading-none tracking-[-0.05em]">
-                    AH<span className="text-primary">*</span>
+            <div className="editorial-shell flex items-center justify-between gap-3 sm:gap-4">
+                <Link href="/" className="editorial-display text-[1.35rem] leading-none tracking-[-0.05em] sm:text-2xl md:text-3xl">
+                    {t.siteConfig.name}
+                    <span className="text-primary">*</span>
                 </Link>
 
                 {/* Desktop Nav */}
@@ -61,7 +71,7 @@ export default function Navbar() {
                         </Link>
                         );
                     })}
-                    <LanguageSelector />
+                    {/* <LanguageSelector /> */}
                     <ThemeToggle />
                 </div>
 
@@ -69,7 +79,7 @@ export default function Navbar() {
                 <div className="flex md:hidden items-center gap-4">
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="editorial-button px-3 py-2"
+                        className="editorial-button px-3 py-2 active:translate-y-0"
                         aria-label={isOpen ? "Close Menu" : "Open Menu"}
                         aria-expanded={isOpen}
                     >
@@ -87,20 +97,23 @@ export default function Navbar() {
                         exit={{ opacity: 0, height: 0 }}
                         className="border-t-2 border-border bg-background md:hidden"
                     >
-                        <div className="editorial-shell flex flex-col gap-4 py-6">
-                            {navLinks.map((link, index) => (
+                        <div className="editorial-shell flex flex-col gap-4 py-5 sm:py-6">
+                            {navLinks.map((link, index) => {
+                                const active = link.match(pathname);
+                                return (
                                 <Link
                                     key={link.name}
                                     href={link.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="editorial-display text-2xl"
+                                    className={`editorial-display text-2xl ${active ? "text-primary" : "text-foreground"}`}
                                 >
                                     <span className="mr-2 text-sm text-primary">{String(index + 1).padStart(2, "0")}</span>
                                     {link.name}
                                 </Link>
-                            ))}
+                                );
+                            })}
                             <div className="flex items-center gap-3 border-t border-border pt-4">
-                                <LanguageSelector />
+                                {/* <LanguageSelector /> */}
                                 <ThemeToggle />
                             </div>
                         </div>

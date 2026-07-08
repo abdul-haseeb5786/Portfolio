@@ -17,7 +17,7 @@ export default function Footer() {
     return (
         <footer className="border-t-4 border-border py-12 md:py-16" role="contentinfo" aria-label="Site Footer">
             <div className="editorial-shell">
-                <div className="grid gap-10 md:grid-cols-[2fr_1fr_1fr_1fr]">
+                <div className="grid gap-8 sm:gap-10 md:grid-cols-[2fr_1fr_1fr_1fr]">
                     <div>
                         <div className="editorial-eyebrow">End - Colophon</div>
                         <Link href="/" className="editorial-display mt-3 inline-block text-[clamp(52px,8vw,118px)]">
@@ -72,7 +72,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="mt-10 flex flex-col gap-3 border-t border-border pt-5 text-xs uppercase tracking-[0.12em] text-muted md:flex-row md:items-center md:justify-between">
+                <div className="mt-8 flex flex-col gap-3 border-t border-border pt-5 text-[10px] uppercase tracking-[0.12em] text-muted sm:mt-10 sm:text-xs md:flex-row md:items-center md:justify-between">
                     <p>© {currentYear} Abdul Haseeb. {t.footer.rights}</p>
                     <p>{t.siteConfig.role}</p>
                 </div>

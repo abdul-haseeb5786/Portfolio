@@ -79,12 +79,12 @@ export default function CaseStudyDetails() {
   return (
     <div className="editorial-page pb-24">
       {/* HEADER SECTION */}
-      <EditorialShell className="py-12 md:py-16">
-        <div className="grid gap-5 grid-cols-[auto_1fr] items-baseline mb-6">
+      <EditorialShell className="py-10 sm:py-12 md:py-16">
+        <div className="mb-6 grid gap-4 sm:grid-cols-[auto_1fr] sm:items-baseline">
           <Eyebrow num={currentIdx + 1}>Case Study № {String(currentIdx + 1).padStart(2, "0")}</Eyebrow>
           <Link
             href="/casestudy"
-            className="editorial-mono justify-self-end text-[11px] uppercase tracking-[0.1em] text-muted hover:text-primary decoration-none"
+            className="editorial-mono justify-self-start text-[11px] uppercase tracking-[0.1em] text-muted hover:text-primary decoration-none sm:justify-self-end"
             style={{ textDecoration: "none" }}
           >
             <span className="inline-flex items-center gap-2">
@@ -93,13 +93,13 @@ export default function CaseStudyDetails() {
           </Link>
         </div>
 
-        <h1 className="editorial-display editorial-title-xl mt-4">
+        <h1 className="editorial-display editorial-title-xl mt-3 sm:mt-4">
           {formatDisplay(project.title)}
           <span className="text-primary">.</span>
         </h1>
 
         {/* META ROW */}
-        <div className="mt-6 grid gap-4 border-y-2 border-border py-4 grid-cols-2 md:grid-cols-5 editorial-mono text-[11px] uppercase tracking-[0.08em]">
+        <div className="mt-6 grid gap-4 border-y-2 border-border py-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-5 editorial-mono text-[11px] uppercase tracking-[0.08em]">
           <div>
             <div className="text-[9px] uppercase tracking-[0.1em] text-muted">Category</div>
             <div className="mt-1 font-bold">{project.category}</div>
@@ -145,7 +145,7 @@ export default function CaseStudyDetails() {
       </EditorialShell>
 
       {/* OVERVIEW CALLOUT */}
-      <EditorialShell className="mt-14 grid gap-10 md:grid-cols-[1fr_2fr]">
+      <EditorialShell className="mt-10 grid gap-8 sm:mt-14 sm:gap-10 md:grid-cols-[1fr_2fr]">
         <Eyebrow num="01">Overview</Eyebrow>
         <p className="editorial-serif text-[clamp(22px,3.4vw,42px)] leading-[1.25] italic text-foreground">
           {cs.overview || project.description}
@@ -169,7 +169,7 @@ export default function CaseStudyDetails() {
       )}
 
       {/* CASE STUDY BLOCKS */}
-      <EditorialShell className="mt-14 grid gap-12 md:grid-cols-2">
+      <EditorialShell className="mt-10 grid gap-8 sm:mt-14 sm:gap-10 md:grid-cols-2 md:gap-12">
         <CaseBlock num="02" kicker={t.projects.objective || "Objective"}>
           <p>{cs.objective || project.longDescription || project.description}</p>
         </CaseBlock>
@@ -196,10 +196,10 @@ export default function CaseStudyDetails() {
       )}
 
       {/* TIMELINE */}
-      <EditorialShell className="mt-20">
+      <EditorialShell className="mt-16 sm:mt-20">
         <Eyebrow num="07">Timeline</Eyebrow>
-        <div className="border-t-2 border-b-2 border-border mt-4 py-6">
-          <div className="grid gap-6 grid-cols-2 md:grid-cols-5">
+        <div className="mt-4 border-t-2 border-b-2 border-border py-6">
+          <div className="grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-5">
             {timelineData.map(([phase, desc], i) => (
               <div key={i} className="relative">
                 <div className={`editorial-display text-2xl leading-none ${i === timelineData.length - 1 ? "text-primary" : "text-foreground"}`}>
@@ -234,8 +234,8 @@ export default function CaseStudyDetails() {
 
       {/* NEXT PROJECT LINK */}
       {nextProject && (
-        <EditorialShell className="mt-20">
-          <div className="editorial-frame editorial-frame-thick grid gap-6 p-8 md:grid-cols-[1fr_auto] md:items-center">
+        <EditorialShell className="mt-16 sm:mt-20">
+          <div className="editorial-frame editorial-frame-thick grid gap-6 p-6 sm:p-8 md:grid-cols-[1fr_auto] md:items-center">
             <div>
               <Eyebrow>Next Case Study</Eyebrow>
               <div className="editorial-display mt-3 text-[clamp(32px,5vw,64px)]">

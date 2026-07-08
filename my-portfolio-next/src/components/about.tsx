@@ -26,17 +26,17 @@ export default function About({ summary = false }: AboutProps) {
     };
 
     return (
-        <div className="editorial-page pb-24" id="about">
+        <div className="editorial-page overflow-x-clip pb-24" id="about">
             <EditorialShell className="py-12 md:py-16">
                 <Eyebrow num={4}>About - Skills - Education</Eyebrow>
-                <div className="mt-6 grid gap-10 md:grid-cols-[1.2fr_1fr] md:items-start">
-                    <h1 id="about-heading" className="editorial-display editorial-title-lg">
+                <div className="mt-6 grid gap-8 sm:gap-10 md:grid-cols-[1.2fr_1fr] md:items-start">
+                    <h1 id="about-heading" className="editorial-display editorial-title-lg max-w-full break-words leading-[0.82]">
                         HI<span className="text-primary">-</span><br />
                         I BUILD<br />
                         SYSTEMS.
                     </h1>
                     <div>
-                        <div className="space-y-5 text-lg leading-8 text-muted">
+                        <div className="space-y-4 text-base leading-7 text-muted sm:space-y-5 sm:text-lg sm:leading-8">
                             {(summary ? t.about.paragraphs.slice(0, 1) : t.about.paragraphs).map((p: string, i: number) => (
                                 <p
                                     key={i}

@@ -22,7 +22,7 @@ export default function FeatureTile({
   return (
     <Link
       href={href}
-      className={`editorial-frame ${big ? "md:col-span-6 md:row-span-2" : "md:col-span-3"} ${accent ? "bg-foreground text-background" : ""} group block p-4 transition-transform hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0_var(--accent)]`}
+      className={`editorial-frame ${big ? "md:col-span-6 md:row-span-2" : "md:col-span-3"} ${accent ? "bg-foreground text-background" : ""} group block p-4 transition-transform hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0_var(--accent)] sm:p-5`}
     >
       <div className="flex items-baseline justify-between gap-3">
         <span className={`editorial-mono text-[11px] tracking-[0.12em] ${accent ? "text-primary" : "text-muted"}`}>
@@ -32,13 +32,13 @@ export default function FeatureTile({
           {category}
         </span>
       </div>
-      <div className={`editorial-display mt-6 ${big ? "text-[clamp(48px,7vw,100px)]" : "text-[clamp(24px,2.8vw,40px)]"}`}>
+      <div className={`editorial-display mt-5 sm:mt-6 ${big ? "text-[clamp(38px,6vw,100px)]" : "text-[clamp(22px,3vw,40px)]"}`}>
         {title}
       </div>
-      <p className={`mt-3 max-w-[90%] text-sm leading-6 ${accent ? "text-background/80" : "text-muted"}`}>
+      <p className={`mt-3 max-w-[95%] text-sm leading-6 ${accent ? "text-background/80" : "text-muted"}`}>
         {description}
       </p>
-      <div className="mt-6 flex items-center justify-between">
+      <div className="mt-5 flex items-center justify-between gap-3 sm:mt-6">
         <span className="editorial-mono text-[10px] uppercase tracking-[0.12em]">
           Case study
         </span>

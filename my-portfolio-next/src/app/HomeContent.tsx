@@ -25,27 +25,24 @@ export default function HomeContent() {
 
   return (
     <div className="editorial-page pb-20">
-      <EditorialShell className="py-12 md:py-16">
-        <div className="mb-8 grid gap-6 md:grid-cols-[1fr_220px]">
+      <EditorialShell className="py-10 sm:py-12 md:py-16">
+        <div className="mb-6 grid gap-4 md:mb-8 md:grid-cols-[1fr_220px] md:gap-6">
           <Eyebrow num={1}>
             Index - {t.siteConfig.role} - {t.siteConfig.location}
           </Eyebrow>
-          <div className="editorial-mono text-right text-[11px] uppercase tracking-[0.12em] text-muted">
+          <div className="editorial-mono text-left text-[11px] uppercase tracking-[0.12em] text-muted md:text-right">
             <span className="editorial-serif">{t.hero.welcome}</span>
           </div>
         </div>
 
-        <h1 className="editorial-display editorial-title-xl mb-8">
-          <Magnetic text={formatDisplay(t.hero.name)} />
-          <span className="text-primary">.</span>
-          <br />
-          <span className="border-b-[8px] border-foreground pb-0">
+        <h1 className="editorial-display editorial-title-xl mb-6 sm:mb-8">
+          <span className="border-b-[6px] border-foreground pb-0 sm:border-b-[8px]">
             <Magnetic text={formatDisplay(t.hero.typewriterStrings[0] || t.siteConfig.role)} />
           </span>
         </h1>
 
-        <div className="grid gap-8 border-t-4 border-border pt-8 md:grid-cols-[1.4fr_1fr] md:items-start">
-          <p className="editorial-serif text-[clamp(22px,2.7vw,34px)] leading-[1.25]">
+        <div className="grid gap-6 border-t-4 border-border pt-6 sm:gap-8 sm:pt-8 md:grid-cols-[1.4fr_1fr] md:items-start">
+          <p className="editorial-serif text-[clamp(20px,2.5vw,34px)] leading-[1.2] sm:leading-[1.25]">
             {t.hero.description}
           </p>
           <div className="flex flex-col gap-3">
@@ -105,8 +102,8 @@ export default function HomeContent() {
         </div>
       </EditorialShell>
 
-      <EditorialShell className="pt-16">
-        <div className="grid gap-6 border-y-4 border-border py-8 md:grid-cols-4">
+      <EditorialShell className="pt-12 sm:pt-16">
+        <div className="grid gap-4 border-y-4 border-border py-6 sm:gap-6 sm:py-8 md:grid-cols-4">
           <StatBlock value={experienceYears} label={t.about.stats.experience} />
           <StatBlock value={projectCount} label={t.about.stats.projects} />
           <StatBlock value="3" label={t.editorial.languages} />

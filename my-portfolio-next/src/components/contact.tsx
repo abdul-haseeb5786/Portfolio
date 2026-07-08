@@ -61,8 +61,8 @@ function ContactSlip() {
     return (
         <form className="slip" onSubmit={submit} noValidate>
             <div className="slip-head">
-                <span>Submission Slip</span>
-                <span className="slip-doc-no">
+               <p className="max-w-full break-words leading-relaxed">Want to build something awesome? <br /> (Or just want to sponsor my next coffee?)</p>
+                <span className="slip-doc-no ml-0 text-left sm:ml-3 sm:text-right">
                     {t.contact.form.subject} · No. {new Date().getFullYear()}
                 </span>
             </div>
@@ -98,6 +98,7 @@ function ContactSlip() {
                         onChange={set("name")}
                         className={errors.name ? "err" : ""}
                         autoComplete="name"
+                        placeholder={t.contact.form.namePlaceholder}
                     />
                     {errors.name && <div className="err-msg">↳ {errors.name}</div>}
                 </div>
@@ -115,6 +116,7 @@ function ContactSlip() {
                             onChange={set("email")}
                             className={errors.email ? "err" : ""}
                             autoComplete="email"
+                            placeholder={t.contact.form.emailPlaceholder}
                         />
                         {errors.email && <div className="err-msg">↳ {errors.email}</div>}
                     </div>
@@ -129,6 +131,7 @@ function ContactSlip() {
                             value={form.subject}
                             onChange={set("subject")}
                             className={errors.subject ? "err" : ""}
+                            placeholder={t.contact.form.subjectPlaceholder}
                         />
                         {errors.subject && <div className="err-msg">↳ {errors.subject}</div>}
                     </div>
@@ -147,6 +150,7 @@ function ContactSlip() {
                         value={form.message}
                         onChange={set("message")}
                         className={errors.message ? "err" : ""}
+                        placeholder={t.contact.form.messagePlaceholder}
                     />
                     {errors.message && <div className="err-msg">↳ {errors.message}</div>}
                 </div>
@@ -188,13 +192,13 @@ export default function Contact() {
     ];
 
     return (
-        <div className="editorial-page pb-24" id="contact">
+        <div className="editorial-page overflow-x-clip pb-24" id="contact">
             {/* ── HEADER ── */}
             <EditorialShell className="py-12 md:py-16">
                 <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
                     <div>
                         <Eyebrow num={5}>Resume — Contact</Eyebrow>
-                        <h1 className="editorial-display editorial-title-lg mt-3">
+                        <h1 className="editorial-display editorial-title-lg mt-3 max-w-full break-words">
                             EXP<span className="text-primary">·</span>ER
                             <br />
                             <span className="border-b-[10px] border-foreground">IENCE</span>.
@@ -203,7 +207,7 @@ export default function Contact() {
                     <div className="flex flex-col gap-2">
                         <button
                             onClick={downloadCV}
-                            className="editorial-button editorial-button-invert"
+                            className="editorial-button editorial-button-invert w-full sm:w-auto"
                         >
                             ↓ {t.about.downloadCV} <span className="text-primary">·</span> pdf
                         </button>
