@@ -1,7 +1,7 @@
 {
-  "name": "Abdul Haseeb | MERN Stack Developer",
-  "short_name": "Portfolio",
-  "description": "Professional portfolio of Abdul Haseeb, a MERN Stack Developer specializing in React, Node.js, and MongoDB.",
+  "name": "Abdul Haseeb | AI Engineer",
+  "short_name": "AI Portfolio",
+  "description": "Portfolio of Abdul Haseeb, an AI Engineer building agentic AI systems, RAG applications, voice agents, and automation platforms.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0a0a0a",

@@ -11,13 +11,13 @@ interface MetadataProps {
     canonical?: string;
 }
 
-export function constructMetadata({
+export function     constructMetadata({
     title,
     description = "Abdul Haseeb is an AI Engineer building agentic AI systems, LLM workflows, RAG applications, voice agents, and automation platforms for modern products.",
     image = "/Portofolio.png?v=3",
     icons = {
-        icon: "/Adobe-Express-file.png?v=3",
-        apple: "/Adobe-Express-file.png?v=3",
+        icon: "/favicon.png",
+        apple: "/icon-192x192.png",
     },
     noIndex = false,
     canonical,
